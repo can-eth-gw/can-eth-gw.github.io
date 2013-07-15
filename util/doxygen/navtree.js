@@ -2,8 +2,8 @@ var NAVTREE =
 [
   [ "can-eth-gw-utils Gateway Utilities", "index.html", [
     [ "can-eth-utils", "md__i_n_s_t_a_l_l.html", null ],
-    [ "Manual cegwctl", "md_cegwctl.html", null ],
-    [ "Manual cegwsend", "md_cegwsend.html", null ],
+    [ "NAME", "md_cegwctl.html", null ],
+    [ "NAME", "md_cegwsend.html", null ],
     [ "can-eth-utils", "md__r_e_a_d_m_e.html", null ],
     [ "Data Structures", null, [
       [ "Data Structures", "annotated.html", "annotated" ],

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>cegwsend.pod</title>
+<title>cegwsend - CAN - Ethernet Gateway Send Utility</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rev="made" href="mailto:root@localhost" />
 </head>
@@ -14,10 +14,99 @@
 <div name="index">
 <p><a name="__index__"></a></p>
 
+<ul>
 
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#exit_status">EXIT STATUS</a></li>
+	<li><a href="#copyright">COPYRIGHT</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#see_also">SEE ALSO</a></li>
+</ul>
+
+<hr name="index" />
 </div>
 <!-- INDEX END -->
 
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>cegwsend - CAN - Ethernet Gateway Send Utility</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>cegwsend</strong> [ <strong>-s</strong> <em>SOURCE MAC ADDRESS</em> | <strong>--src</strong>=<em>SOURCE MAC ADDRESS</em> ] { <strong>-d</strong> <em>DESTINATION MAC ADDRESS</em> | <strong>-dst</strong>=<em>DESTINANTION MAC ADDRESS</em> | <strong>-t</strong> <em>ETHERTYPE</em> | <strong>--type</strong>=<em>ETHERTYPE</em> ] [ <strong>-r</strong> &lt;RAW DATA&gt; | <strong>--raw</strong>=&lt;RAW DATA&gt; | <strong>-i</strong> &lt;NAME OF THE ETHERNET INTERFACE&gt; | <strong>--interface</strong>=&lt;NAME OF THE ETHERNET INTERFACE&gt; }</p>
+<p><em>ETHERTYPE</em> := { <strong>ipv4</strong> | <strong>ipv6</strong> | <strong>can</strong> | <strong>canfd</strong> | <strong>none</strong> | <strong>[0x]1234</strong> }</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>Send Utility for testing non ip-based ethernet interfaces. You can send with this utility an ethernet package with raw data or with an CAN/CAN-FD Frame as payload.</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="s_src" class="item"><strong>-s</strong>, <strong>--src</strong></a></strong></dt>
+
+<dd>
+<p>The MAC address, which should be written down in the SOURCE field of the ethernet header. In the current version this option is NOT USED.</p>
+</dd>
+<dt><strong><a name="d_dst" class="item"><strong>-d</strong>, <strong>--dst</strong></a></strong></dt>
+
+<dd>
+<p>The MAC address, which should be written down in the DESTINATION field of the ethernet header.</p>
+</dd>
+<dt><strong><a name="t_type_ethertype_type_type" class="item"><strong>-t</strong>, <strong>--type</strong> <em>ETHERTYPE</em>, <strong>--type</strong>=<em>TYPE</em></a></strong></dt>
+
+<dd>
+<p>Set the EtherType of the Ethernet frame. '<strong>ipv4</strong>', '<strong>ipv6</strong>', '<strong>can</strong>' and '<strong>canfd</strong>' can be translated to their hexadcimal code. All other types must be written like '<strong>0x1234</strong>' or '<strong>1234</strong>. Please note that the last example is a hexadecimal number, too. '<strong>none</strong>' can be used for experimental purposes.</p>
+</dd>
+<dt><strong><a name="r_raw" class="item"><strong>-r</strong>, <strong>--raw</strong></a></strong></dt>
+
+<dd>
+<p>The raw data that should be sent. Please notice that the raw data must be typed in the console as a hexadecimal number like this &quot;01 23 45 67 89 ab cd ef&quot;, for example. You can use capital letters for A, B, C, D, E and F, of course.</p>
+</dd>
+<dt><strong><a name="i_interface" class="item"><strong>-i</strong>, <strong>--interface</strong></a></strong></dt>
+
+<dd>
+<p>The name of the Ethernet Interface, that is going to receive the message</p>
+</dd>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="exit_status">EXIT STATUS</a></h1>
+<p>cegwsend returns a zero exit status if the command succeeds. Non Zero if an error has occured.</p>
+<p>
+</p>
+<hr />
+<h1><a name="copyright">COPYRIGHT</a></h1>
+<p>(C) Copyright 2013 Fabian Raab, Stefan Smarzly, Jakob Pfeiffer</p>
+<p>This file is part of CAN-Eth-GW.</p>
+<p>CAN-Eth-GW is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+<p>CAN-Eth-GW is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with CAN-Eth-GW. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Jakob Pfeiffer &lt;<a href="mailto:jakob.pfeiffer@in.tum.de">jakob.pfeiffer@in.tum.de</a>&gt;</p>
+<p>
+</p>
+<hr />
+<h1><a name="see_also">SEE ALSO</a></h1>
+<p><a href="http://can-eth-gw.github.io/">http://can-eth-gw.github.io/</a></p>
 
 </body>
 

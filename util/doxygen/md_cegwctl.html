@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>can-eth-gw-utils Gateway Utilities: Manual cegwctl</title>
+<title>can-eth-gw-utils Gateway Utilities: NAME</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,11 +99,10 @@ $(document).ready(function(){initNavTree('md_cegwctl.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Manual cegwctl </div>  </div>
+<div class="title">NAME </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>NAME</h1>
-<p>cegwctl - CAN - Ethernet Gateway Control Utility</p>
+<div class="textblock"><p>cegwctl - CAN - Ethernet Gateway Control Utility</p>
 <h1>SYNOPSIS</h1>
 <p><b>cegwctl</b> [ __-f__ | __--can-fd__ ] [ __-t__ <em>TYPE</em> | __--type__=_TYPE_ ] [ __-b__ | __--bidirectional__ ] <b>add</b> <b>route</b> <em>SRC</em> <em>DST</em></p>
 <p><b>cegwctl</b> [ __-f__ | __--can-fd__ ] [ __-t__ <em>TYPE</em> | __--type__=_TYPE_ ] <b>add</b> <b>dev</b></p>
@@ -115,29 +114,32 @@ $(document).ready(function(){initNavTree('md_cegwctl.html','');});
 <p>Control Utility for the ce_gw Kernel Programm.</p>
 <h1>OPTIONS</h1>
 <ul>
-<li>__-b__, __--bidirectional__</li>
+<li><p class="startli">__-b__, __--bidirectional__</p>
+<p class="startli">If you add a route from SRC to DST, there will be also add the same route back from DST to SRC.</p>
+</li>
 </ul>
-<p>If you add a route from SRC to DST, there will be also add the same route back from DST to SRC.</p>
 <ul>
-<li>__-f__, __--can-fd__</li>
+<li><p class="startli">__-f__, __--can-fd__</p>
+<p class="startli">A Flag for the larger CAN-FD Frames.</p>
+</li>
 </ul>
-<p>A Flag for the larger CAN-FD Frames.</p>
 <ul>
-<li>__-t__ <em>TYPE</em>, __--type__=_TYPE_</li>
+<li><p class="startli">__-t__ <em>TYPE</em>, __--type__=_TYPE_</p>
+<p class="startli">Set The Type of the Gateway. '<b>net</b>' is the Default. <b>udp</b>, <b>tcp</b> are not supported yet.</p>
+</li>
 </ul>
-<p>Set The Type of the Gateway. '<b>net</b>' is the Default. <b>udp</b>, <b>tcp</b> are not supported yet.</p>
 <ul>
 <li><em>TYPE</em> := { <b>none</b> | <b>eth</b> | <b>net</b> | <b>udp</b> | <b>tcp</b> } Types</li>
 </ul>
 <h1>COMMANDS</h1>
 <ul>
-<li><b>add</b> <b>route</b> <em>SRC</em> <em>DST</em></li>
+<li><p class="startli"><b>add</b> <b>route</b> <em>SRC</em> <em>DST</em></p>
+<p class="startli">Add a Gateway from <em>SRC</em> to <em>DST</em>, where SRC and DST are the String names of the Interfaces.</p>
+</li>
 </ul>
-<p>Add a Gateway from <em>SRC</em> to <em>DST</em>, where SRC and DST are the String names of the Interfaces.</p>
 <ul>
-<li><b>add</b> <b>dev</b></li>
-</ul>
-<p>Add a virtual ethernet device. You need this device for adding a route. With the options [ __-f__ | __--can-fd__ ] [ __-t__ <em>TYPE</em> | __--type__=_TYPE_ ] you can set a meaningfull MTU. </p>
+<li><p class="startli"><b>add</b> <b>dev</b></p>
+<p class="startli">Add a virtual ethernet device. You need this device for adding a route. With the options [ __-f__ | __--can-fd__ ] [ __-t__ <em>TYPE</em> | __--type__=_TYPE_ ] you can set a meaningfull MTU. </p>
 <pre class="fragment">+------+-----+------+--------------------------+
 | TYPE | FD? | BYTE | MTU Size Description     |
 +------+-----+------+--------------------------+
@@ -149,18 +151,23 @@ $(document).ready(function(){initNavTree('md_cegwctl.html','');});
 | UDP  | --- | 1500 | Standart Ethernet MTU    |
 | TCP  | --- | 1500 | Standart Ethernet MTU    |
 +------+-----+------+--------------------------+
-</pre><ul>
-<li><b>del</b> <b>route</b> <em>ID</em></li>
+</pre></li>
 </ul>
-<p>Deletes the Gateway with <em>ID</em>.</p>
 <ul>
-<li><b>del</b> <b>dev</b> <em>NAME</em></li>
+<li><p class="startli"><b>del</b> <b>route</b> <em>ID</em></p>
+<p class="startli">Deletes the Gateway with <em>ID</em>.</p>
+</li>
 </ul>
-<p>Deletes a previously with <b>add</b> <b>dev</b> added device with <em>NAME</em> as name.</p>
 <ul>
-<li><b>route</b> [<em>ID</em>]</li>
+<li><p class="startli"><b>del</b> <b>dev</b> <em>NAME</em></p>
+<p class="startli">Deletes a previously with <b>add</b> <b>dev</b> added device with <em>NAME</em> as name.</p>
+</li>
 </ul>
-<p>List active Gateways and Informations or if <em>ID</em> is specified, Information of the Gateway with <em>ID</em> will printed</p>
+<ul>
+<li><p class="startli"><b>route</b> [<em>ID</em>]</p>
+<p class="startli">List active Gateways and Informations or if <em>ID</em> is specified, Information of the Gateway with <em>ID</em> will printed</p>
+</li>
+</ul>
 <h1>EXAMPLES</h1>
 <p>Add a Gateway: </p>
 <pre class="fragment">      cegwctl -f -t net add route "eth0" "can0"
@@ -181,7 +188,7 @@ $(document).ready(function(){initNavTree('md_cegwctl.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jul 15 2013 22:44:00 for can-eth-gw-utils Gateway Utilities by
+    <li class="footer">Generated on Mon Jul 15 2013 23:32:07 for can-eth-gw-utils Gateway Utilities by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

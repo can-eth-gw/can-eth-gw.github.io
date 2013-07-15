@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>can-eth-gw-utils Gateway Utilities: Manual cegwsend</title>
+<title>can-eth-gw-utils Gateway Utilities: NAME</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,11 +99,10 @@ $(document).ready(function(){initNavTree('md_cegwsend.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Manual cegwsend </div>  </div>
+<div class="title">NAME </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>NAME</h1>
-<p>cegwsend - CAN - Ethernet Gateway Send Utility</p>
+<div class="textblock"><p>cegwsend - CAN - Ethernet Gateway Send Utility</p>
 <h1>SYNOPSIS</h1>
 <p><b>cegwsend</b> [ __-s__ <em>SOURCE MAC ADDRESS</em> | __--src__=_SOURCE MAC ADDRESS_ ] { __-d__ <em>DESTINATION MAC ADDRESS</em> | __-dst__=_DESTINANTION MAC ADDRESS_ | __-t__ <em>ETHERTYPE</em> | __--type__=_ETHERTYPE_ ] [ __-r__ &lt;RAW data&gt;=""&gt; | __--raw__=&lt;RAW data&gt;=""&gt; | __-i__ &lt;NAME of="" the="" ethernet="" interface&gt;=""&gt; | __--interface__=&lt;NAME of="" the="" ethernet="" interface&gt;=""&gt; }</p>
 <p><em>ETHERTYPE</em> := { <b>ipv4</b> | <b>ipv6</b> | <b>can</b> | <b>canfd</b> | <b>none</b> | __[0x]1234__ }</p>
@@ -111,25 +110,30 @@ $(document).ready(function(){initNavTree('md_cegwsend.html','');});
 <p>Send Utility for testing non ip-based ethernet interfaces. You can send with this utility an ethernet package with raw data or with an CAN/CAN-FD Frame as payload.</p>
 <h1>OPTIONS</h1>
 <ul>
-<li>__-s__, __--src__</li>
+<li><p class="startli">__-s__, __--src__</p>
+<p class="startli">The MAC address, which should be written down in the SOURCE field of the ethernet header. In the current version this option is NOT USED.</p>
+</li>
 </ul>
-<p>The MAC address, which should be written down in the SOURCE field of the ethernet header. In the current version this option is NOT USED.</p>
 <ul>
-<li>__-d__, __--dst__</li>
+<li><p class="startli">__-d__, __--dst__</p>
+<p class="startli">The MAC address, which should be written down in the DESTINATION field of the ethernet header.</p>
+</li>
 </ul>
-<p>The MAC address, which should be written down in the DESTINATION field of the ethernet header.</p>
 <ul>
-<li>__-t__, __--type__ <em>ETHERTYPE</em>, __--type__=_TYPE_</li>
+<li><p class="startli">__-t__, __--type__ <em>ETHERTYPE</em>, __--type__=_TYPE_</p>
+<p class="startli">Set the EtherType of the Ethernet frame. '<b>ipv4</b>', '<b>ipv6</b>', '<b>can</b>' and '<b>canfd</b>' can be translated to their hexadcimal code. All other types must be written like '<b>0x1234</b>' or '<b>1234</b>. Please note that the last example is a hexadecimal number, too. '<b>none</b>' can be used for experimental purposes.</p>
+</li>
 </ul>
-<p>Set the EtherType of the Ethernet frame. '<b>ipv4</b>', '<b>ipv6</b>', '<b>can</b>' and '<b>canfd</b>' can be translated to their hexadcimal code. All other types must be written like '<b>0x1234</b>' or '<b>1234</b>. Please note that the last example is a hexadecimal number, too. '<b>none</b>' can be used for experimental purposes.</p>
 <ul>
-<li>__-r__, __--raw__</li>
+<li><p class="startli">__-r__, __--raw__</p>
+<p class="startli">The raw data that should be sent. Please notice that the raw data must be typed in the console as a hexadecimal number like this "01 23 45 67 89 ab cd ef", for example. You can use capital letters for A, B, C, D, E and F, of course.</p>
+</li>
 </ul>
-<p>The raw data that should be sent. Please notice that the raw data must be typed in the console as a hexadecimal number like this "01 23 45 67 89 ab cd ef", for example. You can use capital letters for A, B, C, D, E and F, of course.</p>
 <ul>
-<li>__-i__, __--interface__</li>
+<li><p class="startli">__-i__, __--interface__</p>
+<p class="startli">The name of the Ethernet Interface, that is going to receive the message</p>
+</li>
 </ul>
-<p>The name of the Ethernet Interface, that is going to receive the message</p>
 <h1>EXIT STATUS</h1>
 <p>cegwsend returns a zero exit status if the command succeeds. Non Zero if an error has occured.</p>
 <h1>COPYRIGHT</h1>
@@ -146,7 +150,7 @@ $(document).ready(function(){initNavTree('md_cegwsend.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jul 15 2013 22:44:00 for can-eth-gw-utils Gateway Utilities by
+    <li class="footer">Generated on Mon Jul 15 2013 23:32:07 for can-eth-gw-utils Gateway Utilities by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>
