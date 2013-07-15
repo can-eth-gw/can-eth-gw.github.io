@@ -1,0 +1,4 @@
+<map id="ce_gw_net2can_alloc" name="ce_gw_net2can_alloc">
+<area shape="rect" id="node3" href="$group__proc.html#ga5029c243442a169c880a5a93ac3efb09" title="The gateway function for incoming ETH frames Receive skb from ETH dev –&gt; process –&gt; send to CAN bus..." alt="" coords="201,5,311,35"/>
+<area shape="rect" id="node5" href="$group__dev.html#ga92ee5d088cdeeb4bd7d939e549a5c51b" title="called by the OS if a package is sent to the device" alt="" coords="361,5,513,35"/>
+</map>

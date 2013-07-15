@@ -1,0 +1,4 @@
+<map id="ce_gw_alloc_canfd_frame" name="ce_gw_alloc_canfd_frame">
+<area shape="rect" id="node3" href="$group__trans.html#gaecbcb806ddf3d363971cf8abe469117a" title="converst sk buffer including an ethernet frame to sk buffer including a canfd frame" alt="" coords="241,5,383,35"/>
+<area shape="rect" id="node5" href="$ce__gw__main_8h.html#a4018eac863183a215107d442d065c768" title="ce_gw_get_header_canfd" alt="" coords="227,59,397,88"/>
+</map>

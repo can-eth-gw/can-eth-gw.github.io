@@ -1,0 +1,4 @@
+<map id="ce_gw_alloc_can_frame" name="ce_gw_alloc_can_frame">
+<area shape="rect" id="node3" href="$group__trans.html#ga69c7de1a4181d84f8d46d401d67a6f7b" title="converst sk_buffer including an ethernet frame to sk_buffer including a can_frame" alt="" coords="231,5,361,35"/>
+<area shape="rect" id="node5" href="$group__get.html#gae23d143501d4247947e8e89e94e44415" title="builds a can header in SFF (standart frame format) or EFF (extended frame formate) with the given inf..." alt="" coords="217,59,375,88"/>
+</map>

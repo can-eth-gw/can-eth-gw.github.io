@@ -1,0 +1,5 @@
+<map id="ce_gw_init_module" name="ce_gw_init_module">
+<area shape="rect" id="node3" href="$ce__gw__dev_8c.html#ac80bda3b07e5e8d816a71576fb219655" title="Initialise all objects, wich are needed by the other functions." alt="" coords="188,5,348,35"/>
+<area shape="rect" id="node5" href="$ce__gw__netlink_8c.html#a48a683ab44d1ba7866bb305447102a1f" title="Must called once at module init." alt="" coords="204,59,332,88"/>
+<area shape="rect" id="node7" href="$ce__gw__main_8c.html#adfe7d8bb541d52ac88237c1c927c87c3" title="list_jobs" alt="" coords="233,112,303,141"/>
+</map>

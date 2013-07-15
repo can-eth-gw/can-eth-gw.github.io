@@ -1,0 +1,15 @@
+<map id="ce_gw_netlink_add" name="ce_gw_netlink_add">
+<area shape="rect" id="node3" href="$ce__gw__main_8c.html#aaabe871861b8e5300a33e1c5f797a88b" title="ce_gw_create_route" alt="" coords="187,85,325,115"/>
+<area shape="rect" id="node19" href="$group__dev.html#gaec9f0ca6285f78543128e51a53059a95" title="Allocate the device and set standart Attributes with ce_gw_dev_setup()" alt="" coords="191,165,321,195"/>
+<area shape="rect" id="node25" href="$group__dev.html#ga8f0e118cdc2a09c0e4ae81b798260791" title="Free virtual ethernet device and remove from internal lists." alt="" coords="197,219,315,248"/>
+<area shape="rect" id="node27" href="$group__dev.html#gab3ac9b72d30717c20f4d63faec67a425" title="Register a virtual ethernet device on the OS." alt="" coords="187,272,325,301"/>
+<area shape="rect" id="node5" href="$group__dev.html#ga8e37969a73186890c848970eec1b3822" title="check if the param eth_dev is registered by this module" alt="" coords="375,5,543,35"/>
+<area shape="rect" id="node7" href="$ce__gw__main_8c.html#ac11aded26e4f830da41ceefc1ec8bb06" title="ce_gw_register_can_src" alt="" coords="377,59,540,88"/>
+<area shape="rect" id="node15" href="$ce__gw__main_8c.html#ac954c1b20c84ff0ef0dee8b4c1807920" title="ce_gw_register_eth_src" alt="" coords="379,112,539,141"/>
+<area shape="rect" id="node9" href="$group__proc.html#ga3bbb3494e2b31be8b585e07f362c5700" title="The gateway function for incoming CAN frames Receive CAN frame –&gt; process –&gt; send to ETH dev (skbuffe..." alt="" coords="619,59,731,88"/>
+<area shape="rect" id="node11" href="$group__trans.html#ga1fa2d0effaf27e3d6da160030ab0f8bd" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload and allocate" alt="" coords="805,59,952,88"/>
+<area shape="rect" id="node13" href="$group__trans.html#gae4c1866baead9c3b0592eb336d6d27c9" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload" alt="" coords="1001,59,1113,88"/>
+<area shape="rect" id="node17" href="$group__dev.html#ga83ca099f9d263a83b70bbfc6d11e2e06" title="Adds an pointer to the net_device internal list where it is the src." alt="" coords="592,112,757,141"/>
+<area shape="rect" id="node21" href="$group__dev.html#gae64b1dda501717ab714fc4931ea8506c" title="Allocates a Ethernet Device for the Gateway." alt="" coords="397,165,520,195"/>
+<area shape="rect" id="node23" href="$group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device." alt="" coords="396,219,521,248"/>
+</map>

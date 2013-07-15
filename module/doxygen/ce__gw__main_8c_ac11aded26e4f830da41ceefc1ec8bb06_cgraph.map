@@ -1,0 +1,5 @@
+<map id="ce_gw_register_can_src" name="ce_gw_register_can_src">
+<area shape="rect" id="node3" href="$group__proc.html#ga3bbb3494e2b31be8b585e07f362c5700" title="The gateway function for incoming CAN frames Receive CAN frame –&gt; process –&gt; send to ETH dev (skbuffe..." alt="" coords="217,5,329,35"/>
+<area shape="rect" id="node5" href="$group__trans.html#ga1fa2d0effaf27e3d6da160030ab0f8bd" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload and allocate" alt="" coords="379,5,525,35"/>
+<area shape="rect" id="node7" href="$group__trans.html#gae4c1866baead9c3b0592eb336d6d27c9" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload" alt="" coords="575,5,687,35"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="ce_gw_remove_route" name="ce_gw_remove_route">
+<area shape="rect" id="node3" href="$group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="589,5,701,35"/>
+<area shape="rect" id="node5" href="$group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists." alt="" coords="200,31,352,60"/>
+<area shape="rect" id="node10" href="$ce__gw__netlink_8c.html#ab0a5b3010858a846fb34dadb9e405dc4" title="ce_gw_netlink_del" alt="" coords="407,84,535,113"/>
+<area shape="rect" id="node7" href="$group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="401,31,540,60"/>
+</map>

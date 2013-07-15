@@ -1,0 +1,4 @@
+<map id="ce_gw_dev_start_xmit" name="ce_gw_dev_start_xmit">
+<area shape="rect" id="node3" href="$group__proc.html#ga5029c243442a169c880a5a93ac3efb09" title="The gateway function for incoming ETH frames Receive skb from ETH dev –&gt; process –&gt; send to CAN bus..." alt="" coords="209,5,319,35"/>
+<area shape="rect" id="node5" href="$group__trans.html#ga79e97ca021765d2116bc2fbe289983bb" title="for CE_GW_TYPE_NET: Copy the can&#45;frame from eth_skb to a new can skb." alt="" coords="368,5,515,35"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="ce_gw_create_route" name="ce_gw_create_route">
+<area shape="rect" id="node3" href="$group__dev.html#ga8e37969a73186890c848970eec1b3822" title="check if the param eth_dev is registered by this module" alt="" coords="193,5,361,35"/>
+<area shape="rect" id="node5" href="$ce__gw__main_8c.html#ac11aded26e4f830da41ceefc1ec8bb06" title="ce_gw_register_can_src" alt="" coords="196,59,359,88"/>
+<area shape="rect" id="node13" href="$ce__gw__main_8c.html#ac954c1b20c84ff0ef0dee8b4c1807920" title="ce_gw_register_eth_src" alt="" coords="197,112,357,141"/>
+<area shape="rect" id="node7" href="$group__proc.html#ga3bbb3494e2b31be8b585e07f362c5700" title="The gateway function for incoming CAN frames Receive CAN frame –&gt; process –&gt; send to ETH dev (skbuffe..." alt="" coords="437,59,549,88"/>
+<area shape="rect" id="node9" href="$group__trans.html#ga1fa2d0effaf27e3d6da160030ab0f8bd" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload and allocate" alt="" coords="624,59,771,88"/>
+<area shape="rect" id="node11" href="$group__trans.html#gae4c1866baead9c3b0592eb336d6d27c9" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload" alt="" coords="820,59,932,88"/>
+<area shape="rect" id="node15" href="$group__dev.html#ga83ca099f9d263a83b70bbfc6d11e2e06" title="Adds an pointer to the net_device internal list where it is the src." alt="" coords="411,112,576,141"/>
+</map>

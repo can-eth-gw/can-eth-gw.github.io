@@ -1,0 +1,4 @@
+<map id="ce_gw_can_rcv" name="ce_gw_can_rcv">
+<area shape="rect" id="node3" href="$group__trans.html#ga1fa2d0effaf27e3d6da160030ab0f8bd" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload and allocate" alt="" coords="168,5,315,35"/>
+<area shape="rect" id="node5" href="$group__trans.html#gae4c1866baead9c3b0592eb336d6d27c9" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload" alt="" coords="364,5,476,35"/>
+</map>
