@@ -25,7 +25,5 @@ var searchData=
   ['cegwctl_2emd',['cegwctl.md',['../cegwctl_8md.html',1,'']]],
   ['cegwsend_2ec',['cegwsend.c',['../cegwsend_8c.html',1,'']]],
   ['cegwsend_2emd',['cegwsend.md',['../cegwsend_8md.html',1,'']]],
-  ['convert_5fto_5fmac',['convert_to_mac',['../cegwsend_8c.html#a6812c1aea233f06c19e34aaf901ab7d7',1,'cegwsend.c']]],
-  ['can_2deth_2dutils',['can-eth-utils',['../md__i_n_s_t_a_l_l.html',1,'']]],
-  ['can_2deth_2dutils',['can-eth-utils',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['convert_5fto_5fmac',['convert_to_mac',['../cegwsend_8c.html#a6812c1aea233f06c19e34aaf901ab7d7',1,'cegwsend.c']]]
 ];

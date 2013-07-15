@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['name',['NAME',['../md_cegwctl.html',1,'']]],
-  ['name',['NAME',['../md_cegwsend.html',1,'']]],
   ['name',['name',['../structflags.html#a5ac083a645d964373f022d03df4849c8',1,'flags::name()'],['../structenums.html#a5ac083a645d964373f022d03df4849c8',1,'enums::name()']]],
   ['netlink_2ec',['netlink.c',['../netlink_8c.html',1,'']]],
   ['netlink_2eh',['netlink.h',['../netlink_8h.html',1,'']]],
