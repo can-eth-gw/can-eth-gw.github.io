@@ -4,11 +4,11 @@ title: Developer Documentation
 subtitle: Developer documentation for the CAN Ethernet Gateway
 ---
 
-<a name="top"/>
+<a name="top"/></a>
 
 Developer documentation for the CAN Ethernet Gateway
 
-<a name="toc"/>
+<a name="toc"/></a>
 This file contains:
 
  1. [Overview / What is a CAN Ethernet Gateway](#chap1)
@@ -38,7 +38,7 @@ This file contains:
  6. [Copyright](#chap6)
  7. [References](#chap7)
 
-<a name="chap1"/>
+<a name="chap1"/></a>
 
 1. Overview / What is a CAN Ethernet Gateway
 --------------------------------------------
@@ -51,7 +51,7 @@ the CAN frame. In the kernel module sources the types are represented with
 `enum ce_gw_type` (`ce_gw_main.h`) and in userspace with `enum gw_type`
 (`netlink.h`)  _[UP](#top)_
 
-<a name="chap1-1"/>
+<a name="chap1-1"/></a>
 ### 1.1. Ethernet followed by CAN
 The first idea is to add a CAN header and the following payload directly after 
 the ethernet frame. The CAN header always uses the structure implemented in the
@@ -86,7 +86,7 @@ addresses are needed. Therefore it is necessary to define a mapping table,
 which definies one or more MAC address for one or more CAN identifier. The
 table is not implemented yet.  _[UP](#top)_
 
-<a name="chap1-2"/>
+<a name="chap1-2"/></a>
 ### 1.2 Ethernet followed by IP and TCP/UDP
 To avoid the need for a CAN network on the side of ethernet signals an IP and
 TCP/UDP header can be added after the ethernet header. They are followed by the
@@ -125,7 +125,7 @@ to map the ID of the CAN header on the MAC address. But in comparison with the
 first approach the ethernet frames will be compatible with all networks using
 IP and TCP/UDP. These are not yet implemented.  _[UP](#top)_
 
-<a name="chap1-3"/>
+<a name="chap1-3"/></a>
 ### 1.3 Ethernet followed by IP, TCP/UDP and CAN
 
 If an ethernet frame is requested that is compatible with networks using IP and
@@ -161,7 +161,7 @@ out of all three options. This method can be used for a CAN bridge over an IP
 network, e.g. internet. Another possibility is to use the gateway for sending a
 CAN frame to an application.  _[UP](#top)_
 
-<a name="chap2"/>
+<a name="chap2"/></a>
 
 2. CAN Ethernet Gateway concept
 -------------------------------
@@ -211,7 +211,7 @@ the components of this kernel module (ce_gw) and others of the OS.
   _[UP](#top)_
 ~~~~~~~
 
-<a name="chap2-1"/>
+<a name="chap2-1"/></a>
 
 ### 2.1  Netlink server
 
@@ -219,33 +219,33 @@ The netlink server administrates the communication between kernel- and
 userspace. It enables a configuration of the gateway by the user.
   _[UP](#top)_
 
-<a name="chap2-2"/>
+<a name="chap2-2"/></a>
 ### 2.2 Virtual ethernet device
 
 The virtual ethernet device theoretical disguises the CAN Ethernet Gateway as
 ethernet device. Therefore it is possible to use the gateway just like every
 other ethernet device without knowing the structure behind. 
 
-<a name="chap2-3"/>
+<a name="chap2-3"/></a>
 ### 2.3 CAN - Ethernet Gateway
 
 The CAN - Ethernet Gateway is responsible for receiving CAN frames and
 translating them. Additionally it theoretical simulates an ethernet network so
 that it is possible to use every ethernet function on the translated CAN frame.  _[UP](#top)_
 
-<a name="chap2-4"/>
+<a name="chap2-4"/></a>
 ### 2.4 Netlink client
 
 The netlink client controls the gateway in the userspace. See application
 'cegwctl' in package "can-eth-gw-utils":
 ([Link](https://github.com/can-eth-gw/can-eth-gw-utils "Sources on Github"))  _[UP](#top)_
 
-<a name="chap3"/>
+<a name="chap3"/></a>
 
 3. Translating CAN and ethernet
 -------------------------------
 
-<a name="chap3-1"/>
+<a name="chap3-1"/></a>
 ### 3.1 Characteristics of CAN
 
 While working with the CAN struct there are a few things to keep an eye on.
@@ -257,7 +257,7 @@ First thing is that there are basicly three different CAN formats:
 
   _[UP](#top)_
 
-<a name="chap3-1-1"/>
+<a name="chap3-1-1"/></a>
 #### 3.1.1 CAN SFF and EFF
 
 CAN SFF and EFF use the same struct (can_frame). The difference between this
@@ -309,7 +309,7 @@ the header and following data.
 
 Both original SFF and EFF and the struct add a data field of eight byte.  _[UP](#top)_
 
-<a name="chap3-1-2"/>
+<a name="chap3-1-2"/></a>
 #### 3.1.2 CAN FD
 
 The CAN FD allows the use of a up to 64 byte data field. It also adds some
@@ -328,7 +328,7 @@ specific fields, followed by 64 byte data.
 ~~~~~~~
   _[UP](#top)_
 
-<a name="chap3-1-3"/>
+<a name="chap3-1-3"/></a>
 #### 3.1.3 Length calculation
 
 As the 64 byte data length should be represented by a only eight bit long
@@ -336,12 +336,12 @@ len-field a calculation for the real length is needed. This is done by the
 can_dlc2len function included in can/dev.h. That function is also need for
 calculating the length of a can_frame.  _[UP](#top)_
 
-<a name="chap3-2"/>
+<a name="chap3-2"/></a>
 ### 3.2 Translation
 
 For sending the ethernet and CAN packages the sk buffer is used.  _[UP](#top)_
 
-<a name="chap3-2-1"/>
+<a name="chap3-2-1"/></a>
 #### 3.2.1 Ethernet to CAN
 
 As a CAN frame can only hold eight byte of data there is no space for including
@@ -371,7 +371,7 @@ at the end of the data.
 Even if the pointers of mac, network and transport header are set on the side of
 the CAN frame there is no guarentee that they will be used.  _[UP](#top)_
 
-<a name="chap3-2-2"/>
+<a name="chap3-2-2"/></a>
 #### 3.2.2 Ethernet to CAN FD
 
 When a ethernet frame is translated into a CAN FD it is possible to copy IP
@@ -408,7 +408,7 @@ ethernet to CAN translation.
 Even if the pointers of mac, network and transport header are set on the side of
 the CAN frame there is no guarentee that they will be used.  _[UP](#top)_
 
-<a name="chap3-2-3"/>
+<a name="chap3-2-3"/></a>
 #### 3.2.3 CAN to ethernet
 
 To translate a CAN frame into an ethernet frame the payload will be copied at
@@ -437,7 +437,7 @@ Additional the transport header can still not be set correctly as there is no
 TCP/UDP header. Therefore it needs to be set at the and of the payload.
   _[UP](#top)_
 
-<a name="chap3-2-4"/>
+<a name="chap3-2-4"/></a>
 #### 3.2.4 CAN FD to ethernet
 
 The translation of CAN FD to ethernet is quite similar to ethernet to CAN FD.
@@ -470,7 +470,7 @@ If the CAN FD includes IP and TCP/UDP header both pointers can be set correctly
 as shown in the picture. Otherwise the transport pointer will be set to the end
 of the payload.  _[UP](#top)_
 
-<a name="chap3-2-5"/>
+<a name="chap3-2-5"/></a>
 #### 3.2.5 Ethernet including complete CAN / CAN FD
 
 If an ethernet frame includes a complete CAN or CAN FD frame the data after
@@ -498,7 +498,7 @@ transport pointer is pointing to the end of the payload. On CAN or CAN FD side
 only the data pointer is set. All other pointers can point anywhere.  
 _[UP](#top)_
 
-<a name="chap3-3"/>
+<a name="chap3-3"/></a>
 ### 3.3 Special messages
 
 On both sides, ethernet and CAN, there are some special messages that can not
@@ -514,7 +514,7 @@ Beside those messages described there are some other messages that can't be
 translated directly but are not relevant.
 These messages are not implemented yet.  _[UP](#top)_
 
-<a name="chap4"/>
+<a name="chap4"/></a>
 
 4. Routing
 ----------
@@ -523,7 +523,7 @@ In the CAN Ethernet Gateway there are two routs. One goes from the virtual
 ethernet device over the "CAN - ethernet gateway" to the CAN device. The other
 one routs excatly the other way round.  _[UP](#top)_
 
-<a name="chap4-1"/>
+<a name="chap4-1"/></a>
 ### 4.1 Routing lists
 
 ~~~~~~~
@@ -582,7 +582,7 @@ must be identical to the ethernet device, that owns the list.
 Job_src works in the same way. It lists all instances of ce_gw_job, that
 reference the ethernet device as source.  _[UP](#top)_
 
-<a name="chap5"/>
+<a name="chap5"/></a>
 
 5. Useful links
 ---------------
@@ -593,7 +593,7 @@ canliteratur/can_fd_spec.pdf)
 * socket can: [https://gitorious.org/linux-can](https://gitorious.org/
 linux-can)
 
-<a name="chap6"/>
+<a name="chap6"/></a>
 
 6. Copyright
 ------------
@@ -615,7 +615,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with CAN-Eth-GW.  If not, see <http://www.gnu.org/licenses/>.
 
-<a name="chap7"/>
+<a name="chap7"/></a>
 
 7. References
 -------------
