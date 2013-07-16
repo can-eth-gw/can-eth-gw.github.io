@@ -49,4 +49,4 @@ Early Development
    + Fabian Raab _<fabian.raab@tum.de>_
    + Stefan Smarzly _<stefan.smarzly@in.tum.de>_
 
-Developed at [Technical University of Munich](http://tum.edu "TUM") - [Department Informatics](http://cs.tum.edu "Informatics")
+Developed at [Technical University of Munich](http://www.tum.edu "TUM") - [Department Informatics](http://www.cs.tum.edu "Informatics")
