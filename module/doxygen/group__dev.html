@@ -184,7 +184,7 @@ $(document).ready(function(){initNavTree('group__dev.html','');});
 </div><div class="memdoc">
 
 <p>Allocates a Ethernet Device for the Gateway. </p>
-<p>Allocates a Ethernet Device with struct <a class="el" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> as private data. <a class="el" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device.">ce_gw_dev_setup()</a> should be called after this function. free_netdev(dev) musst be called for freeing the memory. </p>
+<p>Allocates a Ethernet Device with struct <a class="el" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> as private data. <a class="el" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device.">ce_gw_dev_setup()</a> should be called after this function. <a class="el" href="group__dev.html#ga8f0e118cdc2a09c0e4ae81b798260791" title="Free virtual ethernet device and remove from internal lists.">ce_gw_dev_free()</a> musst be called for freeing the memory. </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">NULL</td><td>If an error has occured. </td></tr>
@@ -1352,7 +1352,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 16 2013 22:40:42 for can_eth_gw Gateway Module by
+    <li class="footer">Generated on Tue Jul 16 2013 22:46:44 for can_eth_gw Gateway Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>
