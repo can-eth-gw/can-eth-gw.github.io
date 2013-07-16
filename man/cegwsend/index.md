@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Manual: cegwsend
+title: Manual cegwsend
 subtitle: CAN - Ethernet Gateway Send Utility
 ---
 

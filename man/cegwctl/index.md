@@ -1,13 +1,12 @@
 ---
 layout: index
-title: Manual: cegwctl
+title: Manual cegwctl
 subtitle: CAN - Ethernet Gateway Control Utility
 ---
 
 # NAME
 
 cegwctl - CAN - Ethernet Gateway Control Utility
-
 
 
 # SYNOPSIS
