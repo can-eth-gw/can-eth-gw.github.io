@@ -1,10 +1,54 @@
 ---
 layout: index
-title: can-eth-gw-main
-subtitle: Subtitle
+title: CAN - Ethernet Gateway
+subtitle: A linux kernel module Gateway for bidirectional translation.
 ---
 
-CE-GW
-=====
+![Logo](CAN-eth-GW-middle.png)
 
-this is cegw page
+### Abstract
+
+The CAN Ethernet Gateway converts a CAN (controller area network) signal into an ethernet signal. From a operation system perspective the gateway is disguised as an ethernet device by a virtual ethernet device. Due to missing equality of the frame structures there are some varying methods for translating the CAN frame (see [1. Overview / What is a CAN Ethernet Gateway](http://can-eth-gw.github.io/module/doc/developer/#chap1 "1. Overview / What is a CAN Ethernet Gateway")). Main Github Page is [here](https://github.com/can-eth-gw "Main Github Page").
+
+### Kernel Module
+
+#### Online Documentation
+
+  + [Developer Documentation](http://can-eth-gw.github.io/module/doc/developer/ "Developer Documentation")
+  + [Doxygen Source Code Reference](http://can-eth-gw.github.io/module/doxygen/ "Doxygen Source Code Reference")
+  
+#### Get Source Code
+
+  + [Github Page](https://github.com/can-eth-gw/can_eth_gw "Github Page")
+
+#### Status
+
+Early Development
+
+### Utilities Package
+
+#### Manuals
+
+The manuals also exists in html format:
+
+  +  [cegwctl](http://can-eth-gw.github.io/man/cegwctl/ "cegwctl")
+  +  [cegwsend](http://can-eth-gw.github.io/man/cegwsend/ "cegwsend")
+  
+#### Online Documentation
+
+  + [Doxygen Source Code Reference](http://can-eth-gw.github.io/util/doxygen/ "Doxygen Source Code Reference")
+  
+#### Get Source Code
+
+  + [Github Page](https://github.com/can-eth-gw/can-eth-gw-utils "Github Page")
+
+#### Status
+
+Early Development
+  
+### Authors
+
+   + Fabian Raab _<fabian.raab@tum.de>_
+   + Stefan Smarzly _<stefan.smarzly@in.tum.de>_
+
+Developed at [Technical University of Munich](http://tum.edu "TUM") [Department Informatics](http://cs.tum.edu "Informatics")
