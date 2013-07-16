@@ -288,12 +288,13 @@ struct (canfd_frame). The structure of identifier, the ERR, RTR, EFF and the
 len field (same as DLC) is alike. After that part there are 24 bits of new FD
 specific fields, followed by 64 byte data.</p>
 <pre><code>                                 1   1   1
-   11 bit          18 bit       bit bit bit  8 bit  8 bit  8 bit  8 bit
-+___________+__________________+___+___+___+______+______+______+______+
-|           | Extended         |   |   |   |      |      |      |      |
-|identifier | identifier       |ERR|RTR|EFF| len  |flags | res0 | res1 |
-+___________+__________________+___+___+___+______+______+______+______+
+   11 bit          18 bit       bit bit bit 4 bit 4 bit  8 bit  8 bit  8 bit
++___________+__________________+___+___+___+_____+_____+______+______+______+
+|           | Extended         |   |   |   | len |     |      | res0 | res1 |
+|identifier | identifier       |ERR|RTR|EFF| pad | len |flags | pad  | pad  |
++___________+__________________+___+___+___+_____+_____+______+______+______+
 </code></pre>
+
 <p><em><a href="#top">UP</a></em></p>
 <p><a name="chap3-1-3"/></p>
 <h4>3.1.3 Length calculation</h4>
