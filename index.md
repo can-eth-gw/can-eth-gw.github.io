@@ -4,8 +4,6 @@ title: CAN - Ethernet Gateway
 subtitle: A linux kernel module Gateway for bidirectional translation.
 ---
 
-![Logo](CAN-eth-GW-middle.png)
-
 ### Abstract
 
 The CAN Ethernet Gateway converts a CAN (controller area network) signal into an ethernet signal. From a operation system perspective the gateway is disguised as an ethernet device by a virtual ethernet device. Due to missing equality of the frame structures there are some varying methods for translating the CAN frame (see [1. Overview / What is a CAN Ethernet Gateway](http://can-eth-gw.github.io/module/doc/developer/#chap1 "1. Overview / What is a CAN Ethernet Gateway")). Main Github Page is [here](https://github.com/can-eth-gw "Main Github Page").
