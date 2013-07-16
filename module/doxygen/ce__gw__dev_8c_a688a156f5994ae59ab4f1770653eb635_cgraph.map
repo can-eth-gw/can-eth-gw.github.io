@@ -1,9 +1,0 @@
-<map id="ce_gw_dev_unregister" name="ce_gw_dev_unregister">
-<area shape="rect" id="node3" href="$ce__gw__main_8c.html#a0b296fdda11e90cddbe65ae8b541b8dd" title="ce_gw_remove_route" alt="" coords="205,32,352,61"/>
-<area shape="rect" id="node5" href="$ce__gw__main_8c.html#a65fdb4f375d591e7e4a54a9ec38ebb06" title="ce_gw_unregister_can_src" alt="" coords="401,5,577,35"/>
-<area shape="rect" id="node13" href="$ce__gw__main_8c.html#a3daed74080a98c11ed9640c67490c6bb" title="ce_gw_unregister_eth_src" alt="" coords="403,59,576,88"/>
-<area shape="rect" id="node7" href="$group__proc.html#ga3bbb3494e2b31be8b585e07f362c5700" title="The gateway function for incoming CAN frames Receive CAN frame –&gt; process –&gt; send to ETH dev (skbuffe..." alt="" coords="652,5,764,35"/>
-<area shape="rect" id="node9" href="$group__trans.html#ga1fa2d0effaf27e3d6da160030ab0f8bd" title="ce_gw_can2net_alloc" alt="" coords="837,5,984,35"/>
-<area shape="rect" id="node11" href="$group__trans.html#gae4c1866baead9c3b0592eb336d6d27c9" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload" alt="" coords="1033,5,1145,35"/>
-<area shape="rect" id="node15" href="$ce__gw__dev_8c.html#ae9a5687f1eeb483ad060e7e63b54a846" title="Removes the pointer to param job from the list in ethernet net_device." alt="" coords="627,59,789,88"/>
-</map>

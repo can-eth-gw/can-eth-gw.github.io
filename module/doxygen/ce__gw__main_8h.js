@@ -24,6 +24,5 @@ var ce__gw__main_8h =
     [ "ce_gw_get_header_can", "ce__gw__main_8h.html#gae23d143501d4247947e8e89e94e44415", null ],
     [ "ce_gw_get_header_canfd", "ce__gw__main_8h.html#a4018eac863183a215107d442d065c768", null ],
     [ "ce_gw_get_job_list", "ce__gw__main_8h.html#a5d0b164253044ff4a32fd89ac6f826be", null ],
-    [ "ce_gw_is_can_header_error_msg", "ce__gw__main_8h.html#af5725e22e3e9826c60c8afd1a9196656", null ],
     [ "ce_gw_remove_route", "ce__gw__main_8h.html#a0b296fdda11e90cddbe65ae8b541b8dd", null ]
 ];

@@ -1,4 +1,4 @@
 <map id="ce_gw_dev_setup" name="ce_gw_dev_setup">
 <area shape="rect" id="node3" href="$group__dev.html#gaec9f0ca6285f78543128e51a53059a95" title="Allocate the device and set standart Attributes with ce_gw_dev_setup()" alt="" coords="181,5,312,35"/>
-<area shape="rect" id="node5" href="$ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="ce_gw_netlink_add" alt="" coords="360,5,493,35"/>
+<area shape="rect" id="node5" href="$ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="360,5,493,35"/>
 </map>

@@ -1,3 +1,3 @@
 <map id="ce_gw_netlink_list" name="ce_gw_netlink_list">
-<area shape="rect" id="node3" href="$ce__gw__main_8c.html#a5d0b164253044ff4a32fd89ac6f826be" title="ce_gw_get_job_list" alt="" coords="184,5,317,35"/>
+<area shape="rect" id="node3" href="$ce__gw__main_8c.html#a1214de0e02dda555638ea35720e36c5b" title="getter for HLIST_HEAD(ce_gw_job_list)" alt="" coords="184,5,317,35"/>
 </map>

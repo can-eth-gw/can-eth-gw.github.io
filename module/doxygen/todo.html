@@ -104,31 +104,37 @@ $(document).ready(function(){initNavTree('todo.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000001"></a>Global <a class="el" href="group__alloc.html#gaa01ba68dc0bec3059930d2d5994612ca">ce_gw_alloc_can_frame</a>  (void)</dt>
+<dt><a class="anchor" id="_todo000004"></a>Global <a class="el" href="group__alloc.html#gaa01ba68dc0bec3059930d2d5994612ca">ce_gw_alloc_can_frame</a>  (void)</dt>
 <dd>not tested yet  </dd>
-<dt><a class="anchor" id="_todo000003"></a>Global <a class="el" href="group__alloc.html#ga7623cd8e8b0fc26f156ebfb5614fadfd">ce_gw_alloc_canfd_frame</a>  (void)</dt>
+<dt><a class="anchor" id="_todo000006"></a>Global <a class="el" href="group__alloc.html#ga7623cd8e8b0fc26f156ebfb5614fadfd">ce_gw_alloc_canfd_frame</a>  (void)</dt>
 <dd>not tested yet  </dd>
+<dt><a class="anchor" id="_todo000014"></a>Global <a class="el" href="group__proc.html#ga3bbb3494e2b31be8b585e07f362c5700">ce_gw_can_rcv</a>  (struct sk_buff *can_skb, void *data)</dt>
+<dd><p class="startdd">check also for canfd flag not only Type and call function. You must also check then if the message then is really a canfd-frame or not. </p>
+<p class="enddd">call other translation functions. check for canfd-frame or only use canfd-frame casts.  </p>
+</dd>
 <dt><a class="anchor" id="_todo000010"></a>Global <a class="el" href="group__trans.html#ga977d9c338cf2969ed6ec96a4fb98fb4b">ce_gw_can_to_eth</a>  (unsigned char *dest, unsigned char *source, __be16 type, struct sk_buff *can_buffer, struct net_device *dev)</dt>
 <dd>not tested yet  </dd>
-<dt><a class="anchor" id="_todo000007"></a>Global <a class="el" href="group__trans.html#ga42745042f65ddbafaae0f73690965109">ce_gw_canfd2net</a>  (struct sk_buff *eth_skb, struct sk_buff *can_skb, struct net_device *eth_dev, struct net_device *can_dev, unsigned char *mac_dst, unsigned char *mac_src)</dt>
-<dd>not tested yet  </dd>
-<dt><a class="anchor" id="_todo000008"></a>Global <a class="el" href="group__trans.html#ga6340470249dccdd05c32091bacc36570">ce_gw_canfd2net_alloc</a>  (struct sk_buff *can_skb, struct net_device *eth_dev, struct net_device *can_dev, unsigned char *mac_dst, unsigned char *mac_src)</dt>
-<dd>not tested yet  </dd>
+<dt><a class="anchor" id="_todo000001"></a>Global <a class="el" href="group__trans.html#ga42745042f65ddbafaae0f73690965109">ce_gw_canfd2net</a>  (struct sk_buff *eth_skb, struct sk_buff *can_skb, struct net_device *eth_dev, struct net_device *can_dev, unsigned char *mac_dst, unsigned char *mac_src)</dt>
+<dd>not tested yet but its the same as <a class="el" href="group__trans.html#gae4c1866baead9c3b0592eb336d6d27c9" title="for CE_GW_TYPE_NET: copy CAN-Frame into ethernet payload">ce_gw_can2net()</a>  </dd>
+<dt><a class="anchor" id="_todo000002"></a>Global <a class="el" href="group__trans.html#ga6340470249dccdd05c32091bacc36570">ce_gw_canfd2net_alloc</a>  (struct sk_buff *can_skb, struct net_device *eth_dev, struct net_device *can_dev, unsigned char *mac_dst, unsigned char *mac_src)</dt>
+<dd>not tested yet but its the same as <a class="el" href="group__trans.html#ga1fa2d0effaf27e3d6da160030ab0f8bd" title="for CE_GW_TYPE_NET: copy CAN-Frame into ethernet payload and allocate">ce_gw_can2net_alloc()</a>  </dd>
 <dt><a class="anchor" id="_todo000011"></a>Global <a class="el" href="group__trans.html#gaf604d8090ebd07d4d105b1c61f5d2146">ce_gw_canfd_to_eth</a>  (unsigned char *dest, unsigned char *source, __be16 type, struct sk_buff *canfd_skb, struct net_device *dev)</dt>
 <dd>not tested yet  </dd>
+<dt><a class="anchor" id="_todo000015"></a>Global <a class="el" href="group__proc.html#ga5029c243442a169c880a5a93ac3efb09">ce_gw_eth_rcv</a>  (struct sk_buff *eth_skb, void *data)</dt>
+<dd>check for canfd-frame or only use canfd-frame casts.  </dd>
 <dt><a class="anchor" id="_todo000012"></a>Global <a class="el" href="group__trans.html#ga69c7de1a4181d84f8d46d401d67a6f7b">ce_gw_eth_to_can</a>  (canid_t id, struct sk_buff *eth_buff, struct net_device *dev)</dt>
 <dd>not tested yet  </dd>
 <dt><a class="anchor" id="_todo000013"></a>Global <a class="el" href="group__trans.html#gaecbcb806ddf3d363971cf8abe469117a">ce_gw_eth_to_canfd</a>  (canid_t id, __u8 flags, __u8 res0, __u8 res1, struct sk_buff *eth_skb, struct net_device *dev)</dt>
 <dd>not tested yet  </dd>
-<dt><a class="anchor" id="_todo000002"></a>Global <a class="el" href="group__alloc.html#gace556f285358490c0cdbb3d553ff0d68">ce_gw_free_can_frame</a>  (struct can_frame *memory)</dt>
+<dt><a class="anchor" id="_todo000005"></a>Global <a class="el" href="group__alloc.html#gace556f285358490c0cdbb3d553ff0d68">ce_gw_free_can_frame</a>  (struct can_frame *memory)</dt>
 <dd>not tested yet  </dd>
-<dt><a class="anchor" id="_todo000004"></a>Global <a class="el" href="group__alloc.html#ga40f05385e7fb22f3ac41df0a175bfd83">ce_gw_free_canfd_frame</a>  (struct canfd_frame *memory)</dt>
+<dt><a class="anchor" id="_todo000007"></a>Global <a class="el" href="group__alloc.html#ga40f05385e7fb22f3ac41df0a175bfd83">ce_gw_free_canfd_frame</a>  (struct canfd_frame *memory)</dt>
 <dd>not tested yet  </dd>
-<dt><a class="anchor" id="_todo000005"></a>Global <a class="el" href="group__get.html#gae23d143501d4247947e8e89e94e44415">ce_gw_get_header_can</a>  (canid_t can_id, __u8 can_dlc, __u8 *payload)</dt>
+<dt><a class="anchor" id="_todo000008"></a>Global <a class="el" href="group__get.html#gae23d143501d4247947e8e89e94e44415">ce_gw_get_header_can</a>  (canid_t can_id, __u8 can_dlc, __u8 *payload)</dt>
 <dd><p class="startdd">not tested yet</p>
 <p class="enddd"></p>
 </dd>
-<dt><a class="anchor" id="_todo000009"></a>Global <a class="el" href="group__trans.html#ga5a566d089ad7a57607638a84d962facd">ce_gw_net2canfd_alloc</a>  (struct sk_buff *eth_skb, struct net_device *can_dev, struct net_device *eth_dev)</dt>
+<dt><a class="anchor" id="_todo000003"></a>Global <a class="el" href="group__trans.html#ga5a566d089ad7a57607638a84d962facd">ce_gw_net2canfd_alloc</a>  (struct sk_buff *eth_skb, struct net_device *can_dev, struct net_device *eth_dev)</dt>
 <dd><p class="startdd">not tested yet. </p>
 <p class="enddd">there might be a better way to allocted the new skb. </p>
 </dd>
@@ -138,7 +144,7 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jul 15 2013 22:27:44 for can_eth_gw Gateway Module by
+    <li class="footer">Generated on Tue Jul 16 2013 22:31:36 for can_eth_gw Gateway Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

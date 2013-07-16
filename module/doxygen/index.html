@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="top"></a></p>
 <h1><a class="el" href="developer__doc_8md.html">developer_doc.md</a></h1>
-<p>Developer dokumentation for the CAN Ethernet Gateway</p>
+<p>Developer documentation for the CAN Ethernet Gateway</p>
 <p><a class="anchor" id="toc"></a> This file contains:</p>
 <ol type="1">
 <li><a href="#chap1">Overview / What is a CAN Ethernet Gateway</a><ol type="a">
@@ -305,14 +305,14 @@ $(document).ready(function(){initNavTree('index.html','');});
 <p>Both original SFF and EFF and the struct add a data field of eight byte. _<a href="#top">UP</a>_</p>
 <p><a class="anchor" id="chap3-1-2"></a> </p>
 <h4>3.1.2 CAN FD</h4>
-<p>The CAN FD allows the use of a up to 64 byte data field. It also adds some additional flags and reserved fields. Therefore it is implemented in a new struct (canfd_frame). The structure of identifier, the ERR, RTR, EFF and the len field (same as DLC) is alike. After that part there are 24 bits of new FD specific fields, followed by 64 byte data. </p>
-<pre class="fragment">                                 1   1   1
-   11 bit          18 bit       bit bit bit  8 bit  8 bit  8 bit  8 bit
-+___________+__________________+___+___+___+______+______+______+______+
-|           | Extended         |   |   |   |      |      |      |      |
-|identifier | identifier       |ERR|RTR|EFF| len  |flags | res0 | res1 |
-+___________+__________________+___+___+___+______+______+______+______+
-</pre><p>_<a href="#top">UP</a>_</p>
+<p>The CAN FD allows the use of a up to 64 byte data field. It also adds some additional flags and reserved fields. Therefore it is implemented in a new struct (canfd_frame). The structure of identifier, the ERR, RTR, EFF and the len field (same as DLC) is alike. After that part there are 24 bits of new FD specific fields, followed by 64 byte data.</p>
+<div class="fragment"><div class="line">                                 1   1   1</div>
+<div class="line">   11 bit          18 bit       bit bit bit 4 bit 4 bit  8 bit  8 bit  8 bit</div>
+<div class="line">+___________+__________________+___+___+___+_____+_____+______+______+______+</div>
+<div class="line">|           | Extended         |   |   |   | len |     |      | res0 | res1 |</div>
+<div class="line">|identifier | identifier       |ERR|RTR|EFF| pad | len |flags | pad  | pad  |</div>
+<div class="line">+___________+__________________+___+___+___+_____+_____+______+______+______+</div>
+</div><!-- fragment --><p> _<a href="#top">UP</a>_</p>
 <p><a class="anchor" id="chap3-1-3"></a> </p>
 <h4>3.1.3 Length calculation</h4>
 <p>As the 64 byte data length should be represented by a only eight bit long len-field a calculation for the real length is needed. This is done by the can_dlc2len function included in can/dev.h. That function is also need for calculating the length of a can_frame. _<a href="#top">UP</a>_</p>
@@ -494,7 +494,7 @@ linux-can">https://gitorious.org/linux-can</a></li>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jul 15 2013 22:27:45 for can_eth_gw Gateway Module by
+    <li class="footer">Generated on Tue Jul 16 2013 22:31:36 for can_eth_gw Gateway Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

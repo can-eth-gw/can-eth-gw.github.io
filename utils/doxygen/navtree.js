@@ -1,15 +1,18 @@
 var NAVTREE =
 [
-  [ "can-eth-gw-utils Gateway Utilities", "index.html", [
+  [ "can-eth-gw-utils Utilities", "index.html", [
     [ "INSTALL", "md__i_n_s_t_a_l_l.html", null ],
     [ "man cegwctl", "md_cegwctl.html", null ],
     [ "man cegwsend", "md_cegwsend.html", null ],
     [ "Readme", "md__r_e_a_d_m_e.html", null ],
+    [ "Todo List", "todo.html", null ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", null, [
       [ "Data Structures", "annotated.html", "annotated" ],
       [ "Data Structure Index", "classes.html", null ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -19,6 +22,7 @@ var NAVTREE =
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
