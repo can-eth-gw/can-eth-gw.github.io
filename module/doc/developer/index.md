@@ -587,11 +587,8 @@ reference the ethernet device as source.  _[UP](#top)_
 5. Useful links
 ---------------
 
-* bosch CAN documentation: [http://www.bosch-semiconductors.de/media/pdf_1/
-canliteratur/can_fd_spec.pdf](http://www.bosch-semiconductors.de/media/pdf_1/
-canliteratur/can_fd_spec.pdf)
-* socket can: [https://gitorious.org/linux-can](https://gitorious.org/
-linux-can)
+* bosch CAN documentation: [http://www.bosch-semiconductors.de/media/pdf_1/canliteratur/can_fd_spec.pdf](http://www.bosch-semiconductors.de/media/pdf_1/canliteratur/can_fd_spec.pdf)
+* socket can: [https://gitorious.org/linux-can](https://gitorious.org/linux-can)
 
 <a name="chap6"/></a>
 
