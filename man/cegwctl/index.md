@@ -9,11 +9,12 @@ subtitle: CAN - Ethernet Gateway Control Utility
 cegwctl - CAN - Ethernet Gateway Control Utility
 
 
+
 # SYNOPSIS
 
 __cegwctl__ \[ __\-f__ | __\--can-fd__ \] \[ __\-t__ _TYPE_ | __\--type__=_TYPE_ \] \[ __\-b__ | __\--bidirectional__ \] __add__ __route__ _SRC_ _DST_
 
-__cegwctl__ \[ __\-f__ | __\--can-fd__ \] \[ __\-t__ _TYPE_ | __\--type__=_TYPE_ \] __add__ __dev__
+__cegwctl__ \[ __\-f__ | __\--can-fd__ \] \[ __\-t__ _TYPE_ | __\--type__=_TYPE_ \] __add__ __dev__ \[_NAME_\]
 
 _TYPE_ := { __none__ | __eth__ | __net__ | __udp__ | __tcp__ }
 
@@ -51,9 +52,9 @@ Control Utility for the ce\_gw Kernel Programm.
 
     Add a Gateway from _SRC_ to _DST_, where SRC and DST are the String names of the Interfaces.
 
-- __add__ __dev__
+- __add__ __dev__ \[_NAME_\]
 
-    Add a virtual ethernet device. You need this device for adding a route. With the options \[ __\-f__ | __\--can-fd__ \] \[ __\-t__ _TYPE_ | __\--type__=_TYPE_ \] you can set a meaningfull MTU.
+    Add a virtual ethernet device. You need this device for adding a route. _NAME_ will be the name of the new device. If you don't set _NAME_, it will be called \`cegw%d\`, where %d is a consecutive number. With the options \[ __\-f__ | __\--can-fd__ \] \[ __\-t__ _TYPE_ | __\--type__=_TYPE_ \] you can set a meaningfull MTU.
 
     	+------+-----+------+--------------------------+
     	| TYPE | FD? | BYTE | MTU Size Description     |
