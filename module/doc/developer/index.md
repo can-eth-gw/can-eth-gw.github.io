@@ -273,6 +273,7 @@ Here is the original signal:
 
 
 __SFF header:__
+
 ~~~~~~~
                 1   1   1
      11 bit    bit bit bit  4 bit
@@ -285,7 +286,9 @@ __SFF header:__
      Arbitration      Control
       Field            Field
 ~~~~~~~
+
 __EFF header:__
+
 ~~~~~~~
                 1   1                      1   1   1
      11 bit    bit bit       18 bit       bit bit bit  4 bit
