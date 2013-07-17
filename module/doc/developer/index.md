@@ -51,7 +51,7 @@ the CAN frame. In the kernel module sources the types are represented with
 `enum ce_gw_type` (`ce_gw_main.h`) and in userspace with `enum gw_type`
 (`netlink.h`). The Gateway connect to the CAN driver named "linux-can"
 (formerly "socketCAN") which is built in since Linux Kernel 3.2 . But this
-module requires at minimum Linux Kernel 3.6 . _[UP](#top)_
+module requires at minimum Linux Kernel 3.6 . _[:UP:](#top)_ :up:
 
 <a name="chap1-1"/></a>
 ### 1.1. Ethernet followed by CAN
@@ -86,7 +86,7 @@ The MAC address can be a broadcast address for keeping things easy but this
 will create a lot of traffic for the system. To keep the traffic low specific
 addresses are needed. Therefore it is necessary to define a mapping table,
 which definies one or more MAC address for one or more CAN identifier. The
-table is not implemented yet.  _[UP](#top)_
+table is not implemented yet.  _[:UP:](#top)_
 
 <a name="chap1-2"/></a>
 ### 1.2 Ethernet followed by IP and TCP/UDP
