@@ -49,7 +49,9 @@ disguised as an ethernet device by a virtual ethernet device. Due to missing
 equality of the frame structures there are some varying methods for translating
 the CAN frame. In the kernel module sources the types are represented with
 `enum ce_gw_type` (`ce_gw_main.h`) and in userspace with `enum gw_type`
-(`netlink.h`)  _[UP](#top)_
+(`netlink.h`). The Gateway connect to the CAN driver named "linux-can"
+(formerly "socketCAN") which is built in since Linux Kernel 3.2 . But this
+module requires at minimum Linux Kernel 3.6 . _[UP](#top)_
 
 <a name="chap1-1"/></a>
 ### 1.1. Ethernet followed by CAN
@@ -269,19 +271,32 @@ than the signal produced by the CAN struct.
 
 Here is the original signal:
 
-	              1   1   1
-	   11 bit    bit bit bit  4 bit
-	+___________+___+___+___+______+
-	|           |   |   |   |      |
-	|identifier |RTR|EFF|res| DLC  | SFF header
-	+___________+___+___+___+______+
-	
-	              1   1                      1   1   1
-	   11 bit    bit bit       18 bit       bit bit bit  4 bit
-	+___________+___+___+__________________+___+___+___+______+
-	|           |sub|   | extended         |   |   |   |      |
-	|identifier |RTR|EFF| identifier       |RTR|res|res| DLC  | EFF header
-	+___________+___+___+__________________+___+___+___+______+
+
+__SFF header:__
+~~~~~~~
+                1   1   1
+     11 bit    bit bit bit  4 bit
+  +___________+___+___+___+______+___...
+  |           |   |   |   |      | Raw
+  |identifier |RTR|EFF|res| DLC  | Data
+  +___________+___+___+___+______+___...
+  |               |              |
+  |<------------->|<------------>|
+     Arbitration      Control
+      Field            Field
+~~~~~~~
+__EFF header:__
+~~~~~~~
+                1   1                      1   1   1
+     11 bit    bit bit       18 bit       bit bit bit  4 bit
+  +___________+___+___+__________________+___+___+___+______+___...
+  |           |sub|   | extended         |   |   |   |      | Raw
+  |identifier |RTR|EFF| identifier       |RTR|res|res| DLC  | Data
+  +___________+___+___+__________________+___+___+___+______+___...
+  |                                          |              |
+  |<---------------------------------------->|<------------>|
+           Arbitration Field                   Control Field
+~~~~~~~
 
 The 13th bit decides whether the sent signal is SFF or EFF. (1 = EFF, 0 =
 SFF).
@@ -291,10 +306,10 @@ The struct can_frame changes the signal:
 ~~~~~~~
                                  1   1   1    4     4
    11 bit          18 bit       bit bit bit  bit   bit      3 byte
-+___________+__________________+___+___+___+_____+_____+________________+
-|           | extended         |   |   |   | DLC |     |                |
-|identifier | identifier       |ERR|RTR|EFF| pad | DLC |    padding     |
-+___________+__________________+___+___+___+_____+_____+________________+
++___________+__________________+___+___+___+_____+_____+________________+___...
+|           | extended         |   |   |   | DLC |     |                | Raw
+|identifier | identifier       |ERR|RTR|EFF| pad | DLC |    padding     | Data
++___________+__________________+___+___+___+_____+_____+________________+___...
 
 ~~~~~~~
 	
@@ -629,4 +644,5 @@ __Authors:__
    + Fabian Raab _<fabian.raab@tum.de>_
    + Stefan Smarzly _<stefan.smarzly@in.tum.de>_
 
-__Date:__ 15. July 2013
+__Date:__ 17. July 2013
+
