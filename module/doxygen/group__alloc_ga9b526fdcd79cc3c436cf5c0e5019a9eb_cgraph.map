@@ -1,5 +1,5 @@
 <map id="ce_gw_init_module" name="ce_gw_init_module">
 <area shape="rect" id="node3" href="$group__dev.html#gac80bda3b07e5e8d816a71576fb219655" title="Initialise all objects, wich are needed by the other functions." alt="" coords="188,5,348,35"/>
-<area shape="rect" id="node5" href="$group__net.html#ga48a683ab44d1ba7866bb305447102a1f" title="Must called once at module init." alt="" coords="204,59,332,88"/>
+<area shape="rect" id="node5" href="$group__net.html#ga4faff69979214be9930357331bc42316" title="Must called once at module init." alt="" coords="204,59,332,88"/>
 <area shape="rect" id="node7" href="$ce__gw__main_8c.html#a3590678f1867d673fb7f45413cc96b86" title="Some helper tools for testing." alt="" coords="233,112,303,141"/>
 </map>

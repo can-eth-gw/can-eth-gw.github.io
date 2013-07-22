@@ -149,6 +149,8 @@ This graph shows which files directly or indirectly include this file:</div>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structce__gw__job.html">ce_gw_job</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae907159232a1abcd6479c948ac507dd9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ce__gw__main_8h.html#ae907159232a1abcd6479c948ac507dd9">CE_GW_F_CAN_FD</a>&#160;&#160;&#160;0x00000001</td></tr>
+<tr class="separator:ae907159232a1abcd6479c948ac507dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad05f7d5aa3a89a00822e0c78611db323"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ce__gw__main_8h.html#ad05f7d5aa3a89a00822e0c78611db323">CE_GW_TYPE_MAX</a>&#160;&#160;&#160;(<a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066aadb6d3b8c4cd957b2641ebc154279ae1">__CE_GW_TYPE_MAX</a> - 1)</td></tr>
 <tr class="separator:ad05f7d5aa3a89a00822e0c78611db323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9169581523a63d249884c335b34f066"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a> { <br/>
@@ -214,6 +216,23 @@ Data Structures</h2></td></tr>
 
 <p>Definition in file <a class="el" href="ce__gw__main_8h_source.html">ce_gw_main.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ae907159232a1abcd6479c948ac507dd9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CE_GW_F_CAN_FD&#160;&#160;&#160;0x00000001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="structce__gw__job.html#a9fb2abd9f2594cefc48d6856e01f2879">ce_gw_job.flags</a>: is Gateway CANfd compatible </p>
+
+<p>Definition at line <a class="el" href="ce__gw__main_8h_source.html#l00049">49</a> of file <a class="el" href="ce__gw__main_8h_source.html">ce_gw_main.h</a>.</p>
+
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00347">ce_gw_dev_setup()</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00213">ce_gw_has_min_mtu()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ad05f7d5aa3a89a00822e0c78611db323"></a>
 <div class="memitem">
 <div class="memproto">
@@ -223,8 +242,9 @@ Data Structures</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Maximum Type Number </p>
 
-<p>Definition at line <a class="el" href="ce__gw__main_8h_source.html#l00061">61</a> of file <a class="el" href="ce__gw__main_8h_source.html">ce_gw_main.h</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__main_8h_source.html#l00065">65</a> of file <a class="el" href="ce__gw__main_8h_source.html">ce_gw_main.h</a>.</p>
 
 </div>
 </div>
@@ -261,15 +281,15 @@ Data Structures</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ce__gw__main_8h_source.html#l00051">51</a> of file <a class="el" href="ce__gw__main_8h_source.html">ce_gw_main.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066af4901ada58f827c027ddaa05feeb79be">CE_GW_TYPE_NONE</a>,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a51cf04b19d151ef02d0741faf68b462b">CE_GW_TYPE_ETH</a>, </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a71eb32a8512b0e899de88c047114b880">CE_GW_TYPE_NET</a>, </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2eed9c0cbc5a57d049cebdd8952f1278">CE_GW_TYPE_TCP</a>, </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2248c70f9d410e4f8b728d9d94e0f06a">CE_GW_TYPE_UDP</a>, </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066aadb6d3b8c4cd957b2641ebc154279ae1">__CE_GW_TYPE_MAX</a>, </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<p>Definition at line <a class="el" href="ce__gw__main_8h_source.html#l00055">55</a> of file <a class="el" href="ce__gw__main_8h_source.html">ce_gw_main.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066af4901ada58f827c027ddaa05feeb79be">CE_GW_TYPE_NONE</a>,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a51cf04b19d151ef02d0741faf68b462b">CE_GW_TYPE_ETH</a>, </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a71eb32a8512b0e899de88c047114b880">CE_GW_TYPE_NET</a>, </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2eed9c0cbc5a57d049cebdd8952f1278">CE_GW_TYPE_TCP</a>, </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2248c70f9d410e4f8b728d9d94e0f06a">CE_GW_TYPE_UDP</a>, </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066aadb6d3b8c4cd957b2641ebc154279ae1">__CE_GW_TYPE_MAX</a>, </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,74 +330,80 @@ Data Structures</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00915">915</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00916">916</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8h_source.html#l00084">ce_gw_job::can_rcv_filter</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00187">ce_gw_is_registered_dev()</a>, <a class="el" href="ce__gw__main_8c_source.html#l00887">ce_gw_register_can_src()</a>, <a class="el" href="ce__gw__main_8c_source.html#l00902">ce_gw_register_eth_src()</a>, <a class="el" href="ce__gw__main_8h_source.html#l00078">ce_gw_job::dev</a>, <a class="el" href="ce__gw__main_8h_source.html#l00075">ce_gw_job::dropped_frames</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, <a class="el" href="ce__gw__main_8h_source.html#l00073">ce_gw_job::flags</a>, <a class="el" href="ce__gw__main_8h_source.html#l00074">ce_gw_job::handled_frames</a>, <a class="el" href="ce__gw__main_8h_source.html#l00071">ce_gw_job::id</a>, <a class="el" href="ce__gw__main_8c_source.html#l00148">job_count</a>, <a class="el" href="ce__gw__main_8h_source.html#l00068">ce_gw_job::list</a>, <a class="el" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">ce_gw_job::src</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00072">ce_gw_job::type</a>.</p>
+<p>References <a class="el" href="ce__gw__main_8h_source.html#l00089">ce_gw_job::can_rcv_filter</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00213">ce_gw_has_min_mtu()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00192">ce_gw_is_registered_dev()</a>, <a class="el" href="ce__gw__main_8c_source.html#l00888">ce_gw_register_can_src()</a>, <a class="el" href="ce__gw__main_8c_source.html#l00903">ce_gw_register_eth_src()</a>, <a class="el" href="ce__gw__main_8h_source.html#l00083">ce_gw_job::dev</a>, <a class="el" href="ce__gw__main_8h_source.html#l00080">ce_gw_job::dropped_frames</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, <a class="el" href="ce__gw__main_8h_source.html#l00078">ce_gw_job::flags</a>, <a class="el" href="ce__gw__main_8h_source.html#l00079">ce_gw_job::handled_frames</a>, <a class="el" href="ce__gw__main_8h_source.html#l00076">ce_gw_job::id</a>, <a class="el" href="ce__gw__main_8c_source.html#l00149">job_count</a>, <a class="el" href="ce__gw__main_8h_source.html#l00073">ce_gw_job::list</a>, <a class="el" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">ce_gw_job::src</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00077">ce_gw_job::type</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__netlink_8c_source.html#l00210">ce_gw_netlink_add()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;{</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *gwj;</div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    gwj = kmem_cache_alloc(ce_gw_job_cache, GFP_KERNEL);</div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;</div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a> = <a class="code" href="ce__gw__main_8c.html#adced14fcf3ab49e9fce398ada0764adc">job_count</a>++;</div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a1d49bd9d919c4214a04082757ca67751">handled_frames</a> = 0;</div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a492eb5f747f9e39c83c44938c29600c9">dropped_frames</a> = 0;</div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;</div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    err = -ENODEV;</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> = dev_get_by_index(&amp;init_net, src_ifindex);</div>
-<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> = dev_get_by_index(&amp;init_net, dst_ifindex);</div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <span class="keywordflow">if</span> (!gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> || !gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>)</div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;        <span class="keywordflow">goto</span> clean_exit;</div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;</div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a2fc54833b3dd67f45f24d24c1b237815">type</a> = rt_type;</div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a9fb2abd9f2594cefc48d6856e01f2879">flags</a> = <a class="code" href="structce__gw__job.html#a9fb2abd9f2594cefc48d6856e01f2879">flags</a>;</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;    <span class="comment">/* TEST: pre-filled values */</span></div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a1a8aff109991710252da27e47bc83fa1">can_rcv_filter</a>.can_id = 0x42A;</div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a1a8aff109991710252da27e47bc83fa1">can_rcv_filter</a>.can_mask = 0; <span class="comment">/* allow all frames */</span></div>
+<p>Referenced by <a class="el" href="ce__gw__netlink_8c_source.html#l00216">ce_gw_netlink_add()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;{</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *gwj;</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    gwj = kmem_cache_alloc(ce_gw_job_cache, GFP_KERNEL);</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a> = <a class="code" href="ce__gw__main_8c.html#adced14fcf3ab49e9fce398ada0764adc">job_count</a>++;</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a1d49bd9d919c4214a04082757ca67751">handled_frames</a> = 0;</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a492eb5f747f9e39c83c44938c29600c9">dropped_frames</a> = 0;</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    err = -ENODEV;</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> = dev_get_by_index(&amp;init_net, src_ifindex);</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> = dev_get_by_index(&amp;init_net, dst_ifindex);</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    <span class="keywordflow">if</span> (!gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> || !gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>)</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;        <span class="keywordflow">goto</span> clean_exit;</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="ce__gw__dev_8c.html#aeb77e056c71ccebb57e895dc366be6f1" title="checks if the given device has enough mtu to use the type and flags">ce_gw_has_min_mtu</a>(gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>, rt_type, <a class="code" href="structce__gw__job.html#a9fb2abd9f2594cefc48d6856e01f2879">flags</a>) == <span class="keyword">false</span> ||</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;        <a class="code" href="ce__gw__dev_8c.html#aeb77e056c71ccebb57e895dc366be6f1" title="checks if the given device has enough mtu to use the type and flags">ce_gw_has_min_mtu</a>(gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>, rt_type, <a class="code" href="structce__gw__job.html#a9fb2abd9f2594cefc48d6856e01f2879">flags</a>) == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;        err = -EOPNOTSUPP;</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        <span class="keywordflow">goto</span> clean_exit;</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;    }</div>
 <div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;<span class="comment">     * Depending on routing direction: register at source device</span></div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;    <span class="keywordflow">if</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>-&gt;type == ARPHRD_CAN &amp;&amp;</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;        <a class="code" href="group__dev.html#ga8e37969a73186890c848970eec1b3822" title="check if the param eth_dev is registered by this module">ce_gw_is_registered_dev</a>(gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>) == 0) {</div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        <span class="comment">/*      &amp;&amp; gwj-&gt;dst.dev-&gt;type == ARPHRD_ETHER) {*/</span></div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;        <span class="comment">/* CAN source --&gt; ETH destination (cegw virtual dev) */</span></div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;        err = <a class="code" href="ce__gw__main_8c.html#ac11aded26e4f830da41ceefc1ec8bb06">ce_gw_register_can_src</a>(gwj);</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="group__dev.html#ga8e37969a73186890c848970eec1b3822" title="check if the param eth_dev is registered by this module">ce_gw_is_registered_dev</a>(gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>) == 0 &amp;&amp;</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;               gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>-&gt;type == ARPHRD_CAN) {</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        <span class="comment">/* ETH source (cegw virtual dev) --&gt; CAN destination */</span></div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;        err = <a class="code" href="ce__gw__main_8c.html#ac954c1b20c84ff0ef0dee8b4c1807920">ce_gw_register_eth_src</a>(gwj);</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;        <span class="comment">/* Undefined routing setup */</span></div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;        <span class="keywordflow">goto</span> clean_exit;</div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;    }</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;    <span class="keywordflow">if</span> (!err)</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;        hlist_add_head_rcu(&amp;gwj-&gt;<a class="code" href="structce__gw__job.html#a71d95aff87c97c965ee946427631cddf">list</a>, &amp;ce_gw_job_list);</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;clean_exit:</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;    <span class="keywordflow">if</span> (err) {</div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;        printk(KERN_ERR <span class="stringliteral">&quot;ce_gw: Src or dst device not found or &quot;</span></div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;               <span class="stringliteral">&quot;not compatible (CAN&lt;-&gt;CEGW ETH), exit.\n&quot;</span>);</div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;        <span class="keywordflow">if</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>)</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;            dev_put(gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;        <span class="keywordflow">if</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>)</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;            dev_put(gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;        kmem_cache_free(ce_gw_job_cache, gwj);</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    }</div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;</div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    <span class="keywordflow">return</span> err;</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;}</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a2fc54833b3dd67f45f24d24c1b237815">type</a> = rt_type;</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a9fb2abd9f2594cefc48d6856e01f2879">flags</a> = <a class="code" href="structce__gw__job.html#a9fb2abd9f2594cefc48d6856e01f2879">flags</a>;</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;    <span class="comment">/* TEST: pre-filled values */</span></div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a1a8aff109991710252da27e47bc83fa1">can_rcv_filter</a>.can_id = 0x42A;</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a1a8aff109991710252da27e47bc83fa1">can_rcv_filter</a>.can_mask = 0; <span class="comment">/* allow all frames */</span></div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;<span class="comment">     * Depending on routing direction: register at source device</span></div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;    <span class="keywordflow">if</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>-&gt;type == ARPHRD_CAN &amp;&amp;</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;        <a class="code" href="group__dev.html#ga8e37969a73186890c848970eec1b3822" title="check if the param eth_dev is registered by this module">ce_gw_is_registered_dev</a>(gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>) == 0) {</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;        <span class="comment">/*      &amp;&amp; gwj-&gt;dst.dev-&gt;type == ARPHRD_ETHER) {*/</span></div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;        <span class="comment">/* CAN source --&gt; ETH destination (cegw virtual dev) */</span></div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;        err = <a class="code" href="ce__gw__main_8c.html#ac11aded26e4f830da41ceefc1ec8bb06">ce_gw_register_can_src</a>(gwj);</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="group__dev.html#ga8e37969a73186890c848970eec1b3822" title="check if the param eth_dev is registered by this module">ce_gw_is_registered_dev</a>(gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>) == 0 &amp;&amp;</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;               gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>-&gt;type == ARPHRD_CAN) {</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;        <span class="comment">/* ETH source (cegw virtual dev) --&gt; CAN destination */</span></div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;        err = <a class="code" href="ce__gw__main_8c.html#ac954c1b20c84ff0ef0dee8b4c1807920">ce_gw_register_eth_src</a>(gwj);</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;        <span class="comment">/* Undefined routing setup */</span></div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;        <span class="keywordflow">goto</span> clean_exit;</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    }</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;</div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    <span class="keywordflow">if</span> (!err)</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;        hlist_add_head_rcu(&amp;gwj-&gt;<a class="code" href="structce__gw__job.html#a71d95aff87c97c965ee946427631cddf">list</a>, &amp;ce_gw_job_list);</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;clean_exit:</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;    <span class="keywordflow">if</span> (err) {</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;        printk(KERN_ERR <span class="stringliteral">&quot;ce_gw: Src or dst device not found or &quot;</span></div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;               <span class="stringliteral">&quot;not compatible (CAN&lt;-&gt;CEGW ETH), exit.\n&quot;</span>);</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;        <span class="keywordflow">if</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>)</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;            dev_put(gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;        <span class="keywordflow">if</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>)</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;            dev_put(gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;        kmem_cache_free(ce_gw_job_cache, gwj);</div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    }</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;    <span class="keywordflow">return</span> err;</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ce__gw__main_8h_aaabe871861b8e5300a33e1c5f797a88b_cgraph.png" border="0" usemap="#ce__gw__main_8h_aaabe871861b8e5300a33e1c5f797a88b_cgraph" alt=""/></div>
 <map name="ce__gw__main_8h_aaabe871861b8e5300a33e1c5f797a88b_cgraph" id="ce__gw__main_8h_aaabe871861b8e5300a33e1c5f797a88b_cgraph">
-<area shape="rect" id="node3" href="group__dev.html#ga8e37969a73186890c848970eec1b3822" title="check if the param eth_dev is registered by this module" alt="" coords="193,5,361,35"/><area shape="rect" id="node5" href="ce__gw__main_8c.html#ac11aded26e4f830da41ceefc1ec8bb06" title="ce_gw_register_can_src" alt="" coords="196,59,359,88"/><area shape="rect" id="node13" href="ce__gw__main_8c.html#ac954c1b20c84ff0ef0dee8b4c1807920" title="ce_gw_register_eth_src" alt="" coords="197,112,357,141"/><area shape="rect" id="node7" href="group__proc.html#ga3bbb3494e2b31be8b585e07f362c5700" title="The gateway function for incoming CAN frames Receive CAN frame –&gt; process –&gt; send to ETH dev (skbuffe..." alt="" coords="437,59,549,88"/><area shape="rect" id="node9" href="group__trans.html#ga1fa2d0effaf27e3d6da160030ab0f8bd" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload and allocate" alt="" coords="624,59,771,88"/><area shape="rect" id="node11" href="group__trans.html#gae4c1866baead9c3b0592eb336d6d27c9" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload" alt="" coords="820,59,932,88"/><area shape="rect" id="node15" href="group__dev.html#ga83ca099f9d263a83b70bbfc6d11e2e06" title="Adds an pointer to the net_device internal list where it is the src." alt="" coords="411,112,576,141"/></map>
+<area shape="rect" id="node3" href="ce__gw__dev_8c.html#aeb77e056c71ccebb57e895dc366be6f1" title="checks if the given device has enough mtu to use the type and flags" alt="" coords="205,5,349,35"/><area shape="rect" id="node5" href="group__dev.html#ga8e37969a73186890c848970eec1b3822" title="check if the param eth_dev is registered by this module" alt="" coords="193,59,361,88"/><area shape="rect" id="node7" href="ce__gw__main_8c.html#ac11aded26e4f830da41ceefc1ec8bb06" title="ce_gw_register_can_src" alt="" coords="196,112,359,141"/><area shape="rect" id="node15" href="ce__gw__main_8c.html#ac954c1b20c84ff0ef0dee8b4c1807920" title="ce_gw_register_eth_src" alt="" coords="197,165,357,195"/><area shape="rect" id="node9" href="group__proc.html#ga3bbb3494e2b31be8b585e07f362c5700" title="The gateway function for incoming CAN frames Receive CAN frame –&gt; process –&gt; send to ETH dev (skbuffe..." alt="" coords="437,112,549,141"/><area shape="rect" id="node11" href="group__trans.html#ga1fa2d0effaf27e3d6da160030ab0f8bd" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload and allocate" alt="" coords="624,112,771,141"/><area shape="rect" id="node13" href="group__trans.html#gae4c1866baead9c3b0592eb336d6d27c9" title="for CE_GW_TYPE_NET: copy CAN&#45;Frame into ethernet payload" alt="" coords="820,112,932,141"/><area shape="rect" id="node17" href="group__dev.html#ga83ca099f9d263a83b70bbfc6d11e2e06" title="Adds an pointer to the net_device internal list where it is the src." alt="" coords="411,165,576,195"/></map>
 </div>
 </p>
 
@@ -386,7 +412,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ce__gw__main_8h_aaabe871861b8e5300a33e1c5f797a88b_icgraph.png" border="0" usemap="#ce__gw__main_8h_aaabe871861b8e5300a33e1c5f797a88b_icgraph" alt=""/></div>
 <map name="ce__gw__main_8h_aaabe871861b8e5300a33e1c5f797a88b_icgraph" id="ce__gw__main_8h_aaabe871861b8e5300a33e1c5f797a88b_icgraph">
-<area shape="rect" id="node3" href="ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="192,5,325,35"/></map>
+<area shape="rect" id="node3" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="192,5,325,35"/></map>
 </div>
 </p>
 
@@ -448,26 +474,26 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00200">200</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00201">201</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8c_source.html#l00172">ce_gw_alloc_canfd_frame()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                                                  {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keyword">struct </span>canfd_frame *canfd = <a class="code" href="group__alloc.html#ga7623cd8e8b0fc26f156ebfb5614fadfd" title="allocates memory for a canfd frame">ce_gw_alloc_canfd_frame</a>();</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">if</span> (canfd == NULL) {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        printk (KERN_ERR <span class="stringliteral">&quot;ce_gw_main.c: kmalloc failed in function&quot;</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                <span class="stringliteral">&quot;ce_gw_get_header_canfd\n&quot;</span>);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    canfd-&gt;can_id = id;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    canfd-&gt;len = len;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    canfd-&gt;flags = flags;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    canfd-&gt;__res0 = res0;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    canfd-&gt;__res1 = res1;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    *(u64 *)canfd-&gt;data = *(u64 *)data;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">return</span> canfd;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<p>References <a class="el" href="ce__gw__main_8c_source.html#l00173">ce_gw_alloc_canfd_frame()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                                                  {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">struct </span>canfd_frame *canfd = <a class="code" href="group__alloc.html#ga7623cd8e8b0fc26f156ebfb5614fadfd" title="allocates memory for a canfd frame">ce_gw_alloc_canfd_frame</a>();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">if</span> (canfd == NULL) {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        printk (KERN_ERR <span class="stringliteral">&quot;ce_gw_main.c: kmalloc failed in function&quot;</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="stringliteral">&quot;ce_gw_get_header_canfd\n&quot;</span>);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    canfd-&gt;can_id = id;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    canfd-&gt;len = len;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    canfd-&gt;flags = flags;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    canfd-&gt;__res0 = res0;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    canfd-&gt;__res1 = res1;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    *(u64 *)canfd-&gt;data = *(u64 *)data;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">return</span> canfd;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -505,19 +531,19 @@ Here is the call graph for this function:</div>
 <p>getter for <a class="el" href="ce__gw__main_8c.html#ab0c89efa49fe9e2972038016705bc0c7">HLIST_HEAD(ce_gw_job_list)</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to ce_gw_job_list. </dd></dl>
 
-<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00156">156</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00157">157</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__netlink_8c_source.html#l00385">ce_gw_netlink_list()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                            {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">return</span> &amp;ce_gw_job_list;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__netlink_8c_source.html#l00401">ce_gw_netlink_list()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                            {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> &amp;ce_gw_job_list;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ce__gw__main_8h_a5d0b164253044ff4a32fd89ac6f826be_icgraph.png" border="0" usemap="#ce__gw__main_8h_a5d0b164253044ff4a32fd89ac6f826be_icgraph" alt=""/></div>
 <map name="ce__gw__main_8h_a5d0b164253044ff4a32fd89ac6f826be_icgraph" id="ce__gw__main_8h_a5d0b164253044ff4a32fd89ac6f826be_icgraph">
-<area shape="rect" id="node3" href="ce__gw__netlink_8c.html#a498d434aab41b8f1a295ab1f5317839c" title="Send informations of one or more routes to userspace." alt="" coords="188,5,316,35"/></map>
+<area shape="rect" id="node3" href="group__net.html#ga498d434aab41b8f1a295ab1f5317839c" title="Send informations of one or more routes to userspace." alt="" coords="188,5,316,35"/></map>
 </div>
 </p>
 
@@ -537,36 +563,36 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00975">975</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00982">982</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8h_source.html#l00084">ce_gw_job::can_rcv_filter</a>, <a class="el" href="ce__gw__main_8c_source.html#l00894">ce_gw_unregister_can_src()</a>, <a class="el" href="ce__gw__main_8c_source.html#l00909">ce_gw_unregister_eth_src()</a>, <a class="el" href="ce__gw__main_8h_source.html#l00078">ce_gw_job::dev</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, <a class="el" href="ce__gw__main_8h_source.html#l00071">ce_gw_job::id</a>, <a class="el" href="ce__gw__main_8h_source.html#l00068">ce_gw_job::list</a>, and <a class="el" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">ce_gw_job::src</a>.</p>
+<p>References <a class="el" href="ce__gw__main_8h_source.html#l00089">ce_gw_job::can_rcv_filter</a>, <a class="el" href="ce__gw__main_8c_source.html#l00895">ce_gw_unregister_can_src()</a>, <a class="el" href="ce__gw__main_8c_source.html#l00910">ce_gw_unregister_eth_src()</a>, <a class="el" href="ce__gw__main_8h_source.html#l00083">ce_gw_job::dev</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, <a class="el" href="ce__gw__main_8h_source.html#l00076">ce_gw_job::id</a>, <a class="el" href="ce__gw__main_8h_source.html#l00073">ce_gw_job::list</a>, and <a class="el" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">ce_gw_job::src</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l01041">ce_gw_cleanup()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00384">ce_gw_dev_unregister()</a>, and <a class="el" href="ce__gw__netlink_8c_source.html#l00318">ce_gw_netlink_del()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;{</div>
-<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;    pr_info(<span class="stringliteral">&quot;ce_gw: unregister CAN ETH GW routes\n&quot;</span>);</div>
-<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *gwj = NULL;</div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;    <span class="keyword">struct </span>hlist_node *n, *nx;</div>
-<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;</div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    hlist_for_each_entry_safe(gwj, n, nx, &amp;ce_gw_job_list, list) {</div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;        <span class="keywordflow">if</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a> != <span class="keywordtype">id</span> &amp;&amp; <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;</div>
-<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;        pr_debug(<span class="stringliteral">&quot;Removing routing src device: %s, id %x, mask %x\n&quot;</span>,</div>
-<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;                 gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>-&gt;name, gwj-&gt;<a class="code" href="structce__gw__job.html#a1a8aff109991710252da27e47bc83fa1">can_rcv_filter</a>.can_id,</div>
-<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;                 gwj-&gt;<a class="code" href="structce__gw__job.html#a1a8aff109991710252da27e47bc83fa1">can_rcv_filter</a>.can_mask);</div>
-<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;        hlist_del(&amp;gwj-&gt;<a class="code" href="structce__gw__job.html#a71d95aff87c97c965ee946427631cddf">list</a>);</div>
-<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;        <span class="comment">/* TODO: Unregister destination device (only for cegw eth) */</span></div>
-<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;        <span class="keywordflow">if</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>-&gt;type == ARPHRD_CAN)</div>
-<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;            <a class="code" href="ce__gw__main_8c.html#a65fdb4f375d591e7e4a54a9ec38ebb06">ce_gw_unregister_can_src</a>(gwj);</div>
-<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;            <a class="code" href="ce__gw__main_8c.html#a3daed74080a98c11ed9640c67490c6bb">ce_gw_unregister_eth_src</a>(gwj);</div>
-<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;        dev_put(gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
-<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;        dev_put(gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
-<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;        kmem_cache_free(ce_gw_job_cache, gwj);</div>
-<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;    }</div>
-<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;</div>
-<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;    <span class="keywordflow">return</span> 0; <span class="comment">/* TODO: error, when no suitable entry was found */</span></div>
-<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l01048">ce_gw_cleanup()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00430">ce_gw_dev_unregister()</a>, and <a class="el" href="ce__gw__netlink_8c_source.html#l00333">ce_gw_netlink_del()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;{</div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;    pr_info(<span class="stringliteral">&quot;ce_gw: unregister CAN ETH GW routes\n&quot;</span>);</div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *gwj = NULL;</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;    <span class="keyword">struct </span>hlist_node *n, *nx;</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;    hlist_for_each_entry_safe(gwj, n, nx, &amp;ce_gw_job_list, list) {</div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;        <span class="keywordflow">if</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a> != <span class="keywordtype">id</span> &amp;&amp; <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;        pr_debug(<span class="stringliteral">&quot;Removing routing src device: %s, id %x, mask %x\n&quot;</span>,</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;                 gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>-&gt;name, gwj-&gt;<a class="code" href="structce__gw__job.html#a1a8aff109991710252da27e47bc83fa1">can_rcv_filter</a>.can_id,</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;                 gwj-&gt;<a class="code" href="structce__gw__job.html#a1a8aff109991710252da27e47bc83fa1">can_rcv_filter</a>.can_mask);</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;        hlist_del(&amp;gwj-&gt;<a class="code" href="structce__gw__job.html#a71d95aff87c97c965ee946427631cddf">list</a>);</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;        <span class="comment">/* TODO: Unregister destination device (only for cegw eth) */</span></div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;        <span class="keywordflow">if</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>-&gt;type == ARPHRD_CAN)</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;            <a class="code" href="ce__gw__main_8c.html#a65fdb4f375d591e7e4a54a9ec38ebb06">ce_gw_unregister_can_src</a>(gwj);</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;            <a class="code" href="ce__gw__main_8c.html#a3daed74080a98c11ed9640c67490c6bb">ce_gw_unregister_eth_src</a>(gwj);</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;        dev_put(gwj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;        dev_put(gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;        kmem_cache_free(ce_gw_job_cache, gwj);</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;    }</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;    <span class="keywordflow">return</span> 0; <span class="comment">/* TODO: error, when no suitable entry was found */</span></div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -582,7 +608,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ce__gw__main_8h_a0b296fdda11e90cddbe65ae8b541b8dd_icgraph.png" border="0" usemap="#ce__gw__main_8h_a0b296fdda11e90cddbe65ae8b541b8dd_icgraph" alt=""/></div>
 <map name="ce__gw__main_8h_a0b296fdda11e90cddbe65ae8b541b8dd_icgraph" id="ce__gw__main_8h_a0b296fdda11e90cddbe65ae8b541b8dd_icgraph">
-<area shape="rect" id="node3" href="group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="589,5,701,35"/><area shape="rect" id="node5" href="group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists." alt="" coords="200,31,352,60"/><area shape="rect" id="node10" href="ce__gw__netlink_8c.html#ab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="407,84,535,113"/><area shape="rect" id="node7" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="401,31,540,60"/></map>
+<area shape="rect" id="node3" href="group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="589,5,701,35"/><area shape="rect" id="node5" href="group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists." alt="" coords="200,31,352,60"/><area shape="rect" id="node10" href="group__net.html#gab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="407,84,535,113"/><area shape="rect" id="node7" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="401,31,540,60"/></map>
 </div>
 </p>
 
@@ -594,7 +620,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="ce__gw__main_8h.html">ce_gw_main.h</a></li>
-    <li class="footer">Generated on Tue Jul 16 2013 22:53:41 for can_eth_gw Gateway Module by
+    <li class="footer">Generated on Mon Jul 22 2013 11:59:52 for can_eth_gw Gateway Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

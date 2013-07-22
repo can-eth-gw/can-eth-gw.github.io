@@ -117,6 +117,8 @@ $(document).ready(function(){initNavTree('netlink_8h.html','');});
 Include dependency graph for netlink.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="netlink_8h__incl.png" border="0" usemap="#netlink_8h" alt=""/></div>
+<map name="netlink_8h" id="netlink_8h">
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -155,11 +157,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <a class="el" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a09bfe0657abef4466c1cff639d5a52e2">__CE_GW_C_MAX</a>
 <br/>
  }</td></tr>
-<tr class="memdesc:adf764cbdea00d65edcd07bb9953ad2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic Netlink Commands.  <a href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7">More...</a><br/></td></tr>
 <tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga78d931ed956ba057768af71d1a0e6296"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__net.html#ga78d931ed956ba057768af71d1a0e6296">ce_gw_add</a> (char *src_name, char *dst_name, uint8_t type, uint32_t <a class="el" href="structflags.html">flags</a>)</td></tr>
-<tr class="memdesc:ga78d931ed956ba057768af71d1a0e6296"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a virtual ethernet device or a route  <a href="group__net.html#ga78d931ed956ba057768af71d1a0e6296">More...</a><br/></td></tr>
-<tr class="separator:ga78d931ed956ba057768af71d1a0e6296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e677c75138bd2596e1e4552a963908c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__net.html#ga1e677c75138bd2596e1e4552a963908c">ce_gw_add</a> (char *dst_name, char *src_name, uint8_t type, uint32_t <a class="el" href="structflags.html">flags</a>)</td></tr>
+<tr class="memdesc:ga1e677c75138bd2596e1e4552a963908c"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a virtual ethernet device or a route  <a href="group__net.html#ga1e677c75138bd2596e1e4552a963908c">More...</a><br/></td></tr>
+<tr class="separator:ga1e677c75138bd2596e1e4552a963908c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga33c7e18b4e6008d440213753a04ca03e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__net.html#ga33c7e18b4e6008d440213753a04ca03e">ce_gw_del</a> (uint32_t id, char *dev_name)</td></tr>
 <tr class="memdesc:ga33c7e18b4e6008d440213753a04ca03e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a device or a route in Kernel Module.  <a href="group__net.html#ga33c7e18b4e6008d440213753a04ca03e">More...</a><br/></td></tr>
 <tr class="separator:ga33c7e18b4e6008d440213753a04ca03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,7 +196,7 @@ This graph shows which files directly or indirectly include this file:</div>
 </div><div class="memdoc">
 <p>Maximum Number of Commands </p>
 
-<p>Definition at line <a class="el" href="netlink_8h_source.html#l00062">62</a> of file <a class="el" href="netlink_8h_source.html">netlink.h</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8h_source.html#l00066">66</a> of file <a class="el" href="netlink_8h_source.html">netlink.h</a>.</p>
 
 </div>
 </div>
@@ -208,6 +209,7 @@ This graph shows which files directly or indirectly include this file:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This Flags are also defind in kernel in ce_gw_dev.h </p>
 
 <p>Definition at line <a class="el" href="netlink_8h_source.html#l00036">36</a> of file <a class="el" href="netlink_8h_source.html">netlink.h</a>.</p>
 
@@ -225,9 +227,9 @@ This graph shows which files directly or indirectly include this file:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="netlink_8h_source.html#l00048">48</a> of file <a class="el" href="netlink_8h_source.html">netlink.h</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8h_source.html#l00051">51</a> of file <a class="el" href="netlink_8h_source.html">netlink.h</a>.</p>
 
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00332">nl_cb_list_entry()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00335">nl_cb_list_entry()</a>.</p>
 
 </div>
 </div>
@@ -241,9 +243,6 @@ This graph shows which files directly or indirectly include this file:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Generic Netlink Commands. </p>
-<p>Set int values as Identifiers for userspace application. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="adf764cbdea00d65edcd07bb9953ad2b7a9a3e1bf3c9bd0fde9885ed149451cdbd"></a>CE_GW_C_UNSPEC</em>&nbsp;</td><td class="fielddoc">
 <p>Only a Dummy to skip index 0. </p>
@@ -265,15 +264,15 @@ This graph shows which files directly or indirectly include this file:</div>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="netlink_8h_source.html#l00054">54</a> of file <a class="el" href="netlink_8h_source.html">netlink.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;     {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a9a3e1bf3c9bd0fde9885ed149451cdbd">CE_GW_C_UNSPEC</a>,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a44cd231b8db9f092acdfd4795757909b">CE_GW_C_ECHO</a>,  </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a2c183715559a2f1c13b34d4939dd6cce">CE_GW_C_ADD</a>,   </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3e85d90203948961ecd044791a58cdb7">CE_GW_C_DEL</a>,   </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a418a3d9e5c52734f0281b21ae8bd3473">CE_GW_C_LIST</a>,  </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a09bfe0657abef4466c1cff639d5a52e2">__CE_GW_C_MAX</a>, </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<p>Definition at line <a class="el" href="netlink_8h_source.html#l00058">58</a> of file <a class="el" href="netlink_8h_source.html">netlink.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;     {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a9a3e1bf3c9bd0fde9885ed149451cdbd">CE_GW_C_UNSPEC</a>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a44cd231b8db9f092acdfd4795757909b">CE_GW_C_ECHO</a>,  </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a2c183715559a2f1c13b34d4939dd6cce">CE_GW_C_ADD</a>,   </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3e85d90203948961ecd044791a58cdb7">CE_GW_C_DEL</a>,   </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a418a3d9e5c52734f0281b21ae8bd3473">CE_GW_C_LIST</a>,  </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a09bfe0657abef4466c1cff639d5a52e2">__CE_GW_C_MAX</a>, </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -286,6 +285,7 @@ This graph shows which files directly or indirectly include this file:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section see"><dt>See Also</dt><dd>This enum are also defind in kernel in ce_gw_main.h </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a64a8bc3b7090fd292bdd05f79d75fd8ea01a66f4d8d66e4614c1c900c5a1c37ff"></a>TYPE_NONE</em>&nbsp;</td><td class="fielddoc">
 <p>No Type. Schould normally not used. </p>
@@ -307,15 +307,15 @@ This graph shows which files directly or indirectly include this file:</div>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="netlink_8h_source.html#l00039">39</a> of file <a class="el" href="netlink_8h_source.html">netlink.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;             {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea01a66f4d8d66e4614c1c900c5a1c37ff">TYPE_NONE</a>,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8eacd404cfd6be2706eb73e88061dbbc023">TYPE_ETH</a>, </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea3b5c4379717b5affcfb3945147d4690c">TYPE_NET</a>, </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea1a4142476e8a457868ab394850603243">TYPE_TCP</a>, </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea193422d3e29e3c2639e57fc43c0a8d5f">TYPE_UDP</a>, </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea26bb7c8f56f7e2976760b01ac8d03a96">__TYPE_MAX</a>, </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<p>Definition at line <a class="el" href="netlink_8h_source.html#l00042">42</a> of file <a class="el" href="netlink_8h_source.html">netlink.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;             {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea01a66f4d8d66e4614c1c900c5a1c37ff">TYPE_NONE</a>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8eacd404cfd6be2706eb73e88061dbbc023">TYPE_ETH</a>, </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea3b5c4379717b5affcfb3945147d4690c">TYPE_NET</a>, </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea1a4142476e8a457868ab394850603243">TYPE_TCP</a>, </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea193422d3e29e3c2639e57fc43c0a8d5f">TYPE_UDP</a>, </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea26bb7c8f56f7e2976760b01ac8d03a96">__TYPE_MAX</a>, </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -325,7 +325,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="netlink_8h.html">netlink.h</a></li>
-    <li class="footer">Generated on Tue Jul 16 2013 22:31:23 for can-eth-gw-utils Utilities by
+    <li class="footer">Generated on Mon Jul 22 2013 12:00:12 for can-eth-gw-utils Utilities by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

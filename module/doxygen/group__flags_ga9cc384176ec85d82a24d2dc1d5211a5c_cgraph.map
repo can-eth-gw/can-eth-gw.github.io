@@ -1,0 +1,3 @@
+<map id="ce_gw_eth_rcv" name="ce_gw_eth_rcv">
+<area shape="rect" id="node3" href="$group__trans.html#ga79e97ca021765d2116bc2fbe289983bb" title="for CE_GW_TYPE_NET: Copy the can&#45;frame from eth_skb to a new can skb." alt="" coords="165,5,312,35"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="ce_gw_eth_to_canfd" name="ce_gw_eth_to_canfd">
+<area shape="rect" id="node3" href="$group__alloc.html#ga7623cd8e8b0fc26f156ebfb5614fadfd" title="allocates memory for a canfd frame" alt="" coords="197,5,371,35"/>
+<area shape="rect" id="node5" href="$group__alloc.html#ga40f05385e7fb22f3ac41df0a175bfd83" title="frees memory allocated for can_frame" alt="" coords="200,59,368,88"/>
+</map>

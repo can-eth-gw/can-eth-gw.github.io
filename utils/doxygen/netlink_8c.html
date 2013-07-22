@@ -185,7 +185,6 @@ Enumerations</h2></td></tr>
 <a class="el" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba52ec4c26206c99e4117f5340d29a6d5d">__CE_GW_A_MAX</a>
 <br/>
  }</td></tr>
-<tr class="memdesc:a06fc87d81c62e9abb8790b6e5713c55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data which can be send and received.  <a href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55b">More...</a><br/></td></tr>
 <tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -209,9 +208,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga503fc6f43280b8fc7f307e7cba0e2dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback witch receive the message sen bach by kernel.  <a href="group__cb.html#ga503fc6f43280b8fc7f307e7cba0e2dc6">More...</a><br/></td></tr>
 <tr class="separator:ga503fc6f43280b8fc7f307e7cba0e2dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ga78d931ed956ba057768af71d1a0e6296"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__net.html#ga78d931ed956ba057768af71d1a0e6296">ce_gw_add</a> (char *src_name, char *dst_name, uint8_t type, uint32_t <a class="el" href="structflags.html">flags</a>)</td></tr>
-<tr class="memdesc:ga78d931ed956ba057768af71d1a0e6296"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a virtual ethernet device or a route  <a href="group__net.html#ga78d931ed956ba057768af71d1a0e6296">More...</a><br/></td></tr>
-<tr class="separator:ga78d931ed956ba057768af71d1a0e6296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e677c75138bd2596e1e4552a963908c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__net.html#ga1e677c75138bd2596e1e4552a963908c">ce_gw_add</a> (char *dst_name, char *src_name, uint8_t type, uint32_t <a class="el" href="structflags.html">flags</a>)</td></tr>
+<tr class="memdesc:ga1e677c75138bd2596e1e4552a963908c"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a virtual ethernet device or a route  <a href="group__net.html#ga1e677c75138bd2596e1e4552a963908c">More...</a><br/></td></tr>
+<tr class="separator:ga1e677c75138bd2596e1e4552a963908c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga33c7e18b4e6008d440213753a04ca03e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__net.html#ga33c7e18b4e6008d440213753a04ca03e">ce_gw_del</a> (uint32_t id, char *dev_name)</td></tr>
 <tr class="memdesc:ga33c7e18b4e6008d440213753a04ca03e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a device or a route in Kernel Module.  <a href="group__net.html#ga33c7e18b4e6008d440213753a04ca03e">More...</a><br/></td></tr>
 <tr class="separator:ga33c7e18b4e6008d440213753a04ca03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,9 +260,9 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Maximum Number of Attribute </p>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00072">72</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00073">73</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00209">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00266">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00457">ce_gw_echo()</a>, <a class="el" href="netlink_8c_source.html#l00381">ce_gw_list()</a>, <a class="el" href="netlink_8c_source.html#l00332">nl_cb_list_entry()</a>, and <a class="el" href="netlink_8c_source.html#l00507">nl_sk_fam_init()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00212">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00269">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00460">ce_gw_echo()</a>, <a class="el" href="netlink_8c_source.html#l00384">ce_gw_list()</a>, <a class="el" href="netlink_8c_source.html#l00335">nl_cb_list_entry()</a>, and <a class="el" href="netlink_8c_source.html#l00510">nl_sk_fam_init()</a>.</p>
 
 </div>
 </div>
@@ -280,7 +279,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netlink_8c_source.html#l00050">50</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00507">nl_sk_fam_init()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00510">nl_sk_fam_init()</a>.</p>
 
 </div>
 </div>
@@ -296,7 +295,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netlink_8c_source.html#l00051">51</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00507">nl_sk_fam_init()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00510">nl_sk_fam_init()</a>.</p>
 
 </div>
 </div>
@@ -312,7 +311,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netlink_8c_source.html#l00054">54</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00209">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00266">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00457">ce_gw_echo()</a>, and <a class="el" href="netlink_8c_source.html#l00381">ce_gw_list()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00212">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00269">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00460">ce_gw_echo()</a>, and <a class="el" href="netlink_8c_source.html#l00384">ce_gw_list()</a>.</p>
 
 </div>
 </div>
@@ -328,7 +327,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netlink_8c_source.html#l00053">53</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00209">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00266">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00457">ce_gw_echo()</a>, and <a class="el" href="netlink_8c_source.html#l00381">ce_gw_list()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00212">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00269">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00460">ce_gw_echo()</a>, and <a class="el" href="netlink_8c_source.html#l00384">ce_gw_list()</a>.</p>
 
 </div>
 </div>
@@ -345,7 +344,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netlink_8c_source.html#l00052">52</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00209">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00266">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00457">ce_gw_echo()</a>, <a class="el" href="netlink_8c_source.html#l00381">ce_gw_list()</a>, <a class="el" href="netlink_8c_source.html#l00332">nl_cb_list_entry()</a>, and <a class="el" href="netlink_8c_source.html#l00507">nl_sk_fam_init()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00212">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00269">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00460">ce_gw_echo()</a>, <a class="el" href="netlink_8c_source.html#l00384">ce_gw_list()</a>, <a class="el" href="netlink_8c_source.html#l00335">nl_cb_list_entry()</a>, and <a class="el" href="netlink_8c_source.html#l00510">nl_sk_fam_init()</a>.</p>
 
 </div>
 </div>
@@ -359,9 +358,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Data which can be send and received. </p>
-<p>Set int values as Identifiers for userspace application. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a06fc87d81c62e9abb8790b6e5713c55bac539d425d542e2eca930067da6f0718a"></a>CE_GW_A_UNSPEC</em>&nbsp;</td><td class="fielddoc">
 <p>Only a Dummy to skip index 0. </p>
@@ -395,19 +391,19 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00060">60</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;     {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bac539d425d542e2eca930067da6f0718a">CE_GW_A_UNSPEC</a>, </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baec3d23bfd24dde6459d9428e8c368ca0">CE_GW_A_DATA</a>,   </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6642afae0bcd79b84efb01fff9907e5b">CE_GW_A_SRC</a>,    </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba2c74c4ccfa93fcac6b48815742acf41d">CE_GW_A_DST</a>,    </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bae2ca6210f65e132637a961d5c3037566">CE_GW_A_ID</a>, </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bac9f9e3a3ceb9cc4040bc673f7b1ed9fd">CE_GW_A_FLAGS</a>,  </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba34bf20414f03b5e1fb194d370963edd7">CE_GW_A_TYPE</a>,   </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baabf82637273f3fe58b157e0ae2099505">CE_GW_A_HNDL</a>,   </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba54a61eb1f34983762b166b6f991d24f9">CE_GW_A_DROP</a>,   </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba52ec4c26206c99e4117f5340d29a6d5d">__CE_GW_A_MAX</a>,  </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00061">61</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;     {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bac539d425d542e2eca930067da6f0718a">CE_GW_A_UNSPEC</a>, </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baec3d23bfd24dde6459d9428e8c368ca0">CE_GW_A_DATA</a>,   </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6642afae0bcd79b84efb01fff9907e5b">CE_GW_A_SRC</a>,    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba2c74c4ccfa93fcac6b48815742acf41d">CE_GW_A_DST</a>,    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bae2ca6210f65e132637a961d5c3037566">CE_GW_A_ID</a>, </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bac9f9e3a3ceb9cc4040bc673f7b1ed9fd">CE_GW_A_FLAGS</a>,  </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba34bf20414f03b5e1fb194d370963edd7">CE_GW_A_TYPE</a>,   </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baabf82637273f3fe58b157e0ae2099505">CE_GW_A_HNDL</a>,   </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba54a61eb1f34983762b166b6f991d24f9">CE_GW_A_DROP</a>,   </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba52ec4c26206c99e4117f5340d29a6d5d">__CE_GW_A_MAX</a>,  </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -430,21 +426,21 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baec3d23bfd24dde6459d9428e8c368ca0">CE_GW_A_DATA</a>] = { .type = NLA_STRING },</div>
-<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6642afae0bcd79b84efb01fff9907e5b">CE_GW_A_SRC</a>] = { .type = NLA_STRING },</div>
-<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba2c74c4ccfa93fcac6b48815742acf41d">CE_GW_A_DST</a>] = { .type = NLA_STRING },</div>
-<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bae2ca6210f65e132637a961d5c3037566">CE_GW_A_ID</a>] = { .type = NLA_U32 },</div>
-<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bac9f9e3a3ceb9cc4040bc673f7b1ed9fd">CE_GW_A_FLAGS</a>] = { .type = NLA_U32 },</div>
-<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba34bf20414f03b5e1fb194d370963edd7">CE_GW_A_TYPE</a>] = { .type = NLA_U8 },</div>
-<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baabf82637273f3fe58b157e0ae2099505">CE_GW_A_HNDL</a>] = { .type = NLA_U32 },</div>
-<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba54a61eb1f34983762b166b6f991d24f9">CE_GW_A_DROP</a>] = { .type = NLA_U32 },</div>
+<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baec3d23bfd24dde6459d9428e8c368ca0">CE_GW_A_DATA</a>] =    { .type = NLA_STRING },</div>
+<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6642afae0bcd79b84efb01fff9907e5b">CE_GW_A_SRC</a>] =     { .type = NLA_STRING },</div>
+<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba2c74c4ccfa93fcac6b48815742acf41d">CE_GW_A_DST</a>] =     { .type = NLA_STRING },</div>
+<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bae2ca6210f65e132637a961d5c3037566">CE_GW_A_ID</a>] =      { .type = NLA_U32 },</div>
+<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bac9f9e3a3ceb9cc4040bc673f7b1ed9fd">CE_GW_A_FLAGS</a>] =   { .type = NLA_U32 },</div>
+<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba34bf20414f03b5e1fb194d370963edd7">CE_GW_A_TYPE</a>] =    { .type = NLA_U8 },</div>
+<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baabf82637273f3fe58b157e0ae2099505">CE_GW_A_HNDL</a>] =    { .type = NLA_U32 },</div>
+<div class="line">    [<a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba54a61eb1f34983762b166b6f991d24f9">CE_GW_A_DROP</a>] =    { .type = NLA_U32 },</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Netlink Policy - Defines the Type for the Netlink Attributes. </p>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00077">77</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00078">78</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00209">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00266">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00457">ce_gw_echo()</a>, <a class="el" href="netlink_8c_source.html#l00381">ce_gw_list()</a>, and <a class="el" href="netlink_8c_source.html#l00332">nl_cb_list_entry()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00212">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00269">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00460">ce_gw_echo()</a>, <a class="el" href="netlink_8c_source.html#l00384">ce_gw_list()</a>, and <a class="el" href="netlink_8c_source.html#l00335">nl_cb_list_entry()</a>.</p>
 
 </div>
 </div>
@@ -462,7 +458,7 @@ Variables</h2></td></tr>
 <div class="line">    { 0     }   </div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00332">nl_cb_list_entry()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00335">nl_cb_list_entry()</a>.</p>
 
 </div>
 </div>
@@ -477,9 +473,9 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Generic Netlink Family </p>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00088">88</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00089">89</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00209">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00266">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00457">ce_gw_echo()</a>, <a class="el" href="netlink_8c_source.html#l00381">ce_gw_list()</a>, <a class="el" href="netlink_8c_source.html#l00556">nl_sk_fam_exit()</a>, and <a class="el" href="netlink_8c_source.html#l00507">nl_sk_fam_init()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00212">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00269">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00460">ce_gw_echo()</a>, <a class="el" href="netlink_8c_source.html#l00384">ce_gw_list()</a>, <a class="el" href="netlink_8c_source.html#l00559">nl_sk_fam_exit()</a>, and <a class="el" href="netlink_8c_source.html#l00510">nl_sk_fam_init()</a>.</p>
 
 </div>
 </div>
@@ -494,9 +490,9 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Socket to Kernel Application </p>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00089">89</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00090">90</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00209">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00266">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00457">ce_gw_echo()</a>, <a class="el" href="netlink_8c_source.html#l00381">ce_gw_list()</a>, <a class="el" href="netlink_8c_source.html#l00556">nl_sk_fam_exit()</a>, and <a class="el" href="netlink_8c_source.html#l00507">nl_sk_fam_init()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00212">ce_gw_add()</a>, <a class="el" href="netlink_8c_source.html#l00269">ce_gw_del()</a>, <a class="el" href="netlink_8c_source.html#l00460">ce_gw_echo()</a>, <a class="el" href="netlink_8c_source.html#l00384">ce_gw_list()</a>, <a class="el" href="netlink_8c_source.html#l00559">nl_sk_fam_exit()</a>, and <a class="el" href="netlink_8c_source.html#l00510">nl_sk_fam_init()</a>.</p>
 
 </div>
 </div>
@@ -518,7 +514,7 @@ Variables</h2></td></tr>
 <div class="line">    { 0     }  </div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p>Referenced by <a class="el" href="netlink_8c_source.html#l00332">nl_cb_list_entry()</a>.</p>
+<p>Referenced by <a class="el" href="netlink_8c_source.html#l00335">nl_cb_list_entry()</a>.</p>
 
 </div>
 </div>
@@ -528,7 +524,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="netlink_8c.html">netlink.c</a></li>
-    <li class="footer">Generated on Tue Jul 16 2013 22:31:23 for can-eth-gw-utils Utilities by
+    <li class="footer">Generated on Mon Jul 22 2013 12:00:12 for can-eth-gw-utils Utilities by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

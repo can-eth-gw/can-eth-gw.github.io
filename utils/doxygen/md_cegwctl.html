@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('md_cegwctl.html','');});
 <p>cegwctl - CAN - Ethernet Gateway Control Utility</p>
 <h1>SYNOPSIS</h1>
 <p><b>cegwctl</b> [ __-f__ | __--can-fd__ ] [ __-t__ <em>TYPE</em> | __--type__=_TYPE_ ] [ __-b__ | __--bidirectional__ ] <b>add</b> <b>route</b> <em>SRC</em> <em>DST</em></p>
-<p><b>cegwctl</b> [ __-f__ | __--can-fd__ ] [ __-t__ <em>TYPE</em> | __--type__=_TYPE_ ] <b>add</b> <b>dev</b></p>
+<p><b>cegwctl</b> [ __-f__ | __--can-fd__ ] [ __-t__ <em>TYPE</em> | __--type__=_TYPE_ ] <b>add</b> <b>dev</b> [<em>NAME</em>]</p>
 <p><em>TYPE</em> := { <b>none</b> | <b>eth</b> | <b>net</b> | <b>udp</b> | <b>tcp</b> }</p>
 <p><b>cegwctl</b> <b>del</b> <b>route</b> <em>ID</em></p>
 <p><b>cegwctl</b> <b>del</b> <b>dev</b> <em>NAME</em></p>
@@ -140,8 +140,8 @@ $(document).ready(function(){initNavTree('md_cegwctl.html','');});
 </li>
 </ul>
 <ul>
-<li><p class="startli"><b>add</b> <b>dev</b></p>
-<p class="startli">Add a virtual ethernet device. You need this device for adding a route. With the options [ __-f__ | __--can-fd__ ] [ __-t__ <em>TYPE</em> | __--type__=_TYPE_ ] you can set a meaningfull MTU. </p>
+<li><p class="startli"><b>add</b> <b>dev</b> [<em>NAME</em>]</p>
+<p class="startli">Add a virtual ethernet device. You need this device for adding a route. <em>NAME</em> will be the name of the new device. If you don't set <em>NAME</em>, it will be called `cegwd`, where d is a consecutive number. With the options [ __-f__ | __--can-fd__ ] [ __-t__ <em>TYPE</em> | __--type__=_TYPE_ ] you can set a meaningfull MTU. </p>
 <pre class="fragment">+------+-----+------+--------------------------+
 | TYPE | FD? | BYTE | MTU Size Description     |
 +------+-----+------+--------------------------+
@@ -190,7 +190,7 @@ $(document).ready(function(){initNavTree('md_cegwctl.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 16 2013 22:31:23 for can-eth-gw-utils Utilities by
+    <li class="footer">Generated on Mon Jul 22 2013 12:00:13 for can-eth-gw-utils Utilities by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

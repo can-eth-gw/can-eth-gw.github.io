@@ -17,7 +17,7 @@ var netlink_8h =
       [ "TYPE_UDP", "netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea193422d3e29e3c2639e57fc43c0a8d5f", null ],
       [ "__TYPE_MAX", "netlink_8h.html#a64a8bc3b7090fd292bdd05f79d75fd8ea26bb7c8f56f7e2976760b01ac8d03a96", null ]
     ] ],
-    [ "ce_gw_add", "netlink_8h.html#ga78d931ed956ba057768af71d1a0e6296", null ],
+    [ "ce_gw_add", "netlink_8h.html#ga1e677c75138bd2596e1e4552a963908c", null ],
     [ "ce_gw_del", "netlink_8h.html#ga33c7e18b4e6008d440213753a04ca03e", null ],
     [ "ce_gw_echo", "netlink_8h.html#ga6b8bed7ed10db2a55102ea62132efd25", null ],
     [ "ce_gw_list", "netlink_8h.html#ga12e26718e5f4aab291b784d79f28e8de", null ],

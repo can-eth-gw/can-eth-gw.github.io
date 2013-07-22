@@ -1,5 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node3" href="$group__net.html#ga78d931ed956ba057768af71d1a0e6296" title="add a virtual ethernet device or a route" alt="" coords="116,5,204,35"/>
+<area shape="rect" id="node3" href="$group__net.html#ga1e677c75138bd2596e1e4552a963908c" title="add a virtual ethernet device or a route" alt="" coords="116,5,204,35"/>
 <area shape="rect" id="node5" href="$group__net.html#ga33c7e18b4e6008d440213753a04ca03e" title="Deletes a device or a route in Kernel Module." alt="" coords="119,59,201,88"/>
 <area shape="rect" id="node7" href="$group__net.html#ga6b8bed7ed10db2a55102ea62132efd25" title="send a message and return the received message from Kernel. (for testing)" alt="" coords="113,112,207,141"/>
 <area shape="rect" id="node11" href="$group__net.html#ga12e26718e5f4aab291b784d79f28e8de" title="Print informations of actual active routes to stdout." alt="" coords="119,165,201,195"/>

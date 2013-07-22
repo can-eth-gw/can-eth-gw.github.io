@@ -18,7 +18,7 @@ var netlink_8c =
     [ "CE_GW_A_HNDL", "netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baabf82637273f3fe58b157e0ae2099505", null ],
     [ "CE_GW_A_DROP", "netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba54a61eb1f34983762b166b6f991d24f9", null ],
     [ "__CE_GW_A_MAX", "netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba52ec4c26206c99e4117f5340d29a6d5d", null ],
-    [ "ce_gw_add", "netlink_8c.html#ga78d931ed956ba057768af71d1a0e6296", null ],
+    [ "ce_gw_add", "netlink_8c.html#ga1e677c75138bd2596e1e4552a963908c", null ],
     [ "ce_gw_del", "netlink_8c.html#ga33c7e18b4e6008d440213753a04ca03e", null ],
     [ "ce_gw_echo", "netlink_8c.html#ga6b8bed7ed10db2a55102ea62132efd25", null ],
     [ "ce_gw_list", "netlink_8c.html#ga12e26718e5f4aab291b784d79f28e8de", null ],

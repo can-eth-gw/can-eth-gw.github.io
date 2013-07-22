@@ -149,7 +149,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 </ol>
 <p><a class="anchor" id="chap1"></a></p>
 <h2>1. Overview / What is a CAN Ethernet Gateway</h2>
-<p>The CAN Ethernet Gateway converts a CAN (controller area network) signal into an ethernet signal. From a operation system perspective the gateway is disguised as an ethernet device by a virtual ethernet device. Due to missing equality of the frame structures there are some varying methods for translating the CAN frame. In the kernel module sources the types are represented with <code>enum ce_gw_type</code> (<code><a class="el" href="ce__gw__main_8h.html" title="Control Area Network - Ethernet - Gateway - Haeder.">ce_gw_main.h</a></code>) and in userspace with <code>enum gw_type</code> (<code>netlink.h</code>) _<a href="#top">UP</a>_</p>
+<p>The CAN Ethernet Gateway converts a CAN (controller area network) signal into an ethernet signal. From a operation system perspective the gateway is disguised as an ethernet device by a virtual ethernet device. Due to missing equality of the frame structures there are some varying methods for translating the CAN frame. In the kernel module sources the types are represented with <code>enum ce_gw_type</code> (<code><a class="el" href="ce__gw__main_8h.html" title="Control Area Network - Ethernet - Gateway - Haeder.">ce_gw_main.h</a></code>) and in userspace with <code>enum gw_type</code> (<code>netlink.h</code>). The Gateway connect to the CAN driver named "linux-can" (formerly "socketCAN") which is built in since Linux Kernel 3.2 . But this module requires at minimum Linux Kernel 3.6 . _<a href="#top">UP</a>_</p>
 <p><a class="anchor" id="chap1-1"></a> </p>
 <h3>1.1. Ethernet followed by CAN</h3>
 <p>The first idea is to add a CAN header and the following payload directly after the ethernet frame. The CAN header always uses the structure implemented in the can.h (see 3.1) and not the original signal. This gateway type is named <code>TYPE_NET</code> (in kernel module with an prefix) in the sources, because CAN is here a network layer protocol. </p>
@@ -279,28 +279,36 @@ $(document).ready(function(){initNavTree('index.html','');});
 <p><a class="anchor" id="chap3-1-1"></a> </p>
 <h4>3.1.1 CAN SFF and EFF</h4>
 <p>CAN SFF and EFF use the same struct (can_frame). The difference between this two types can found in the header. While an SFF has eleven bit for the identifier plus three additional flags, EFF uses 29 bit for the identifier plus the same three flags. To detect which of this two types is used the CAN_EFF_FLAG needs to be checked. The original CAN signal has a different structure than the signal produced by the CAN struct.</p>
-<p>Here is the original signal: </p>
-<pre class="fragment">              1   1   1
-   11 bit    bit bit bit  4 bit
-+___________+___+___+___+______+
-|           |   |   |   |      |
-|identifier |RTR|EFF|res| DLC  | SFF header
-+___________+___+___+___+______+
-
-              1   1                      1   1   1
-   11 bit    bit bit       18 bit       bit bit bit  4 bit
-+___________+___+___+__________________+___+___+___+______+
-|           |sub|   | extended         |   |   |   |      |
-|identifier |RTR|EFF| identifier       |RTR|res|res| DLC  | EFF header
-+___________+___+___+__________________+___+___+___+______+
-</pre><p>The 13th bit decides whether the sent signal is SFF or EFF. (1 = EFF, 0 = SFF).</p>
+<p>Here is the original signal:</p>
+<p><b>SFF header:</b></p>
+<div class="fragment"><div class="line">              1   1   1</div>
+<div class="line">   11 bit    bit bit bit  4 bit</div>
+<div class="line">+___________+___+___+___+______+___...</div>
+<div class="line">|           |   |   |   |      | Raw</div>
+<div class="line">|identifier |RTR|EFF|res| DLC  | Data</div>
+<div class="line">+___________+___+___+___+______+___...</div>
+<div class="line">|               |              |</div>
+<div class="line">|&lt;-------------&gt;|&lt;------------&gt;|</div>
+<div class="line">   Arbitration      Control</div>
+<div class="line">    Field            Field</div>
+</div><!-- fragment --><p><b>EFF header:</b></p>
+<div class="fragment"><div class="line">              1   1                      1   1   1</div>
+<div class="line">   11 bit    bit bit       18 bit       bit bit bit  4 bit</div>
+<div class="line">+___________+___+___+__________________+___+___+___+______+___...</div>
+<div class="line">|           |sub|   | extended         |   |   |   |      | Raw</div>
+<div class="line">|identifier |RTR|EFF| identifier       |RTR|res|res| DLC  | Data</div>
+<div class="line">+___________+___+___+__________________+___+___+___+______+___...</div>
+<div class="line">|                                          |              |</div>
+<div class="line">|&lt;----------------------------------------&gt;|&lt;------------&gt;|</div>
+<div class="line">         Arbitration Field                   Control Field</div>
+</div><!-- fragment --><p>The 13th bit decides whether the sent signal is SFF or EFF. (1 = EFF, 0 = SFF).</p>
 <p>The struct can_frame changes the signal:</p>
 <div class="fragment"><div class="line">                                 1   1   1    4     4</div>
 <div class="line">   11 bit          18 bit       bit bit bit  bit   bit      3 byte</div>
-<div class="line">+___________+__________________+___+___+___+_____+_____+________________+</div>
-<div class="line">|           | extended         |   |   |   | DLC |     |                |</div>
-<div class="line">|identifier | identifier       |ERR|RTR|EFF| pad | DLC |    padding     |</div>
-<div class="line">+___________+__________________+___+___+___+_____+_____+________________+</div>
+<div class="line">+___________+__________________+___+___+___+_____+_____+________________+___...</div>
+<div class="line">|           | extended         |   |   |   | DLC |     |                | Raw</div>
+<div class="line">|identifier | identifier       |ERR|RTR|EFF| pad | DLC |    padding     | Data</div>
+<div class="line">+___________+__________________+___+___+___+_____+_____+________________+___...</div>
 </div><!-- fragment --><p>To see if the message is a SFF or EFF the 32th bit needs to be checked. (1 = EFF, 0 = SFF). As both, SFF and EFF, use the same struct the 18 bit of extended identifier are set to 0 and ignored if the EFF flag is 0. Also there is an extended DLC field of 8 bit but only 4 bit are used. The first 4 bit are just padded. An additional flag for an error (ERR) is added which is not present in the original signal. There, an error is represented as a complete different signal. After the DLC an additional padding field of 3 byte is between the header and following data.</p>
 <p>Both original SFF and EFF and the struct add a data field of eight byte. _<a href="#top">UP</a>_</p>
 <p><a class="anchor" id="chap3-1-2"></a> </p>
@@ -486,13 +494,13 @@ $(document).ready(function(){initNavTree('index.html','');});
 <li>Fabian Raab _<a href="#" onclick="location.href='mai'+'lto:'+'fab'+'ia'+'n.r'+'aa'+'b@t'+'um'+'.de'; return false;">fabia<span style="display: none;">.nosp@m.</span>n.ra<span style="display: none;">.nosp@m.</span>ab@tu<span style="display: none;">.nosp@m.</span>m.de</a>_</li>
 <li>Stefan Smarzly _<a href="#" onclick="location.href='mai'+'lto:'+'ste'+'fa'+'n.s'+'ma'+'rzl'+'y@'+'in.'+'tu'+'m.d'+'e'; return false;">stefa<span style="display: none;">.nosp@m.</span>n.sm<span style="display: none;">.nosp@m.</span>arzly<span style="display: none;">.nosp@m.</span>@in.<span style="display: none;">.nosp@m.</span>tum.d<span style="display: none;">.nosp@m.</span>e</a>_</li>
 </ul>
-<p><b>Date:</b> 15. July 2013 </p>
+<p><b>Date:</b> 17. July 2013 </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 16 2013 22:53:41 for can_eth_gw Gateway Module by
+    <li class="footer">Generated on Mon Jul 22 2013 11:59:52 for can_eth_gw Gateway Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

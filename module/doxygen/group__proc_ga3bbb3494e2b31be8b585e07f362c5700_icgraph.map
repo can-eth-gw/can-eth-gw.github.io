@@ -2,10 +2,10 @@
 <area shape="rect" id="node3" href="$ce__gw__main_8c.html#ac11aded26e4f830da41ceefc1ec8bb06" title="ce_gw_register_can_src" alt="" coords="176,35,339,64"/>
 <area shape="rect" id="node9" href="$ce__gw__main_8c.html#a65fdb4f375d591e7e4a54a9ec38ebb06" title="ce_gw_unregister_can_src" alt="" coords="169,100,345,129"/>
 <area shape="rect" id="node5" href="$ce__gw__main_8h.html#aaabe871861b8e5300a33e1c5f797a88b" title="ce_gw_create_route" alt="" coords="399,9,537,39"/>
-<area shape="rect" id="node7" href="$ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="599,5,732,35"/>
+<area shape="rect" id="node7" href="$group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="599,5,732,35"/>
 <area shape="rect" id="node11" href="$ce__gw__main_8h.html#a0b296fdda11e90cddbe65ae8b541b8dd" title="ce_gw_remove_route" alt="" coords="395,107,541,136"/>
 <area shape="rect" id="node13" href="$group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="979,84,1091,113"/>
 <area shape="rect" id="node15" href="$group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists." alt="" coords="589,109,741,139"/>
-<area shape="rect" id="node20" href="$ce__gw__netlink_8c.html#ab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="796,163,924,192"/>
+<area shape="rect" id="node20" href="$group__net.html#gab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="796,163,924,192"/>
 <area shape="rect" id="node17" href="$group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="791,109,929,139"/>
 </map>

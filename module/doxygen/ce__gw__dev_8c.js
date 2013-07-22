@@ -1,9 +1,9 @@
 var ce__gw__dev_8c =
 [
     [ "ce_gw_dev_list", "structce__gw__dev__list.html", "structce__gw__dev__list" ],
-    [ "ce_gw_dev_alloc", "ce__gw__dev_8c.html#gae64b1dda501717ab714fc4931ea8506c", null ],
+    [ "ce_gw_dev_alloc", "ce__gw__dev_8c.html#a27f33b4dff8e1238ed73d3e57cb8aaf6", null ],
     [ "ce_gw_dev_cleanup", "ce__gw__dev_8c.html#ga9f556bd4667762bc63d53649ad6098ed", null ],
-    [ "ce_gw_dev_create", "ce__gw__dev_8c.html#gaec9f0ca6285f78543128e51a53059a95", null ],
+    [ "ce_gw_dev_create", "ce__gw__dev_8c.html#a78011e5888520abefd3d721fc53af685", null ],
     [ "ce_gw_dev_free", "ce__gw__dev_8c.html#ga8f0e118cdc2a09c0e4ae81b798260791", null ],
     [ "ce_gw_dev_init", "ce__gw__dev_8c.html#ga13b5b278a62db87d23fa6fa28af57d52", null ],
     [ "ce_gw_dev_init_module", "ce__gw__dev_8c.html#gac80bda3b07e5e8d816a71576fb219655", null ],
@@ -17,6 +17,7 @@ var ce__gw__dev_8c =
     [ "ce_gw_dev_start_xmit", "ce__gw__dev_8c.html#ga92ee5d088cdeeb4bd7d939e549a5c51b", null ],
     [ "ce_gw_dev_stop", "ce__gw__dev_8c.html#ga00deea119640947cba74822fa94b1cd0", null ],
     [ "ce_gw_dev_unregister", "ce__gw__dev_8c.html#ga688a156f5994ae59ab4f1770653eb635", null ],
+    [ "ce_gw_has_min_mtu", "ce__gw__dev_8c.html#aeb77e056c71ccebb57e895dc366be6f1", null ],
     [ "ce_gw_is_allocated_dev", "ce__gw__dev_8c.html#gada4234ffe318d94b968d7e63547ef8cb", null ],
     [ "ce_gw_is_registered_dev", "ce__gw__dev_8c.html#ga8e37969a73186890c848970eec1b3822", null ],
     [ "HLIST_HEAD", "ce__gw__dev_8c.html#ab99a7517aea28bff94338502babea7b3", null ],

@@ -123,12 +123,14 @@ $(document).ready(function(){initNavTree('ce__gw__dev_8c.html','');});
 <code>#include &lt;uapi/linux/can.h&gt;</code><br/>
 <code>#include &quot;<a class="el" href="ce__gw__dev_8h_source.html">ce_gw_dev.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="ce__gw__main_8h_source.html">ce_gw_main.h</a>&quot;</code><br/>
+<code>#include &lt;asm-generic/errno-base.h&gt;</code><br/>
+<code>#include &lt;asm-generic/errno.h&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ce_gw_dev.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="ce__gw__dev_8c__incl.png" border="0" usemap="#ce__gw__dev_8c" alt=""/></div>
 <map name="ce__gw__dev_8c" id="ce__gw__dev_8c">
-<area shape="rect" id="node17" href="ce__gw__dev_8h.html" title="Control Area Network &#45; Ethernet &#45; Gateway &#45; Device Header." alt="" coords="579,83,677,112"/><area shape="rect" id="node25" href="ce__gw__main_8h.html" title="Control Area Network &#45; Ethernet &#45; Gateway &#45; Haeder." alt="" coords="665,160,772,189"/><area shape="rect" id="node35" href="ce__gw__netlink_8h.html" title="Control Area Network &#45; Ethernet &#45; Gateway &#45; Device Header." alt="" coords="1416,237,1531,267"/></map>
+<area shape="rect" id="node17" href="ce__gw__dev_8h.html" title="Control Area Network &#45; Ethernet &#45; Gateway &#45; Device Header." alt="" coords="580,83,679,112"/><area shape="rect" id="node25" href="ce__gw__main_8h.html" title="Control Area Network &#45; Ethernet &#45; Gateway &#45; Haeder." alt="" coords="665,160,772,189"/><area shape="rect" id="node35" href="ce__gw__netlink_8h.html" title="Control Area Network &#45; Ethernet &#45; Gateway &#45; Device Header." alt="" coords="1416,237,1531,267"/></map>
 </div>
 </div>
 <p><a href="ce__gw__dev_8c_source.html">Go to the source code of this file.</a></p>
@@ -136,6 +138,7 @@ Include dependency graph for ce_gw_dev.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structce__gw__dev__list.html">ce_gw_dev_list</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal list of all registered and allocated devices.  <a href="structce__gw__dev__list.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaacc971a1182fd486217e863331575a"><td class="memItemLeft" align="right" valign="top">static struct kmem_cache <br class="typebreak"/>
 *ce_gw_dev_cache&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ce__gw__dev_8c.html#aaaacc971a1182fd486217e863331575a">__read_mostly</a></td></tr>
@@ -165,6 +168,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:ga8e37969a73186890c848970eec1b3822"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#ga8e37969a73186890c848970eec1b3822">ce_gw_is_registered_dev</a> (struct net_device *eth_dev)</td></tr>
 <tr class="memdesc:ga8e37969a73186890c848970eec1b3822"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if the param eth_dev is registered by this module  <a href="group__dev.html#ga8e37969a73186890c848970eec1b3822">More...</a><br/></td></tr>
 <tr class="separator:ga8e37969a73186890c848970eec1b3822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb77e056c71ccebb57e895dc366be6f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ce__gw__dev_8c.html#aeb77e056c71ccebb57e895dc366be6f1">ce_gw_has_min_mtu</a> (struct net_device *dev, enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a> type, u32 flags)</td></tr>
+<tr class="memdesc:aeb77e056c71ccebb57e895dc366be6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the given device has enough mtu to use the type and flags  <a href="#aeb77e056c71ccebb57e895dc366be6f1">More...</a><br/></td></tr>
+<tr class="separator:aeb77e056c71ccebb57e895dc366be6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga83ca099f9d263a83b70bbfc6d11e2e06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#ga83ca099f9d263a83b70bbfc6d11e2e06">ce_gw_dev_job_src_add</a> (struct <a class="el" href="structce__gw__job.html">ce_gw_job</a> *job)</td></tr>
 <tr class="memdesc:ga83ca099f9d263a83b70bbfc6d11e2e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an pointer to the net_device internal list where it is the src.  <a href="group__dev.html#ga83ca099f9d263a83b70bbfc6d11e2e06">More...</a><br/></td></tr>
 <tr class="separator:ga83ca099f9d263a83b70bbfc6d11e2e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,18 +183,16 @@ Data Structures</h2></td></tr>
 <tr class="memitem:gae9a5687f1eeb483ad060e7e63b54a846"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#gae9a5687f1eeb483ad060e7e63b54a846">ce_gw_dev_job_remove</a> (struct <a class="el" href="structce__gw__job.html">ce_gw_job</a> *job)</td></tr>
 <tr class="memdesc:gae9a5687f1eeb483ad060e7e63b54a846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the pointer to param job from the list in ethernet net_device.  <a href="group__dev.html#gae9a5687f1eeb483ad060e7e63b54a846">More...</a><br/></td></tr>
 <tr class="separator:gae9a5687f1eeb483ad060e7e63b54a846"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae64b1dda501717ab714fc4931ea8506c"><td class="memItemLeft" align="right" valign="top">struct net_device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#gae64b1dda501717ab714fc4931ea8506c">ce_gw_dev_alloc</a> (void)</td></tr>
-<tr class="memdesc:gae64b1dda501717ab714fc4931ea8506c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a Ethernet Device for the Gateway.  <a href="group__dev.html#gae64b1dda501717ab714fc4931ea8506c">More...</a><br/></td></tr>
-<tr class="separator:gae64b1dda501717ab714fc4931ea8506c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27f33b4dff8e1238ed73d3e57cb8aaf6"><td class="memItemLeft" align="right" valign="top">struct net_device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ce__gw__dev_8c.html#a27f33b4dff8e1238ed73d3e57cb8aaf6">ce_gw_dev_alloc</a> (char *dev_name)</td></tr>
+<tr class="separator:a27f33b4dff8e1238ed73d3e57cb8aaf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f0e118cdc2a09c0e4ae81b798260791"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#ga8f0e118cdc2a09c0e4ae81b798260791">ce_gw_dev_free</a> (struct net_device *eth_dev)</td></tr>
 <tr class="memdesc:ga8f0e118cdc2a09c0e4ae81b798260791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free virtual ethernet device and remove from internal lists.  <a href="group__dev.html#ga8f0e118cdc2a09c0e4ae81b798260791">More...</a><br/></td></tr>
 <tr class="separator:ga8f0e118cdc2a09c0e4ae81b798260791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9cde6bf60611bf2cabfd884345508258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258">ce_gw_dev_setup</a> (struct net_device *dev, enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a> type, __u32 flags)</td></tr>
 <tr class="memdesc:ga9cde6bf60611bf2cabfd884345508258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default attributes for the Gateway Ethernet device.  <a href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258">More...</a><br/></td></tr>
 <tr class="separator:ga9cde6bf60611bf2cabfd884345508258"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaec9f0ca6285f78543128e51a53059a95"><td class="memItemLeft" align="right" valign="top">struct net_device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#gaec9f0ca6285f78543128e51a53059a95">ce_gw_dev_create</a> (enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a> type, __u32 flags)</td></tr>
-<tr class="memdesc:gaec9f0ca6285f78543128e51a53059a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the device and set standart Attributes with <a class="el" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device.">ce_gw_dev_setup()</a>  <a href="group__dev.html#gaec9f0ca6285f78543128e51a53059a95">More...</a><br/></td></tr>
-<tr class="separator:gaec9f0ca6285f78543128e51a53059a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78011e5888520abefd3d721fc53af685"><td class="memItemLeft" align="right" valign="top">struct net_device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ce__gw__dev_8c.html#a78011e5888520abefd3d721fc53af685">ce_gw_dev_create</a> (enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a> type, __u32 flags, char *dev_name)</td></tr>
+<tr class="separator:a78011e5888520abefd3d721fc53af685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab3ac9b72d30717c20f4d63faec67a425"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#gab3ac9b72d30717c20f4d63faec67a425">ce_gw_dev_register</a> (struct net_device *eth_dev)</td></tr>
 <tr class="memdesc:gab3ac9b72d30717c20f4d63faec67a425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a virtual ethernet device on the OS.  <a href="group__dev.html#gab3ac9b72d30717c20f4d63faec67a425">More...</a><br/></td></tr>
 <tr class="separator:gab3ac9b72d30717c20f4d63faec67a425"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,6 +214,258 @@ Data Structures</h2></td></tr>
 
 <p>Definition in file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a27f33b4dff8e1238ed73d3e57cb8aaf6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct net_device* ce_gw_dev_alloc </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dev_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00279">279</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+
+<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00066">ce_gw_dev_list::dev</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00065">ce_gw_job_info::job_dst</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00064">ce_gw_job_info::job_src</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00063">ce_gw_dev_list::list_alloc</a>.</p>
+
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00381">ce_gw_dev_create()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                                                   {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Alloc Device\n&quot;</span>);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">struct </span>net_device *dev;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    dev = alloc_netdev(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a>),</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                       dev_name, ether_setup);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">if</span> (dev == NULL) {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Error allocation etherdev.&quot;</span>);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">goto</span> ce_gw_dev_create_error;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">/* initialize private field */</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(dev);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    memset(priv, 0, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a>));</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>.first = NULL;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    priv-&gt;<a class="code" href="structce__gw__job__info.html#a96f88498c4428a4d66d73437ca3620c8">job_dst</a>.first = NULL;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="comment">/* create list entry and add */</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html" title="internal list of all registered and allocated devices.">ce_gw_dev_list</a> *dl;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    dl = kmem_cache_alloc(ce_gw_dev_cache, GFP_KERNEL);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">if</span> (dl == NULL) {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: cache alloc failed&quot;</span>);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">goto</span> ce_gw_dev_create_error_cache;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> = <a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    hlist_add_head_rcu(&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a35fb7bd7e39b7a187fbdc085ddcf5af3">list_alloc</a>, &amp;ce_gw_dev_allocated);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;ce_gw_dev_create_error_cache:</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    kmem_cache_free(ce_gw_dev_cache, dl);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;ce_gw_dev_create_error:</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    free_netdev(dev);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ce__gw__dev_8c_a27f33b4dff8e1238ed73d3e57cb8aaf6_icgraph.png" border="0" usemap="#ce__gw__dev_8c_a27f33b4dff8e1238ed73d3e57cb8aaf6_icgraph" alt=""/></div>
+<map name="ce__gw__dev_8c_a27f33b4dff8e1238ed73d3e57cb8aaf6_icgraph" id="ce__gw__dev_8c_a27f33b4dff8e1238ed73d3e57cb8aaf6_icgraph">
+<area shape="rect" id="node3" href="group__dev.html#ga78011e5888520abefd3d721fc53af685" title="ce_gw_dev_create" alt="" coords="176,5,307,35"/><area shape="rect" id="node5" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="355,5,488,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a78011e5888520abefd3d721fc53af685"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct net_device* ce_gw_dev_create </td>
+          <td>(</td>
+          <td class="paramtype">enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__u32&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dev_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00381">381</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+
+<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00279">ce_gw_dev_alloc()</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00347">ce_gw_dev_setup()</a>.</p>
+
+<p>Referenced by <a class="el" href="ce__gw__netlink_8c_source.html#l00216">ce_gw_netlink_add()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                     {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keyword">struct </span>net_device *dev;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    dev = <a class="code" href="ce__gw__dev_8c.html#a27f33b4dff8e1238ed73d3e57cb8aaf6">ce_gw_dev_alloc</a>(dev_name);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <a class="code" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device.">ce_gw_dev_setup</a>(dev, type, flags);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">return</span> dev;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ce__gw__dev_8c_a78011e5888520abefd3d721fc53af685_cgraph.png" border="0" usemap="#ce__gw__dev_8c_a78011e5888520abefd3d721fc53af685_cgraph" alt=""/></div>
+<map name="ce__gw__dev_8c_a78011e5888520abefd3d721fc53af685_cgraph" id="ce__gw__dev_8c_a78011e5888520abefd3d721fc53af685_cgraph">
+<area shape="rect" id="node3" href="ce__gw__dev_8c.html#a27f33b4dff8e1238ed73d3e57cb8aaf6" title="ce_gw_dev_alloc" alt="" coords="187,5,309,35"/><area shape="rect" id="node5" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device." alt="" coords="185,59,311,88"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ce__gw__dev_8c_a78011e5888520abefd3d721fc53af685_icgraph.png" border="0" usemap="#ce__gw__dev_8c_a78011e5888520abefd3d721fc53af685_icgraph" alt=""/></div>
+<map name="ce__gw__dev_8c_a78011e5888520abefd3d721fc53af685_icgraph" id="ce__gw__dev_8c_a78011e5888520abefd3d721fc53af685_icgraph">
+<area shape="rect" id="node3" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="184,5,317,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb77e056c71ccebb57e895dc366be6f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ce_gw_has_min_mtu </td>
+          <td>(</td>
+          <td class="paramtype">struct net_device *&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u32&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>checks if the given device has enough mtu to use the type and flags </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>The net_device which schould be checked </td></tr>
+    <tr><td class="paramname">type</td><td>The type which sould be compared to </td></tr>
+    <tr><td class="paramname">flags</td><td>needed dor the <a class="el" href="ce__gw__main_8h.html#ae907159232a1abcd6479c948ac507dd9">CE_GW_F_CAN_FD</a> flag, to check if the type is CANfd capable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The mtu of dev is bigger then the nedded mtu by the type </td></tr>
+    <tr><td class="paramname">false</td><td>if not </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00213">213</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+
+<p>References <a class="el" href="ce__gw__main_8h_source.html#l00049">CE_GW_F_CAN_FD</a>, <a class="el" href="ce__gw__main_8h_source.html#l00057">CE_GW_TYPE_ETH</a>, <a class="el" href="ce__gw__main_8h_source.html#l00059">CE_GW_TYPE_NET</a>, <a class="el" href="ce__gw__main_8h_source.html#l00056">CE_GW_TYPE_NONE</a>, <a class="el" href="ce__gw__main_8h_source.html#l00061">CE_GW_TYPE_TCP</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00062">CE_GW_TYPE_UDP</a>.</p>
+
+<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l00916">ce_gw_create_route()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                                                               {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">int</span> mtu = ETH_DATA_LEN; <span class="comment">/* Standart Ethernet Value */</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">switch</span> (type) {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066af4901ada58f827c027ddaa05feeb79be">CE_GW_TYPE_NONE</a>:</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="comment">/* Do Nothing (default Ethernet MTU will be set) */</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a51cf04b19d151ef02d0741faf68b462b">CE_GW_TYPE_ETH</a>:</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">if</span> ((flags &amp; <a class="code" href="ce__gw__main_8h.html#ae907159232a1abcd6479c948ac507dd9">CE_GW_F_CAN_FD</a>) == CE_GW_F_CAN_FD) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            mtu = CANFD_MAX_DLEN;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            mtu = CAN_MAX_DLEN;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a71eb32a8512b0e899de88c047114b880">CE_GW_TYPE_NET</a>:</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">if</span> ((flags &amp; CE_GW_F_CAN_FD) == CE_GW_F_CAN_FD) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            mtu = <span class="keyword">sizeof</span>(<span class="keyword">struct </span>canfd_frame);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            mtu = <span class="keyword">sizeof</span>(<span class="keyword">struct </span>can_frame);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2eed9c0cbc5a57d049cebdd8952f1278">CE_GW_TYPE_TCP</a>:</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="comment">/* TODO nothing yet */</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2248c70f9d410e4f8b728d9d94e0f06a">CE_GW_TYPE_UDP</a>:</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="comment">/* TODO nothing yet */</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Type not defined.&quot;</span>);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">if</span> (dev-&gt;mtu &gt;= mtu) {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ce__gw__dev_8c_aeb77e056c71ccebb57e895dc366be6f1_icgraph.png" border="0" usemap="#ce__gw__dev_8c_aeb77e056c71ccebb57e895dc366be6f1_icgraph" alt=""/></div>
+<map name="ce__gw__dev_8c_aeb77e056c71ccebb57e895dc366be6f1_icgraph" id="ce__gw__dev_8c_aeb77e056c71ccebb57e895dc366be6f1_icgraph">
+<area shape="rect" id="node3" href="ce__gw__main_8h.html#aaabe871861b8e5300a33e1c5f797a88b" title="ce_gw_create_route" alt="" coords="200,5,339,35"/><area shape="rect" id="node5" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="387,5,520,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="ab99a7517aea28bff94338502babea7b3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -264,7 +520,7 @@ Data Structures</h2></td></tr>
 </div><div class="memdoc">
 <p>cache for lists </p>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00051">51</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00054">54</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
 </div>
 </div>
@@ -295,9 +551,9 @@ Data Structures</h2></td></tr>
 </div><!-- fragment -->
 <p>Defined Functions of Ethernet device. </p>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00159">159</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00164">164</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00303">ce_gw_dev_setup()</a>.</p>
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00347">ce_gw_dev_setup()</a>.</p>
 
 </div>
 </div>
@@ -307,7 +563,7 @@ Data Structures</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="ce__gw__dev_8c.html">ce_gw_dev.c</a></li>
-    <li class="footer">Generated on Tue Jul 16 2013 22:53:41 for can_eth_gw Gateway Module by
+    <li class="footer">Generated on Mon Jul 22 2013 11:59:51 for can_eth_gw Gateway Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

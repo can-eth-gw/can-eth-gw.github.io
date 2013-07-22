@@ -104,9 +104,9 @@ $(document).ready(function(){initNavTree('group__get.html','');});
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="memitem:gafff484b7323bda3b06f6203046c42569"><td class="memItemLeft" align="right" valign="top">static __u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__get.html#gafff484b7323bda3b06f6203046c42569">get_ip_version</a> (void *payload)</td></tr>
-<tr class="memdesc:gafff484b7323bda3b06f6203046c42569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the first 4 bytes of IP-Header and detects the version.  <a href="#gafff484b7323bda3b06f6203046c42569">More...</a><br/></td></tr>
-<tr class="separator:gafff484b7323bda3b06f6203046c42569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69aab7cda0095a32385064945acc4c10"><td class="memItemLeft" align="right" valign="top">static __u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__get.html#ga69aab7cda0095a32385064945acc4c10">ce_gw_get_ip_version</a> (void *payload)</td></tr>
+<tr class="memdesc:ga69aab7cda0095a32385064945acc4c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the first 4 bytes of IP-Header and detects the version.  <a href="#ga69aab7cda0095a32385064945acc4c10">More...</a><br/></td></tr>
+<tr class="separator:ga69aab7cda0095a32385064945acc4c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae23d143501d4247947e8e89e94e44415"><td class="memItemLeft" align="right" valign="top">struct can_frame *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__get.html#gae23d143501d4247947e8e89e94e44415">ce_gw_get_header_can</a> (canid_t can_id, __u8 can_dlc, __u8 *payload)</td></tr>
 <tr class="memdesc:gae23d143501d4247947e8e89e94e44415"><td class="mdescLeft">&#160;</td><td class="mdescRight">builds a can header in SFF (standart frame format) or EFF (extended frame formate) with the given information  <a href="#gae23d143501d4247947e8e89e94e44415">More...</a><br/></td></tr>
 <tr class="separator:gae23d143501d4247947e8e89e94e44415"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,21 +170,21 @@ $(document).ready(function(){initNavTree('group__get.html','');});
 </dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>not tested yet</dd></dl>
 
-<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00185">185</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00186">186</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8c_source.html#l00160">ce_gw_alloc_can_frame()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                                 {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">struct </span>can_frame *new_can_frame = <a class="code" href="group__alloc.html#gaa01ba68dc0bec3059930d2d5994612ca" title="allocates memory for the can frame">ce_gw_alloc_can_frame</a>();</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">if</span> (new_can_frame == NULL) {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        printk (KERN_ERR <span class="stringliteral">&quot;ce_gw_main.c: kmalloc failed in function&quot;</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="stringliteral">&quot;ce_gw_get_header_can \n&quot;</span>);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    new_can_frame-&gt;can_id = can_id;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    new_can_frame-&gt;can_dlc = can_dlc;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    *(u64 *)new_can_frame-&gt;data = *(u64 *)payload;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span> new_can_frame;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
+<p>References <a class="el" href="ce__gw__main_8c_source.html#l00161">ce_gw_alloc_can_frame()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                                                 {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">struct </span>can_frame *new_can_frame = <a class="code" href="group__alloc.html#gaa01ba68dc0bec3059930d2d5994612ca" title="allocates memory for the can frame">ce_gw_alloc_can_frame</a>();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> (new_can_frame == NULL) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        printk (KERN_ERR <span class="stringliteral">&quot;ce_gw_main.c: kmalloc failed in function&quot;</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="stringliteral">&quot;ce_gw_get_header_can \n&quot;</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    new_can_frame-&gt;can_id = can_id;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    new_can_frame-&gt;can_dlc = can_dlc;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    *(u64 *)new_can_frame-&gt;data = *(u64 *)payload;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span> new_can_frame;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -197,7 +197,7 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="gafff484b7323bda3b06f6203046c42569"></a>
+<a class="anchor" id="ga69aab7cda0095a32385064945acc4c10"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -205,7 +205,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static __u8 get_ip_version </td>
+          <td class="memname">static __u8 ce_gw_get_ip_version </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>payload</em></td><td>)</td>
@@ -235,17 +235,17 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00745">745</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;{</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    __u8 version = *(__u8 *)payload &amp; 0xF0;</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    <span class="keywordflow">if</span> (version == 0x40) {</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;        <span class="keywordflow">return</span> 4;</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (version == 0x60) {</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        <span class="keywordflow">return</span> 6;</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    }</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;}</div>
+<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00746">746</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;{</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    __u8 version = *(__u8 *)payload &amp; 0xF0;</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;    <span class="keywordflow">if</span> (version == 0x40) {</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;        <span class="keywordflow">return</span> 4;</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (version == 0x60) {</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        <span class="keywordflow">return</span> 6;</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    }</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -254,7 +254,7 @@ Here is the call graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 16 2013 22:53:41 for can_eth_gw Gateway Module by
+    <li class="footer">Generated on Mon Jul 22 2013 11:59:52 for can_eth_gw Gateway Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

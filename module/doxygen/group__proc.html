@@ -149,78 +149,78 @@ $(document).ready(function(){initNavTree('group__proc.html','');});
 <p class="enddd">call other translation functions. check for canfd-frame or only use canfd-frame casts. </p>
 </dd></dl>
 
-<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00758">758</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00759">759</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8c_source.html#l00294">ce_gw_can2net_alloc()</a>, <a class="el" href="ce__gw__main_8h_source.html#l00053">CE_GW_TYPE_ETH</a>, <a class="el" href="ce__gw__main_8h_source.html#l00055">CE_GW_TYPE_NET</a>, <a class="el" href="ce__gw__main_8h_source.html#l00057">CE_GW_TYPE_TCP</a>, <a class="el" href="ce__gw__main_8h_source.html#l00058">CE_GW_TYPE_UDP</a>, <a class="el" href="ce__gw__main_8h_source.html#l00078">ce_gw_job::dev</a>, <a class="el" href="ce__gw__main_8h_source.html#l00075">ce_gw_job::dropped_frames</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, <a class="el" href="ce__gw__main_8h_source.html#l00074">ce_gw_job::handled_frames</a>, <a class="el" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">ce_gw_job::src</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00072">ce_gw_job::type</a>.</p>
+<p>References <a class="el" href="ce__gw__main_8c_source.html#l00295">ce_gw_can2net_alloc()</a>, <a class="el" href="ce__gw__main_8h_source.html#l00057">CE_GW_TYPE_ETH</a>, <a class="el" href="ce__gw__main_8h_source.html#l00059">CE_GW_TYPE_NET</a>, <a class="el" href="ce__gw__main_8h_source.html#l00061">CE_GW_TYPE_TCP</a>, <a class="el" href="ce__gw__main_8h_source.html#l00062">CE_GW_TYPE_UDP</a>, <a class="el" href="ce__gw__main_8h_source.html#l00083">ce_gw_job::dev</a>, <a class="el" href="ce__gw__main_8h_source.html#l00080">ce_gw_job::dropped_frames</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, <a class="el" href="ce__gw__main_8h_source.html#l00079">ce_gw_job::handled_frames</a>, <a class="el" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">ce_gw_job::src</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00077">ce_gw_job::type</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l00887">ce_gw_register_can_src()</a>, and <a class="el" href="ce__gw__main_8c_source.html#l00894">ce_gw_unregister_can_src()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;{</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    <span class="keyword">struct </span>can_frame *cf;</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <span class="comment">/* CAN frame (id, dlc, data)*/</span></div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    cf = (<span class="keyword">struct </span>can_frame *)can_skb-&gt;data;</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    pr_debug(<span class="stringliteral">&quot;Incoming msg from can dev: can_id %x, len %i, can_msg %x\n&quot;</span>,</div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;             cf-&gt;can_id, cf-&gt;can_dlc, cf-&gt;data[0]);</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *cgj = (<span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *)data;</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;    <span class="keyword">struct </span>sk_buff *eth_skb = NULL;</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> dmac = 0xffffffffffff;</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> smac = 0x000000000000;</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <span class="keywordflow">switch</span> (cgj-&gt;<a class="code" href="structce__gw__job.html#a2fc54833b3dd67f45f24d24c1b237815">type</a>) {</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a51cf04b19d151ef02d0741faf68b462b">CE_GW_TYPE_ETH</a>:</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation ETH not implemented yet.&quot;</span>);</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a71eb32a8512b0e899de88c047114b880">CE_GW_TYPE_NET</a>:</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        eth_skb = <a class="code" href="group__trans.html#ga1fa2d0effaf27e3d6da160030ab0f8bd" title="for CE_GW_TYPE_NET: copy CAN-Frame into ethernet payload and allocate">ce_gw_can2net_alloc</a>(can_skb,</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                                      cgj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>,</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                                      cgj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>,</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                                      (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) &amp;dmac,</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                                      (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) &amp;smac);</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2eed9c0cbc5a57d049cebdd8952f1278">CE_GW_TYPE_TCP</a>:</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation IP TCP not implemented yet.&quot;</span>);</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2248c70f9d410e4f8b728d9d94e0f06a">CE_GW_TYPE_UDP</a>:</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation IP UDP not implemented yet.&quot;</span>);</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw: Translation type of ce_gw_job not &quot;</span></div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;               <span class="stringliteral">&quot;implemented. BUG: Some module inserted an invalid &quot;</span></div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;               <span class="stringliteral">&quot;type. Use enum ce_gw_type instead.&quot;</span>);</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        <span class="keywordflow">goto</span> drop_frame;</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;    }</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;    err = netif_rx_ni(eth_skb);</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw: send to kernel failed&quot;</span>);</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        cgj-&gt;<a class="code" href="structce__gw__job.html#a492eb5f747f9e39c83c44938c29600c9">dropped_frames</a>++;</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        <span class="keywordflow">goto</span> exit_error;</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    }</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    cgj-&gt;<a class="code" href="structce__gw__job.html#a1d49bd9d919c4214a04082757ca67751">handled_frames</a>++;</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    <span class="comment">/* TODO If you use kfree_skb(can_skb) the system hang up completely</span></div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;<span class="comment">     * without printing stack trace. But a few packets normally passed</span></div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;<span class="comment">     * before sytem hang up. But &lt;linux/can/dev.h&gt; uses kfree_skb(). There</span></div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;<span class="comment">     * is no refdata count left. The reason why hang up is completely</span></div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;<span class="comment">     * unknown. */</span></div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;exit_error:</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;    pr_info(<span class="stringliteral">&quot;ce_gw: WARNING can skb will not be freed&quot;</span>);</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    <span class="comment">/*kfree_skb(can_skb);*/</span></div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;drop_frame:</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    cgj-&gt;<a class="code" href="structce__gw__job.html#a492eb5f747f9e39c83c44938c29600c9">dropped_frames</a>++;</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;    dev_kfree_skb(eth_skb);</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l00888">ce_gw_register_can_src()</a>, and <a class="el" href="ce__gw__main_8c_source.html#l00895">ce_gw_unregister_can_src()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;{</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <span class="keyword">struct </span>can_frame *cf;</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    <span class="comment">/* CAN frame (id, dlc, data)*/</span></div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    cf = (<span class="keyword">struct </span>can_frame *)can_skb-&gt;data;</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;    pr_debug(<span class="stringliteral">&quot;Incoming msg from can dev: can_id %x, len %i, can_msg %x\n&quot;</span>,</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;             cf-&gt;can_id, cf-&gt;can_dlc, cf-&gt;data[0]);</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *cgj = (<span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *)data;</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    <span class="keyword">struct </span>sk_buff *eth_skb = NULL;</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> dmac = 0xffffffffffff;</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> smac = 0x000000000000;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    <span class="keywordflow">switch</span> (cgj-&gt;<a class="code" href="structce__gw__job.html#a2fc54833b3dd67f45f24d24c1b237815">type</a>) {</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a51cf04b19d151ef02d0741faf68b462b">CE_GW_TYPE_ETH</a>:</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation ETH not implemented yet.&quot;</span>);</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a71eb32a8512b0e899de88c047114b880">CE_GW_TYPE_NET</a>:</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;        eth_skb = <a class="code" href="group__trans.html#ga1fa2d0effaf27e3d6da160030ab0f8bd" title="for CE_GW_TYPE_NET: copy CAN-Frame into ethernet payload and allocate">ce_gw_can2net_alloc</a>(can_skb,</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                                      cgj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>,</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                                      cgj-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>,</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                                      (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) &amp;dmac,</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                                      (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) &amp;smac);</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2eed9c0cbc5a57d049cebdd8952f1278">CE_GW_TYPE_TCP</a>:</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation IP TCP not implemented yet.&quot;</span>);</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2248c70f9d410e4f8b728d9d94e0f06a">CE_GW_TYPE_UDP</a>:</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation IP UDP not implemented yet.&quot;</span>);</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw: Translation type of ce_gw_job not &quot;</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;               <span class="stringliteral">&quot;implemented. BUG: Some module inserted an invalid &quot;</span></div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;               <span class="stringliteral">&quot;type. Use enum ce_gw_type instead.&quot;</span>);</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        <span class="keywordflow">goto</span> drop_frame;</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;    }</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;    err = netif_rx_ni(eth_skb);</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw: send to kernel failed&quot;</span>);</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        cgj-&gt;<a class="code" href="structce__gw__job.html#a492eb5f747f9e39c83c44938c29600c9">dropped_frames</a>++;</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        <span class="keywordflow">goto</span> exit_error;</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    }</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    cgj-&gt;<a class="code" href="structce__gw__job.html#a1d49bd9d919c4214a04082757ca67751">handled_frames</a>++;</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    <span class="comment">/* TODO If you use kfree_skb(can_skb) the system hang up completely</span></div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;<span class="comment">     * without printing stack trace. But a few packets normally passed</span></div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;<span class="comment">     * before sytem hang up. But &lt;linux/can/dev.h&gt; uses kfree_skb(). There</span></div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;<span class="comment">     * is no refdata count left. The reason why hang up is completely</span></div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;<span class="comment">     * unknown. */</span></div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;exit_error:</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    pr_info(<span class="stringliteral">&quot;ce_gw: WARNING can skb will not be freed&quot;</span>);</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    <span class="comment">/*kfree_skb(can_skb);*/</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;drop_frame:</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;    cgj-&gt;<a class="code" href="structce__gw__job.html#a492eb5f747f9e39c83c44938c29600c9">dropped_frames</a>++;</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;    dev_kfree_skb(eth_skb);</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -236,7 +236,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__proc_ga3bbb3494e2b31be8b585e07f362c5700_icgraph.png" border="0" usemap="#group__proc_ga3bbb3494e2b31be8b585e07f362c5700_icgraph" alt=""/></div>
 <map name="group__proc_ga3bbb3494e2b31be8b585e07f362c5700_icgraph" id="group__proc_ga3bbb3494e2b31be8b585e07f362c5700_icgraph">
-<area shape="rect" id="node3" href="ce__gw__main_8c.html#ac11aded26e4f830da41ceefc1ec8bb06" title="ce_gw_register_can_src" alt="" coords="176,35,339,64"/><area shape="rect" id="node9" href="ce__gw__main_8c.html#a65fdb4f375d591e7e4a54a9ec38ebb06" title="ce_gw_unregister_can_src" alt="" coords="169,100,345,129"/><area shape="rect" id="node5" href="ce__gw__main_8h.html#aaabe871861b8e5300a33e1c5f797a88b" title="ce_gw_create_route" alt="" coords="399,9,537,39"/><area shape="rect" id="node7" href="ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="599,5,732,35"/><area shape="rect" id="node11" href="ce__gw__main_8h.html#a0b296fdda11e90cddbe65ae8b541b8dd" title="ce_gw_remove_route" alt="" coords="395,107,541,136"/><area shape="rect" id="node13" href="group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="979,84,1091,113"/><area shape="rect" id="node15" href="group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists." alt="" coords="589,109,741,139"/><area shape="rect" id="node20" href="ce__gw__netlink_8c.html#ab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="796,163,924,192"/><area shape="rect" id="node17" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="791,109,929,139"/></map>
+<area shape="rect" id="node3" href="ce__gw__main_8c.html#ac11aded26e4f830da41ceefc1ec8bb06" title="ce_gw_register_can_src" alt="" coords="176,35,339,64"/><area shape="rect" id="node9" href="ce__gw__main_8c.html#a65fdb4f375d591e7e4a54a9ec38ebb06" title="ce_gw_unregister_can_src" alt="" coords="169,100,345,129"/><area shape="rect" id="node5" href="ce__gw__main_8h.html#aaabe871861b8e5300a33e1c5f797a88b" title="ce_gw_create_route" alt="" coords="399,9,537,39"/><area shape="rect" id="node7" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="599,5,732,35"/><area shape="rect" id="node11" href="ce__gw__main_8h.html#a0b296fdda11e90cddbe65ae8b541b8dd" title="ce_gw_remove_route" alt="" coords="395,107,541,136"/><area shape="rect" id="node13" href="group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="979,84,1091,113"/><area shape="rect" id="node15" href="group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists." alt="" coords="589,109,741,139"/><area shape="rect" id="node20" href="group__net.html#gab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="796,163,924,192"/><area shape="rect" id="node17" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="791,109,929,139"/></map>
 </div>
 </p>
 
@@ -276,68 +276,68 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>check for canfd-frame or only use canfd-frame casts. </dd></dl>
 
-<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00828">828</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__main_8c_source.html#l00829">829</a> of file <a class="el" href="ce__gw__main_8c_source.html">ce_gw_main.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8c_source.html#l00337">ce_gw_net2can_alloc()</a>, <a class="el" href="ce__gw__main_8h_source.html#l00053">CE_GW_TYPE_ETH</a>, <a class="el" href="ce__gw__main_8h_source.html#l00055">CE_GW_TYPE_NET</a>, <a class="el" href="ce__gw__main_8h_source.html#l00057">CE_GW_TYPE_TCP</a>, <a class="el" href="ce__gw__main_8h_source.html#l00058">CE_GW_TYPE_UDP</a>, <a class="el" href="ce__gw__main_8h_source.html#l00078">ce_gw_job::dev</a>, <a class="el" href="ce__gw__main_8h_source.html#l00075">ce_gw_job::dropped_frames</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, <a class="el" href="ce__gw__main_8h_source.html#l00074">ce_gw_job::handled_frames</a>, <a class="el" href="ce__gw__main_8h_source.html#l00071">ce_gw_job::id</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00072">ce_gw_job::type</a>.</p>
+<p>References <a class="el" href="ce__gw__main_8c_source.html#l00338">ce_gw_net2can_alloc()</a>, <a class="el" href="ce__gw__main_8h_source.html#l00057">CE_GW_TYPE_ETH</a>, <a class="el" href="ce__gw__main_8h_source.html#l00059">CE_GW_TYPE_NET</a>, <a class="el" href="ce__gw__main_8h_source.html#l00061">CE_GW_TYPE_TCP</a>, <a class="el" href="ce__gw__main_8h_source.html#l00062">CE_GW_TYPE_UDP</a>, <a class="el" href="ce__gw__main_8h_source.html#l00083">ce_gw_job::dev</a>, <a class="el" href="ce__gw__main_8h_source.html#l00080">ce_gw_job::dropped_frames</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, <a class="el" href="ce__gw__main_8h_source.html#l00079">ce_gw_job::handled_frames</a>, <a class="el" href="ce__gw__main_8h_source.html#l00076">ce_gw_job::id</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00077">ce_gw_job::type</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00110">ce_gw_dev_start_xmit()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;{</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *gwj = (<span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *)data;</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;</div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;    <span class="comment">/* Create Can skb and convert incoming Eth sk buffer depending on</span></div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;<span class="comment">     * type (ce_gw_type in gwj)</span></div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;    <span class="keyword">struct </span>sk_buff *can_skb = NULL;</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    <span class="keywordflow">switch</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#a2fc54833b3dd67f45f24d24c1b237815">type</a>) {</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a51cf04b19d151ef02d0741faf68b462b">CE_GW_TYPE_ETH</a>:</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation ETH not implemented yet.&quot;</span>);</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a71eb32a8512b0e899de88c047114b880">CE_GW_TYPE_NET</a>:</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        can_skb = <a class="code" href="group__trans.html#ga79e97ca021765d2116bc2fbe289983bb" title="for CE_GW_TYPE_NET: Copy the can-frame from eth_skb to a new can skb.">ce_gw_net2can_alloc</a>(eth_skb, gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2eed9c0cbc5a57d049cebdd8952f1278">CE_GW_TYPE_TCP</a>:</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation IP TCP not implemented yet.&quot;</span>);</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2248c70f9d410e4f8b728d9d94e0f06a">CE_GW_TYPE_UDP</a>:</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation IP UDP not implemented yet.&quot;</span>);</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;        printk(KERN_ERR <span class="stringliteral">&quot;ce_gw: Translation type of ce_gw_job not &quot;</span></div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;               <span class="stringliteral">&quot;implemented. BUG: Some module inserted an invalid &quot;</span></div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;               <span class="stringliteral">&quot;type. Use enum ce_gw_type instead.&quot;</span>);</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;        <span class="keywordflow">goto</span> drop_frame;</div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    }</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;</div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;    <span class="comment">/* Memory allocation or translation ETH -&gt; CAN failed */</span></div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    <span class="keywordflow">if</span> (!can_skb)</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        <span class="keywordflow">goto</span> drop_frame;</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    <span class="keyword">struct </span>can_frame *cf;</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    cf = (<span class="keyword">struct </span>can_frame *)can_skb-&gt;data;</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    pr_debug(<span class="stringliteral">&quot;Incoming msg from eth dev (gwj %i): &quot;</span></div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;             <span class="stringliteral">&quot;can_id %x, len %i, can_msg(1) %x\n&quot;</span>,</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;             gwj-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a>, cf-&gt;can_id, cf-&gt;can_dlc, cf-&gt;data[0]);</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    <span class="comment">/* send to CAN netdevice (with echo flag for loopback devices) */</span></div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    <span class="keywordflow">if</span> (can_send(can_skb, 0x01))</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        <span class="keywordflow">goto</span> drop_frame;</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;        gwj-&gt;<a class="code" href="structce__gw__job.html#a1d49bd9d919c4214a04082757ca67751">handled_frames</a>++;</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    <span class="keywordflow">return</span>; <span class="comment">/* Receive + process + send to CAN successful */</span></div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;drop_frame:</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a492eb5f747f9e39c83c44938c29600c9">dropped_frames</a>++;</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    dev_kfree_skb(can_skb);</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00115">ce_gw_dev_start_xmit()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;{</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *gwj = (<span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *)data;</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;    <span class="comment">/* Create Can skb and convert incoming Eth sk buffer depending on</span></div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;<span class="comment">     * type (ce_gw_type in gwj)</span></div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;    <span class="keyword">struct </span>sk_buff *can_skb = NULL;</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;    <span class="keywordflow">switch</span> (gwj-&gt;<a class="code" href="structce__gw__job.html#a2fc54833b3dd67f45f24d24c1b237815">type</a>) {</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a51cf04b19d151ef02d0741faf68b462b">CE_GW_TYPE_ETH</a>:</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation ETH not implemented yet.&quot;</span>);</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a71eb32a8512b0e899de88c047114b880">CE_GW_TYPE_NET</a>:</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;        can_skb = <a class="code" href="group__trans.html#ga79e97ca021765d2116bc2fbe289983bb" title="for CE_GW_TYPE_NET: Copy the can-frame from eth_skb to a new can skb.">ce_gw_net2can_alloc</a>(eth_skb, gwj-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2eed9c0cbc5a57d049cebdd8952f1278">CE_GW_TYPE_TCP</a>:</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation IP TCP not implemented yet.&quot;</span>);</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2248c70f9d410e4f8b728d9d94e0f06a">CE_GW_TYPE_UDP</a>:</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        pr_info(<span class="stringliteral">&quot;Translation IP UDP not implemented yet.&quot;</span>);</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;        printk(KERN_ERR <span class="stringliteral">&quot;ce_gw: Translation type of ce_gw_job not &quot;</span></div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;               <span class="stringliteral">&quot;implemented. BUG: Some module inserted an invalid &quot;</span></div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;               <span class="stringliteral">&quot;type. Use enum ce_gw_type instead.&quot;</span>);</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;        <span class="keywordflow">goto</span> drop_frame;</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    }</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;    <span class="comment">/* Memory allocation or translation ETH -&gt; CAN failed */</span></div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;    <span class="keywordflow">if</span> (!can_skb)</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        <span class="keywordflow">goto</span> drop_frame;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    <span class="keyword">struct </span>can_frame *cf;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    cf = (<span class="keyword">struct </span>can_frame *)can_skb-&gt;data;</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;    pr_debug(<span class="stringliteral">&quot;Incoming msg from eth dev (gwj %i): &quot;</span></div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;             <span class="stringliteral">&quot;can_id %x, len %i, can_msg(1) %x\n&quot;</span>,</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;             gwj-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a>, cf-&gt;can_id, cf-&gt;can_dlc, cf-&gt;data[0]);</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    <span class="comment">/* send to CAN netdevice (with echo flag for loopback devices) */</span></div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    <span class="keywordflow">if</span> (can_send(can_skb, 0x01))</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;        <span class="keywordflow">goto</span> drop_frame;</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;        gwj-&gt;<a class="code" href="structce__gw__job.html#a1d49bd9d919c4214a04082757ca67751">handled_frames</a>++;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    <span class="keywordflow">return</span>; <span class="comment">/* Receive + process + send to CAN successful */</span></div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;drop_frame:</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    gwj-&gt;<a class="code" href="structce__gw__job.html#a492eb5f747f9e39c83c44938c29600c9">dropped_frames</a>++;</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    dev_kfree_skb(can_skb);</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -364,7 +364,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 16 2013 22:53:41 for can_eth_gw Gateway Module by
+    <li class="footer">Generated on Mon Jul 22 2013 11:59:52 for can_eth_gw Gateway Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

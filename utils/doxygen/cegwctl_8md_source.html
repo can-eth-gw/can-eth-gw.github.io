@@ -122,7 +122,7 @@ $(document).ready(function(){initNavTree('cegwctl_8md.html','');});
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;__cegwctl__ \[ __\-f__ | __\--can-fd__ \] \[ __\-t__ _TYPE_ | __\--type__=_TYPE_ \] \[ __\-b__ | __\--bidirectional__ \] __add__ __route__ _SRC_ _DST_</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;__cegwctl__ \[ __\-f__ | __\--can-fd__ \] \[ __\-t__ _TYPE_ | __\--type__=_TYPE_ \] __add__ __dev__</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;__cegwctl__ \[ __\-f__ | __\--can-fd__ \] \[ __\-t__ _TYPE_ | __\--type__=_TYPE_ \] __add__ __dev__ \[_NAME_\]</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;_TYPE_ := { __none__ | __eth__ | __net__ | __udp__ | __tcp__ }</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
@@ -160,86 +160,86 @@ $(document).ready(function(){initNavTree('cegwctl_8md.html','');});
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    Add a Gateway from _SRC_ to _DST_, where SRC and DST are the String names of the Interfaces.</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- __add__ __dev__</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- __add__ __dev__ \[_NAME_\]</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    Add a <span class="keyword">virtual</span> ethernet device. You need <span class="keyword">this</span> device <span class="keywordflow">for</span> adding a route. With the options \[ __\-f__ | __\--can-fd__ \] \[ __\-t__ _TYPE_ | __\--type__=_TYPE_ \] you can <span class="keyword">set</span> a meaningfull MTU.</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        +------+-----+------+--------------------------+</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        | TYPE | FD? | BYTE | MTU Size Description     |</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        +------+-----+------+--------------------------+</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        | NONE | --- | 1500 | Standart Ethernet MTU    |</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        | ETH  | NO  | 8    | Max CAN Payload          |</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        | ETH  | YES | 64   | Max CAN-FD Payload       |</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        | NET  | NO  | 16   | Max CAN Frame            |</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        | NET  | YES | 72   | Max CAN-FD Frame         |</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        | UDP  | --- | 1500 | Standart Ethernet MTU    |</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        | TCP  | --- | 1500 | Standart Ethernet MTU    |</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        +------+-----+------+--------------------------+</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;- __del__ __route__ _ID_</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Deletes the Gateway with _ID_.</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;- __del__ __dev__ _NAME_</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Deletes a previously with __add__ __dev__ added device with _NAME_ as name.</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;- __route__ \[_ID_\]</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    List active Gateways and Informations or <span class="keywordflow">if</span> _ID_ is specified, Information of the Gateway with _ID_ will printed</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor"># EXAMPLES</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;Add a Gateway:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;          cegwctl -f -t net add route <span class="stringliteral">&quot;eth0&quot;</span> <span class="stringliteral">&quot;can0&quot;</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor"># EXIT-STATUS</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;cegwctl returns a zero exit status <span class="keywordflow">if</span> the command succeeds. Non Zero <span class="keywordflow">if</span> an error has occured.</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;# COPYRIGHT</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;(C) Copyright 2013 Fabian Raab, Stefan Smarzly</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;This file is part of CAN-Eth-GW.</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;CAN-Eth-GW is free software: you can redistribute it and/or modify</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;it under the terms of the GNU General Public License as published by</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;the Free Software Foundation, either version 3 of the License, or</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;(at your option) any later version.</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;CAN-Eth-GW is distributed in the hope that it will be useful,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;but WITHOUT ANY WARRANTY; without even the implied warranty of</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;GNU General Public License for more details.</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;You should have received a copy of the GNU General Public License</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;along with CAN-Eth-GW. If not, see [http:<span class="comment">//www.gnu.org/licenses/](http://www.gnu.org/licenses/).</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor"># AUTHOR</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;Fabian Raab &lt;fabian.raab@tum.de&gt;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor"># SEE ALSO</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;[http:<span class="comment">//can-eth-gw.github.io/](http://can-eth-gw.github.io/)</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;ip(8)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    Add a <span class="keyword">virtual</span> ethernet device. You need <span class="keyword">this</span> device <span class="keywordflow">for</span> adding a route. _NAME_ will be the name of the <span class="keyword">new</span> device. If you don<span class="stringliteral">&#39;t set _NAME_, it will be called \`cegw%d\`, where %d is a consecutive number. With the options \[ __\-f__ | __\--can-fd__ \] \[ __\-t__ _TYPE_ | __\--type__=_TYPE_ \] you can set a meaningfull MTU.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="stringliteral">        +------+-----+------+--------------------------+</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="stringliteral">        | TYPE | FD? | BYTE | MTU Size Description     |</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="stringliteral">        +------+-----+------+--------------------------+</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="stringliteral">        | NONE | --- | 1500 | Standart Ethernet MTU    |</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="stringliteral">        | ETH  | NO  | 8    | Max CAN Payload          |</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="stringliteral">        | ETH  | YES | 64   | Max CAN-FD Payload       |</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="stringliteral">        | NET  | NO  | 16   | Max CAN Frame            |</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="stringliteral">        | NET  | YES | 72   | Max CAN-FD Frame         |</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="stringliteral">        | UDP  | --- | 1500 | Standart Ethernet MTU    |</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="stringliteral">        | TCP  | --- | 1500 | Standart Ethernet MTU    |</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="stringliteral">        +------+-----+------+--------------------------+</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="stringliteral">- __del__ __route__ _ID_</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="stringliteral">    Deletes the Gateway with _ID_.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="stringliteral">- __del__ __dev__ _NAME_</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="stringliteral">    Deletes a previously with __add__ __dev__ added device with _NAME_ as name.</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="stringliteral">- __route__ \[_ID_\]</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="stringliteral">    List active Gateways and Informations or if _ID_ is specified, Information of the Gateway with _ID_ will printed</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="stringliteral"># EXAMPLES</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="stringliteral">Add a Gateway:</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="stringliteral">          cegwctl -f -t net add route &quot;eth0&quot; &quot;can0&quot;</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="stringliteral"># EXIT-STATUS</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="stringliteral">cegwctl returns a zero exit status if the command succeeds. Non Zero if an error has occured.</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="stringliteral"># COPYRIGHT</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="stringliteral">(C) Copyright 2013 Fabian Raab, Stefan Smarzly</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="stringliteral">This file is part of CAN-Eth-GW.</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="stringliteral">CAN-Eth-GW is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="stringliteral">it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="stringliteral">the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="stringliteral">(at your option) any later version.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="stringliteral">CAN-Eth-GW is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="stringliteral">but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="stringliteral">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="stringliteral">GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="stringliteral">You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="stringliteral">along with CAN-Eth-GW. If not, see [http://www.gnu.org/licenses/](http://www.gnu.org/licenses/).</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="stringliteral"># AUTHOR</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="stringliteral">Fabian Raab &lt;fabian.raab@tum.de&gt;</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="stringliteral"># SEE ALSO</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="stringliteral">[http://can-eth-gw.github.io/](http://can-eth-gw.github.io/)</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="stringliteral">ip(8)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="cegwctl_8md.html">cegwctl.md</a></li>
-    <li class="footer">Generated on Tue Jul 16 2013 22:31:23 for can-eth-gw-utils Utilities by
+    <li class="footer">Generated on Mon Jul 22 2013 12:00:12 for can-eth-gw-utils Utilities by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

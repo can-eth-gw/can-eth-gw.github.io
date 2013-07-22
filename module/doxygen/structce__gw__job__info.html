@@ -121,8 +121,6 @@ $(document).ready(function(){initNavTree('structce__gw__job__info.html','');});
 Collaboration diagram for ce_gw_job_info:</div>
 <div class="dyncontent">
 <div class="center"><img src="structce__gw__job__info__coll__graph.png" border="0" usemap="#ce__gw__job__info_coll__map" alt="Collaboration graph"/></div>
-<map name="ce__gw__job__info_coll__map" id="ce__gw__job__info_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -136,7 +134,7 @@ Data Fields</h2></td></tr>
 <div class="textblock"><p>The private Field of ether struct net_device with pointer to its job. </p>
 <p>The private Field of ethernet net_device. struct hlist_head job_src; and struct hlist_head job_dst; are Lists with struct <a class="el" href="structce__gw__job.html">ce_gw_job</a> as as its elements. They Point to to the struct <a class="el" href="structce__gw__job.html">ce_gw_job</a> where the dev is part of it. So there exist a Pointer from the struct <a class="el" href="structce__gw__job.html">ce_gw_job</a> to the net_device and from struct <a class="el" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> back to the same struct <a class="el" href="structce__gw__job.html">ce_gw_job</a>. </p>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8h_source.html#l00065">65</a> of file <a class="el" href="ce__gw__dev_8h_source.html">ce_gw_dev.h</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8h_source.html#l00063">63</a> of file <a class="el" href="ce__gw__dev_8h_source.html">ce_gw_dev.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="a96f88498c4428a4d66d73437ca3620c8"></a>
 <div class="memitem">
@@ -149,9 +147,9 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>List where the dev is the dst in job </p>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8h_source.html#l00067">67</a> of file <a class="el" href="ce__gw__dev_8h_source.html">ce_gw_dev.h</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8h_source.html#l00065">65</a> of file <a class="el" href="ce__gw__dev_8h_source.html">ce_gw_dev.h</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00235">ce_gw_dev_alloc()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00213">ce_gw_dev_job_dst_add()</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00384">ce_gw_dev_unregister()</a>.</p>
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00279">ce_gw_dev_alloc()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00257">ce_gw_dev_job_dst_add()</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00430">ce_gw_dev_unregister()</a>.</p>
 
 </div>
 </div>
@@ -166,9 +164,9 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>List where the dev is the src in job </p>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8h_source.html#l00066">66</a> of file <a class="el" href="ce__gw__dev_8h_source.html">ce_gw_dev.h</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8h_source.html#l00064">64</a> of file <a class="el" href="ce__gw__dev_8h_source.html">ce_gw_dev.h</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00235">ce_gw_dev_alloc()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00208">ce_gw_dev_job_src_add()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00110">ce_gw_dev_start_xmit()</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00384">ce_gw_dev_unregister()</a>.</p>
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00279">ce_gw_dev_alloc()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00252">ce_gw_dev_job_src_add()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00115">ce_gw_dev_start_xmit()</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00430">ce_gw_dev_unregister()</a>.</p>
 
 </div>
 </div>
@@ -181,7 +179,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structce__gw__job__info.html">ce_gw_job_info</a></li>
-    <li class="footer">Generated on Tue Jul 16 2013 22:53:41 for can_eth_gw Gateway Module by
+    <li class="footer">Generated on Mon Jul 22 2013 11:59:52 for can_eth_gw Gateway Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

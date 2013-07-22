@@ -134,18 +134,12 @@ $(document).ready(function(){initNavTree('group__dev.html','');});
 <tr class="memitem:gae9a5687f1eeb483ad060e7e63b54a846"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#gae9a5687f1eeb483ad060e7e63b54a846">ce_gw_dev_job_remove</a> (struct <a class="el" href="structce__gw__job.html">ce_gw_job</a> *job)</td></tr>
 <tr class="memdesc:gae9a5687f1eeb483ad060e7e63b54a846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the pointer to param job from the list in ethernet net_device.  <a href="#gae9a5687f1eeb483ad060e7e63b54a846">More...</a><br/></td></tr>
 <tr class="separator:gae9a5687f1eeb483ad060e7e63b54a846"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae64b1dda501717ab714fc4931ea8506c"><td class="memItemLeft" align="right" valign="top">struct net_device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#gae64b1dda501717ab714fc4931ea8506c">ce_gw_dev_alloc</a> (void)</td></tr>
-<tr class="memdesc:gae64b1dda501717ab714fc4931ea8506c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a Ethernet Device for the Gateway.  <a href="#gae64b1dda501717ab714fc4931ea8506c">More...</a><br/></td></tr>
-<tr class="separator:gae64b1dda501717ab714fc4931ea8506c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f0e118cdc2a09c0e4ae81b798260791"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#ga8f0e118cdc2a09c0e4ae81b798260791">ce_gw_dev_free</a> (struct net_device *eth_dev)</td></tr>
 <tr class="memdesc:ga8f0e118cdc2a09c0e4ae81b798260791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free virtual ethernet device and remove from internal lists.  <a href="#ga8f0e118cdc2a09c0e4ae81b798260791">More...</a><br/></td></tr>
 <tr class="separator:ga8f0e118cdc2a09c0e4ae81b798260791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9cde6bf60611bf2cabfd884345508258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258">ce_gw_dev_setup</a> (struct net_device *dev, enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a> type, __u32 flags)</td></tr>
 <tr class="memdesc:ga9cde6bf60611bf2cabfd884345508258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default attributes for the Gateway Ethernet device.  <a href="#ga9cde6bf60611bf2cabfd884345508258">More...</a><br/></td></tr>
 <tr class="separator:ga9cde6bf60611bf2cabfd884345508258"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaec9f0ca6285f78543128e51a53059a95"><td class="memItemLeft" align="right" valign="top">struct net_device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#gaec9f0ca6285f78543128e51a53059a95">ce_gw_dev_create</a> (enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a> type, __u32 flags)</td></tr>
-<tr class="memdesc:gaec9f0ca6285f78543128e51a53059a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the device and set standart Attributes with <a class="el" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device.">ce_gw_dev_setup()</a>  <a href="#gaec9f0ca6285f78543128e51a53059a95">More...</a><br/></td></tr>
-<tr class="separator:gaec9f0ca6285f78543128e51a53059a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab3ac9b72d30717c20f4d63faec67a425"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#gab3ac9b72d30717c20f4d63faec67a425">ce_gw_dev_register</a> (struct net_device *eth_dev)</td></tr>
 <tr class="memdesc:gab3ac9b72d30717c20f4d63faec67a425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a virtual ethernet device on the OS.  <a href="#gab3ac9b72d30717c20f4d63faec67a425">More...</a><br/></td></tr>
 <tr class="separator:gab3ac9b72d30717c20f4d63faec67a425"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,10 +152,17 @@ $(document).ready(function(){initNavTree('group__dev.html','');});
 <tr class="memitem:ga9f556bd4667762bc63d53649ad6098ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed">ce_gw_dev_cleanup</a> (void)</td></tr>
 <tr class="memdesc:ga9f556bd4667762bc63d53649ad6098ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleting all objects created by <a class="el" href="group__dev.html#gac80bda3b07e5e8d816a71576fb219655" title="Initialise all objects, wich are needed by the other functions.">ce_gw_dev_init_module()</a> and all devices.  <a href="#ga9f556bd4667762bc63d53649ad6098ed">More...</a><br/></td></tr>
 <tr class="separator:ga9f556bd4667762bc63d53649ad6098ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb77e056c71ccebb57e895dc366be6f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#gaeb77e056c71ccebb57e895dc366be6f1">ce_gw_has_min_mtu</a> (struct net_device *dev, enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a> type, u32 flags)</td></tr>
+<tr class="memdesc:gaeb77e056c71ccebb57e895dc366be6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if the given device has enough mtu to use the type and flags  <a href="#gaeb77e056c71ccebb57e895dc366be6f1">More...</a><br/></td></tr>
+<tr class="separator:gaeb77e056c71ccebb57e895dc366be6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27f33b4dff8e1238ed73d3e57cb8aaf6"><td class="memItemLeft" align="right" valign="top">struct net_device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#ga27f33b4dff8e1238ed73d3e57cb8aaf6">ce_gw_dev_alloc</a> (char *dev_name)</td></tr>
+<tr class="separator:ga27f33b4dff8e1238ed73d3e57cb8aaf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78011e5888520abefd3d721fc53af685"><td class="memItemLeft" align="right" valign="top">struct net_device *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dev.html#ga78011e5888520abefd3d721fc53af685">ce_gw_dev_create</a> (enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a> type, __u32 flags, char *dev_name)</td></tr>
+<tr class="separator:ga78011e5888520abefd3d721fc53af685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gae64b1dda501717ab714fc4931ea8506c"></a>
+<a class="anchor" id="ga27f33b4dff8e1238ed73d3e57cb8aaf6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -169,10 +170,10 @@ $(document).ready(function(){initNavTree('group__dev.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct net_device * ce_gw_dev_alloc </td>
+          <td class="memname">struct net_device* ce_gw_dev_alloc </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dev_name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -183,66 +184,56 @@ $(document).ready(function(){initNavTree('group__dev.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Allocates a Ethernet Device for the Gateway. </p>
-<p>Allocates a Ethernet Device with struct <a class="el" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> as private data. <a class="el" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device.">ce_gw_dev_setup()</a> should be called after this function. <a class="el" href="group__dev.html#ga8f0e118cdc2a09c0e4ae81b798260791" title="Free virtual ethernet device and remove from internal lists.">ce_gw_dev_free()</a> musst be called for freeing the memory. </p>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If an error has occured. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated device. </dd></dl>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00279">279</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00235">235</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00066">ce_gw_dev_list::dev</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00065">ce_gw_job_info::job_dst</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00064">ce_gw_job_info::job_src</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00063">ce_gw_dev_list::list_alloc</a>.</p>
 
-<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00061">ce_gw_dev_list::dev</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00067">ce_gw_job_info::job_dst</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00066">ce_gw_job_info::job_src</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00058">ce_gw_dev_list::list_alloc</a>.</p>
-
-<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00337">ce_gw_dev_create()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                                         {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Alloc Device\n&quot;</span>);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keyword">struct </span>net_device *dev;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    dev = alloc_netdev(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a>),</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                       <span class="stringliteral">&quot;cegw%d&quot;</span>, ether_setup);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">if</span> (dev == NULL) {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Error allocation etherdev.&quot;</span>);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">goto</span> ce_gw_dev_create_error;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">/* initialize private field */</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(dev);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    memset(priv, 0, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a>));</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>.first = NULL;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    priv-&gt;<a class="code" href="structce__gw__job__info.html#a96f88498c4428a4d66d73437ca3620c8">job_dst</a>.first = NULL;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">/* create list entry and add */</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html">ce_gw_dev_list</a> *dl;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    dl = kmem_cache_alloc(ce_gw_dev_cache, GFP_KERNEL);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">if</span> (dl == NULL) {</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: cache alloc failed&quot;</span>);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">goto</span> ce_gw_dev_create_error_cache;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> = <a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    hlist_add_head_rcu(&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a35fb7bd7e39b7a187fbdc085ddcf5af3">list_alloc</a>, &amp;ce_gw_dev_allocated);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;ce_gw_dev_create_error_cache:</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    kmem_cache_free(ce_gw_dev_cache, dl);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;ce_gw_dev_create_error:</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    free_netdev(dev);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00381">ce_gw_dev_create()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                                                   {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Alloc Device\n&quot;</span>);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">struct </span>net_device *dev;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    dev = alloc_netdev(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a>),</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                       dev_name, ether_setup);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">if</span> (dev == NULL) {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Error allocation etherdev.&quot;</span>);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">goto</span> ce_gw_dev_create_error;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">/* initialize private field */</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(dev);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    memset(priv, 0, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a>));</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>.first = NULL;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    priv-&gt;<a class="code" href="structce__gw__job__info.html#a96f88498c4428a4d66d73437ca3620c8">job_dst</a>.first = NULL;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="comment">/* create list entry and add */</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html" title="internal list of all registered and allocated devices.">ce_gw_dev_list</a> *dl;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    dl = kmem_cache_alloc(ce_gw_dev_cache, GFP_KERNEL);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">if</span> (dl == NULL) {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: cache alloc failed&quot;</span>);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">goto</span> ce_gw_dev_create_error_cache;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> = <a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    hlist_add_head_rcu(&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a35fb7bd7e39b7a187fbdc085ddcf5af3">list_alloc</a>, &amp;ce_gw_dev_allocated);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;ce_gw_dev_create_error_cache:</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    kmem_cache_free(ce_gw_dev_cache, dl);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;ce_gw_dev_create_error:</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    free_netdev(dev);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__dev_gae64b1dda501717ab714fc4931ea8506c_icgraph.png" border="0" usemap="#group__dev_gae64b1dda501717ab714fc4931ea8506c_icgraph" alt=""/></div>
-<map name="group__dev_gae64b1dda501717ab714fc4931ea8506c_icgraph" id="group__dev_gae64b1dda501717ab714fc4931ea8506c_icgraph">
-<area shape="rect" id="node3" href="group__dev.html#gaec9f0ca6285f78543128e51a53059a95" title="Allocate the device and set standart Attributes with ce_gw_dev_setup()" alt="" coords="176,5,307,35"/><area shape="rect" id="node5" href="ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="355,5,488,35"/></map>
+<div class="center"><img src="group__dev_ga27f33b4dff8e1238ed73d3e57cb8aaf6_icgraph.png" border="0" usemap="#group__dev_ga27f33b4dff8e1238ed73d3e57cb8aaf6_icgraph" alt=""/></div>
+<map name="group__dev_ga27f33b4dff8e1238ed73d3e57cb8aaf6_icgraph" id="group__dev_ga27f33b4dff8e1238ed73d3e57cb8aaf6_icgraph">
+<area shape="rect" id="node3" href="group__dev.html#ga78011e5888520abefd3d721fc53af685" title="ce_gw_dev_create" alt="" coords="176,5,307,35"/><area shape="rect" id="node5" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="355,5,488,35"/></map>
 </div>
 </p>
 
@@ -265,44 +256,44 @@ Here is the caller graph for this function:</div>
 <p>Deleting all objects created by <a class="el" href="group__dev.html#gac80bda3b07e5e8d816a71576fb219655" title="Initialise all objects, wich are needed by the other functions.">ce_gw_dev_init_module()</a> and all devices. </p>
 <dl class="section post"><dt>Postcondition</dt><dd>after this function is called the other functions could not be used any more </dd></dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00467">467</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00513">513</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00274">ce_gw_dev_free()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00384">ce_gw_dev_unregister()</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00061">ce_gw_dev_list::dev</a>.</p>
+<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00318">ce_gw_dev_free()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00430">ce_gw_dev_unregister()</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00066">ce_gw_dev_list::dev</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l01041">ce_gw_cleanup()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                             {</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html">ce_gw_dev_list</a> *dl = NULL;</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="comment">/* iterate over list and unregister */</span></div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_registered, list_reg) {</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="preprocessor">#   else</span></div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_registered,</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                              list_reg) {</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="preprocessor">#   endif</span></div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="preprocessor"></span>        <a class="code" href="group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists.">ce_gw_dev_unregister</a>(dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    }</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    dl = NULL;</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    node = NULL;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="comment">/* iterate over list and free */</span></div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_allocated, list_alloc) {</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="preprocessor">#   else</span></div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="preprocessor"></span>    pos = NULL;</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_allocated,</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                              list_alloc) {</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="preprocessor">#   endif</span></div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;<span class="preprocessor"></span>        <a class="code" href="group__dev.html#ga8f0e118cdc2a09c0e4ae81b798260791" title="Free virtual ethernet device and remove from internal lists.">ce_gw_dev_free</a>(dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    }</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    kmem_cache_destroy(ce_gw_dev_cache);</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l01048">ce_gw_cleanup()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                             {</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html" title="internal list of all registered and allocated devices.">ce_gw_dev_list</a> *dl = NULL;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="comment">/* iterate over list and unregister */</span></div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_registered, list_reg) {</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;<span class="preprocessor">#   else</span></div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_registered,</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                              list_reg) {</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;<span class="preprocessor">#   endif</span></div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;<span class="preprocessor"></span>        <a class="code" href="group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists.">ce_gw_dev_unregister</a>(dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    }</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    dl = NULL;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    node = NULL;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <span class="comment">/* iterate over list and free */</span></div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_allocated, list_alloc) {</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;<span class="preprocessor">#   else</span></div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;<span class="preprocessor"></span>    pos = NULL;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_allocated,</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                              list_alloc) {</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;<span class="preprocessor">#   endif</span></div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;<span class="preprocessor"></span>        <a class="code" href="group__dev.html#ga8f0e118cdc2a09c0e4ae81b798260791" title="Free virtual ethernet device and remove from internal lists.">ce_gw_dev_free</a>(dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    }</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    kmem_cache_destroy(ce_gw_dev_cache);</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -324,7 +315,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="gaec9f0ca6285f78543128e51a53059a95"></a>
+<a class="anchor" id="ga78011e5888520abefd3d721fc53af685"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -332,7 +323,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct net_device * ce_gw_dev_create </td>
+          <td class="memname">struct net_device* ce_gw_dev_create </td>
           <td>(</td>
           <td class="paramtype">enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a>&#160;</td>
           <td class="paramname"><em>type</em>, </td>
@@ -341,7 +332,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">__u32&#160;</td>
-          <td class="paramname"><em>flags</em>&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dev_name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -356,45 +353,36 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Allocate the device and set standart Attributes with <a class="el" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device.">ce_gw_dev_setup()</a> </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>Type of the Gateway wich will be linked to the device. A sensible MTU will be set. Use CE_GW_TYPE_NONE for default ethernet MTU. </td></tr>
-    <tr><td class="paramname">flags</td><td>If CE_GW_F_CAN_FD Flag is set the MTU will be set to the CAN-FD size else to the normal CAN size. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated and configured device. </dd></dl>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00381">381</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00337">337</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00279">ce_gw_dev_alloc()</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00347">ce_gw_dev_setup()</a>.</p>
 
-<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00235">ce_gw_dev_alloc()</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00303">ce_gw_dev_setup()</a>.</p>
-
-<p>Referenced by <a class="el" href="ce__gw__netlink_8c_source.html#l00210">ce_gw_netlink_add()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                                                                       {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keyword">struct </span>net_device *dev;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    dev = <a class="code" href="group__dev.html#gae64b1dda501717ab714fc4931ea8506c" title="Allocates a Ethernet Device for the Gateway.">ce_gw_dev_alloc</a>();</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <a class="code" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device.">ce_gw_dev_setup</a>(dev, type, flags);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">return</span> dev;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__netlink_8c_source.html#l00216">ce_gw_netlink_add()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                     {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keyword">struct </span>net_device *dev;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    dev = <a class="code" href="ce__gw__dev_8c.html#a27f33b4dff8e1238ed73d3e57cb8aaf6">ce_gw_dev_alloc</a>(dev_name);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <a class="code" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device.">ce_gw_dev_setup</a>(dev, type, flags);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">return</span> dev;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__dev_gaec9f0ca6285f78543128e51a53059a95_cgraph.png" border="0" usemap="#group__dev_gaec9f0ca6285f78543128e51a53059a95_cgraph" alt=""/></div>
-<map name="group__dev_gaec9f0ca6285f78543128e51a53059a95_cgraph" id="group__dev_gaec9f0ca6285f78543128e51a53059a95_cgraph">
-<area shape="rect" id="node3" href="group__dev.html#gae64b1dda501717ab714fc4931ea8506c" title="Allocates a Ethernet Device for the Gateway." alt="" coords="187,5,309,35"/><area shape="rect" id="node5" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device." alt="" coords="185,59,311,88"/></map>
+<div class="center"><img src="group__dev_ga78011e5888520abefd3d721fc53af685_cgraph.png" border="0" usemap="#group__dev_ga78011e5888520abefd3d721fc53af685_cgraph" alt=""/></div>
+<map name="group__dev_ga78011e5888520abefd3d721fc53af685_cgraph" id="group__dev_ga78011e5888520abefd3d721fc53af685_cgraph">
+<area shape="rect" id="node3" href="ce__gw__dev_8c.html#a27f33b4dff8e1238ed73d3e57cb8aaf6" title="ce_gw_dev_alloc" alt="" coords="187,5,309,35"/><area shape="rect" id="node5" href="group__dev.html#ga9cde6bf60611bf2cabfd884345508258" title="Sets the default attributes for the Gateway Ethernet device." alt="" coords="185,59,311,88"/></map>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__dev_gaec9f0ca6285f78543128e51a53059a95_icgraph.png" border="0" usemap="#group__dev_gaec9f0ca6285f78543128e51a53059a95_icgraph" alt=""/></div>
-<map name="group__dev_gaec9f0ca6285f78543128e51a53059a95_icgraph" id="group__dev_gaec9f0ca6285f78543128e51a53059a95_icgraph">
-<area shape="rect" id="node3" href="ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="184,5,317,35"/></map>
+<div class="center"><img src="group__dev_ga78011e5888520abefd3d721fc53af685_icgraph.png" border="0" usemap="#group__dev_ga78011e5888520abefd3d721fc53af685_icgraph" alt=""/></div>
+<map name="group__dev_ga78011e5888520abefd3d721fc53af685_icgraph" id="group__dev_ga78011e5888520abefd3d721fc53af685_icgraph">
+<area shape="rect" id="node3" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="184,5,317,35"/></map>
 </div>
 </p>
 
@@ -418,51 +406,51 @@ Here is the caller graph for this function:</div>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists.">ce_gw_dev_unregister()</a> was already called </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">eth_dev</td><td>the virtual ethernet device allocated by <a class="el" href="group__dev.html#gae64b1dda501717ab714fc4931ea8506c" title="Allocates a Ethernet Device for the Gateway.">ce_gw_dev_alloc()</a> </td></tr>
+    <tr><td class="paramname">eth_dev</td><td>the virtual ethernet device allocated by <a class="el" href="ce__gw__dev_8c.html#a27f33b4dff8e1238ed73d3e57cb8aaf6">ce_gw_dev_alloc()</a> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00274">274</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00318">318</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00061">ce_gw_dev_list::dev</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00058">ce_gw_dev_list::list_alloc</a>.</p>
+<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00066">ce_gw_dev_list::dev</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00063">ce_gw_dev_list::list_alloc</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00467">ce_gw_dev_cleanup()</a>, <a class="el" href="ce__gw__netlink_8c_source.html#l00210">ce_gw_netlink_add()</a>, and <a class="el" href="ce__gw__netlink_8c_source.html#l00318">ce_gw_netlink_del()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                                                {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Free Device %s\n&quot;</span>, eth_dev-&gt;name);</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html">ce_gw_dev_list</a> *dl = NULL;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="comment">/* search for the List Element of eth_dev */</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_allocated, list_alloc) {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">#   else</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_allocated,</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                              list_alloc) {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">#   endif</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span> (dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev)</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">if</span> (dl == NULL || dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> != eth_dev) {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Device not found in list\n&quot;</span>);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        hlist_del_rcu(&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a35fb7bd7e39b7a187fbdc085ddcf5af3">list_alloc</a>);</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    free_netdev(eth_dev);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    kmem_cache_free(ce_gw_dev_cache, dl);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00513">ce_gw_dev_cleanup()</a>, <a class="el" href="ce__gw__netlink_8c_source.html#l00216">ce_gw_netlink_add()</a>, and <a class="el" href="ce__gw__netlink_8c_source.html#l00333">ce_gw_netlink_del()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                                                {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Free Device %s\n&quot;</span>, eth_dev-&gt;name);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html" title="internal list of all registered and allocated devices.">ce_gw_dev_list</a> *dl = NULL;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="comment">/* search for the List Element of eth_dev */</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_allocated, list_alloc) {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="preprocessor">#   else</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_allocated,</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                              list_alloc) {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="preprocessor">#   endif</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span> (dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev)</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">if</span> (dl == NULL || dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> != eth_dev) {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Device not found in list\n&quot;</span>);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        hlist_del_rcu(&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a35fb7bd7e39b7a187fbdc085ddcf5af3">list_alloc</a>);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    free_netdev(eth_dev);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    kmem_cache_free(ce_gw_dev_cache, dl);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__dev_ga8f0e118cdc2a09c0e4ae81b798260791_icgraph.png" border="0" usemap="#group__dev_ga8f0e118cdc2a09c0e4ae81b798260791_icgraph" alt=""/></div>
 <map name="group__dev_ga8f0e118cdc2a09c0e4ae81b798260791_icgraph" id="group__dev_ga8f0e118cdc2a09c0e4ae81b798260791_icgraph">
-<area shape="rect" id="node3" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="172,5,311,35"/><area shape="rect" id="node7" href="ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="175,59,308,88"/><area shape="rect" id="node9" href="ce__gw__netlink_8c.html#ab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="177,112,305,141"/><area shape="rect" id="node5" href="group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="360,5,472,35"/></map>
+<area shape="rect" id="node3" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="172,5,311,35"/><area shape="rect" id="node7" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="175,59,308,88"/><area shape="rect" id="node9" href="group__net.html#gab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="177,112,305,141"/><area shape="rect" id="node5" href="group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="360,5,472,35"/></map>
 </div>
 </p>
 
@@ -497,11 +485,11 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00151">151</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                           {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    printk (<span class="stringliteral">&quot;ce_gw_dev: device init called\n&quot;</span>);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00156">156</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                           {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    printk (<span class="stringliteral">&quot;ce_gw_dev: device init called\n&quot;</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -529,18 +517,18 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00457">457</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00503">503</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l01009">ce_gw_init_module()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                                {</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    ce_gw_dev_cache = kmem_cache_create(<span class="stringliteral">&quot;can_eth_gw_dev&quot;</span>,</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                                        <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structce__gw__dev__list.html">ce_gw_dev_list</a>),</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                                        0, 0, NULL);</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordflow">if</span> (!ce_gw_dev_cache)</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keywordflow">return</span> -ENOMEM;</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l01016">ce_gw_init_module()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;                                {</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    ce_gw_dev_cache = kmem_cache_create(<span class="stringliteral">&quot;can_eth_gw_dev&quot;</span>,</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                                        <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="structce__gw__dev__list.html" title="internal list of all registered and allocated devices.">ce_gw_dev_list</a>),</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;                                        0, 0, NULL);</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordflow">if</span> (!ce_gw_dev_cache)</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keywordflow">return</span> -ENOMEM;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -595,20 +583,20 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00219">219</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00263">263</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00213">ce_gw_dev_job_dst_add()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00208">ce_gw_dev_job_src_add()</a>, <a class="el" href="ce__gw__main_8h_source.html#l00078">ce_gw_job::dev</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, and <a class="el" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">ce_gw_job::src</a>.</p>
-<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                                                                         {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">if</span> (job-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev) {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <a class="code" href="group__dev.html#ga83ca099f9d263a83b70bbfc6d11e2e06" title="Adds an pointer to the net_device internal list where it is the src.">ce_gw_dev_job_src_add</a>(job);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (job-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev) {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <a class="code" href="group__dev.html#ga6b5f32ea12cf3e9150f81ab2ee82f806" title="Adds an pointer to the net_device internal list where it is the dst.">ce_gw_dev_job_dst_add</a>(job);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev_job_add: Invalid Arguments&quot;</span>);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
+<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00257">ce_gw_dev_job_dst_add()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00252">ce_gw_dev_job_src_add()</a>, <a class="el" href="ce__gw__main_8h_source.html#l00083">ce_gw_job::dev</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, and <a class="el" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">ce_gw_job::src</a>.</p>
+<div class="fragment"><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">if</span> (job-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev) {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <a class="code" href="group__dev.html#ga83ca099f9d263a83b70bbfc6d11e2e06" title="Adds an pointer to the net_device internal list where it is the src.">ce_gw_dev_job_src_add</a>(job);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (job-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev) {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <a class="code" href="group__dev.html#ga6b5f32ea12cf3e9150f81ab2ee82f806" title="Adds an pointer to the net_device internal list where it is the dst.">ce_gw_dev_job_dst_add</a>(job);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev_job_add: Invalid Arguments&quot;</span>);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -645,15 +633,15 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00213">213</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00257">257</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8h_source.html#l00078">ce_gw_job::dev</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00067">ce_gw_job_info::job_dst</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00070">ce_gw_job::list_dev</a>.</p>
+<p>References <a class="el" href="ce__gw__main_8h_source.html#l00083">ce_gw_job::dev</a>, <a class="el" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">ce_gw_job::dst</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00065">ce_gw_job_info::job_dst</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00075">ce_gw_job::list_dev</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00219">ce_gw_dev_job_add()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                                  {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(job-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    hlist_add_head_rcu(&amp;job-&gt;<a class="code" href="structce__gw__job.html#ac29a95b5d91dd5235f3c17c912258304">list_dev</a>, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a96f88498c4428a4d66d73437ca3620c8">job_dst</a>);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00263">ce_gw_dev_job_add()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                                                  {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(job-&gt;<a class="code" href="structce__gw__job.html#af049d820efbf18b5d95fe373e3e90383">dst</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    hlist_add_head_rcu(&amp;job-&gt;<a class="code" href="structce__gw__job.html#ac29a95b5d91dd5235f3c17c912258304">list_dev</a>, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a96f88498c4428a4d66d73437ca3620c8">job_dst</a>);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -690,21 +678,21 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>You must remove the pointer from union src and accordingly union dst in param job to the ethernet struct net_device yourself. Until you do this our pointer architecture is inconsistent. </dd></dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00231">231</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00275">275</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8h_source.html#l00070">ce_gw_job::list_dev</a>.</p>
+<p>References <a class="el" href="ce__gw__main_8h_source.html#l00075">ce_gw_job::list_dev</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l00909">ce_gw_unregister_eth_src()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                                 {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    hlist_del_rcu(&amp;job-&gt;<a class="code" href="structce__gw__job.html#ac29a95b5d91dd5235f3c17c912258304">list_dev</a>);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l00910">ce_gw_unregister_eth_src()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                                 {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    hlist_del_rcu(&amp;job-&gt;<a class="code" href="structce__gw__job.html#ac29a95b5d91dd5235f3c17c912258304">list_dev</a>);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__dev_gae9a5687f1eeb483ad060e7e63b54a846_icgraph.png" border="0" usemap="#group__dev_gae9a5687f1eeb483ad060e7e63b54a846_icgraph" alt=""/></div>
 <map name="group__dev_gae9a5687f1eeb483ad060e7e63b54a846_icgraph" id="group__dev_gae9a5687f1eeb483ad060e7e63b54a846_icgraph">
-<area shape="rect" id="node3" href="ce__gw__main_8c.html#a3daed74080a98c11ed9640c67490c6bb" title="ce_gw_unregister_eth_src" alt="" coords="217,31,391,60"/><area shape="rect" id="node5" href="ce__gw__main_8h.html#a0b296fdda11e90cddbe65ae8b541b8dd" title="ce_gw_remove_route" alt="" coords="440,31,587,60"/><area shape="rect" id="node7" href="group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="1024,5,1136,35"/><area shape="rect" id="node9" href="group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists." alt="" coords="635,31,787,60"/><area shape="rect" id="node14" href="ce__gw__netlink_8c.html#ab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="841,84,969,113"/><area shape="rect" id="node11" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="836,31,975,60"/></map>
+<area shape="rect" id="node3" href="ce__gw__main_8c.html#a3daed74080a98c11ed9640c67490c6bb" title="ce_gw_unregister_eth_src" alt="" coords="217,31,391,60"/><area shape="rect" id="node5" href="ce__gw__main_8h.html#a0b296fdda11e90cddbe65ae8b541b8dd" title="ce_gw_remove_route" alt="" coords="440,31,587,60"/><area shape="rect" id="node7" href="group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="1024,5,1136,35"/><area shape="rect" id="node9" href="group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists." alt="" coords="635,31,787,60"/><area shape="rect" id="node14" href="group__net.html#gab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="841,84,969,113"/><area shape="rect" id="node11" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="836,31,975,60"/></map>
 </div>
 </p>
 
@@ -734,22 +722,22 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00208">208</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00252">252</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8h_source.html#l00078">ce_gw_job::dev</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00066">ce_gw_job_info::job_src</a>, <a class="el" href="ce__gw__main_8h_source.html#l00070">ce_gw_job::list_dev</a>, and <a class="el" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">ce_gw_job::src</a>.</p>
+<p>References <a class="el" href="ce__gw__main_8h_source.html#l00083">ce_gw_job::dev</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00064">ce_gw_job_info::job_src</a>, <a class="el" href="ce__gw__main_8h_source.html#l00075">ce_gw_job::list_dev</a>, and <a class="el" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">ce_gw_job::src</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00219">ce_gw_dev_job_add()</a>, and <a class="el" href="ce__gw__main_8c_source.html#l00902">ce_gw_register_eth_src()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                                                  {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(job-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    hlist_add_head_rcu(&amp;job-&gt;<a class="code" href="structce__gw__job.html#ac29a95b5d91dd5235f3c17c912258304">list_dev</a>, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00263">ce_gw_dev_job_add()</a>, and <a class="el" href="ce__gw__main_8c_source.html#l00903">ce_gw_register_eth_src()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                                                  {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(job-&gt;<a class="code" href="structce__gw__job.html#a494c70e411e6972b0ce2f2bc9d327a1a">src</a>.<a class="code" href="structce__gw__job.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a>);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    hlist_add_head_rcu(&amp;job-&gt;<a class="code" href="structce__gw__job.html#ac29a95b5d91dd5235f3c17c912258304">list_dev</a>, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__dev_ga83ca099f9d263a83b70bbfc6d11e2e06_icgraph.png" border="0" usemap="#group__dev_ga83ca099f9d263a83b70bbfc6d11e2e06_icgraph" alt=""/></div>
 <map name="group__dev_ga83ca099f9d263a83b70bbfc6d11e2e06_icgraph" id="group__dev_ga83ca099f9d263a83b70bbfc6d11e2e06_icgraph">
-<area shape="rect" id="node3" href="group__dev.html#ga6e92f91fd3fb3c030c6ad02dcb425f56" title="Adds an pointer to the net_device internal list where it is part of." alt="" coords="229,5,368,35"/><area shape="rect" id="node5" href="ce__gw__main_8c.html#ac954c1b20c84ff0ef0dee8b4c1807920" title="ce_gw_register_eth_src" alt="" coords="219,59,379,88"/><area shape="rect" id="node7" href="ce__gw__main_8h.html#aaabe871861b8e5300a33e1c5f797a88b" title="ce_gw_create_route" alt="" coords="427,59,565,88"/><area shape="rect" id="node9" href="ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="613,59,747,88"/></map>
+<area shape="rect" id="node3" href="group__dev.html#ga6e92f91fd3fb3c030c6ad02dcb425f56" title="Adds an pointer to the net_device internal list where it is part of." alt="" coords="229,5,368,35"/><area shape="rect" id="node5" href="ce__gw__main_8c.html#ac954c1b20c84ff0ef0dee8b4c1807920" title="ce_gw_register_eth_src" alt="" coords="219,59,379,88"/><area shape="rect" id="node7" href="ce__gw__main_8h.html#aaabe871861b8e5300a33e1c5f797a88b" title="ce_gw_create_route" alt="" coords="427,59,565,88"/><area shape="rect" id="node9" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="613,59,747,88"/></map>
 </div>
 </p>
 
@@ -784,18 +772,18 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00072">72</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    printk(<span class="stringliteral">&quot;ce_gw: ce_gw_open called\n&quot;</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (!netif_device_present(dev)) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev_open: Device not registered&quot;</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00077">77</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    printk(<span class="stringliteral">&quot;ce_gw: ce_gw_open called\n&quot;</span>);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    netif_start_queue(dev);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (!netif_device_present(dev)) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev_open: Device not registered&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    netif_start_queue(dev);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -820,7 +808,7 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>param eth_dev was previously allocated by <a class="el" href="group__dev.html#gae64b1dda501717ab714fc4931ea8506c" title="Allocates a Ethernet Device for the Gateway.">ce_gw_dev_alloc()</a> </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>param eth_dev was previously allocated by <a class="el" href="ce__gw__dev_8c.html#a27f33b4dff8e1238ed73d3e57cb8aaf6">ce_gw_dev_alloc()</a> </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>on success </td></tr>
@@ -829,55 +817,55 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00346">346</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00392">392</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00061">ce_gw_dev_list::dev</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00059">ce_gw_dev_list::list_reg</a>.</p>
+<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00066">ce_gw_dev_list::dev</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00064">ce_gw_dev_list::list_reg</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__netlink_8c_source.html#l00210">ce_gw_netlink_add()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                                                   {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Register Device\n&quot;</span>);</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    err = register_netdev(eth_dev);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html">ce_gw_dev_list</a> *dl = NULL;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="comment">/* search for the List Element of eth_dev */</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_allocated, list_alloc) {</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor">#   else</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_allocated,</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                              list_alloc) {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">#   endif</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span> (dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev)</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">if</span> (dl == NULL || dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> != eth_dev) {</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Device not found in list\n&quot;</span>);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">goto</span> ce_gw_dev_register_error;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    hlist_add_head_rcu(&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a>, &amp;ce_gw_dev_registered);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">if</span> (&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a> == NULL) {</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Device not add to list correct\n&quot;</span>);</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    }</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">return</span> err;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;ce_gw_dev_register_error:</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    unregister_netdev(eth_dev);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordflow">return</span> err;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__netlink_8c_source.html#l00216">ce_gw_netlink_add()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                                                   {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Register Device\n&quot;</span>);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    err = register_netdev(eth_dev);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html" title="internal list of all registered and allocated devices.">ce_gw_dev_list</a> *dl = NULL;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="comment">/* search for the List Element of eth_dev */</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_allocated, list_alloc) {</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="preprocessor">#   else</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_allocated,</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                              list_alloc) {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="preprocessor">#   endif</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span> (dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev)</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">if</span> (dl == NULL || dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> != eth_dev) {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Device not found in list\n&quot;</span>);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordflow">goto</span> ce_gw_dev_register_error;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    }</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    hlist_add_head_rcu(&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a>, &amp;ce_gw_dev_registered);</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">if</span> (&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a> == NULL) {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Device not add to list correct\n&quot;</span>);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">return</span> err;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;ce_gw_dev_register_error:</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    unregister_netdev(eth_dev);</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordflow">return</span> err;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__dev_gab3ac9b72d30717c20f4d63faec67a425_icgraph.png" border="0" usemap="#group__dev_gab3ac9b72d30717c20f4d63faec67a425_icgraph" alt=""/></div>
 <map name="group__dev_gab3ac9b72d30717c20f4d63faec67a425_icgraph" id="group__dev_gab3ac9b72d30717c20f4d63faec67a425_icgraph">
-<area shape="rect" id="node3" href="ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="192,5,325,35"/></map>
+<area shape="rect" id="node3" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="192,5,325,35"/></map>
 </div>
 </p>
 
@@ -924,50 +912,50 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>Sets the default attributes for the Gateway Ethernet device. Also links the net_device operations to the net_dev structure. <a class="el" href="group__dev.html#gab3ac9b72d30717c20f4d63faec67a425" title="Register a virtual ethernet device on the OS.">ce_gw_dev_register()</a> should be called afterwards for registering, <a class="el" href="group__dev.html#ga688a156f5994ae59ab4f1770653eb635" title="Unregister virtual ethernet device and remove from internal lists.">ce_gw_dev_unregister()</a> for unregistering at the end. </p>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00303">303</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00347">347</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__dev_8h_source.html#l00054">CE_GW_F_CAN_FD</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00159">ce_gw_ops</a>, <a class="el" href="ce__gw__main_8h_source.html#l00053">CE_GW_TYPE_ETH</a>, <a class="el" href="ce__gw__main_8h_source.html#l00055">CE_GW_TYPE_NET</a>, <a class="el" href="ce__gw__main_8h_source.html#l00052">CE_GW_TYPE_NONE</a>, <a class="el" href="ce__gw__main_8h_source.html#l00057">CE_GW_TYPE_TCP</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00058">CE_GW_TYPE_UDP</a>.</p>
+<p>References <a class="el" href="ce__gw__main_8h_source.html#l00049">CE_GW_F_CAN_FD</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00164">ce_gw_ops</a>, <a class="el" href="ce__gw__main_8h_source.html#l00057">CE_GW_TYPE_ETH</a>, <a class="el" href="ce__gw__main_8h_source.html#l00059">CE_GW_TYPE_NET</a>, <a class="el" href="ce__gw__main_8h_source.html#l00056">CE_GW_TYPE_NONE</a>, <a class="el" href="ce__gw__main_8h_source.html#l00061">CE_GW_TYPE_TCP</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00062">CE_GW_TYPE_UDP</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00337">ce_gw_dev_create()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                                  {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    dev-&gt;netdev_ops = &amp;<a class="code" href="ce__gw__dev_8c.html#adafc338503ab6806467067a73933e447" title="Defined Functions of Ethernet device.">ce_gw_ops</a>;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="comment">/* Set sensible MTU */</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066af4901ada58f827c027ddaa05feeb79be">CE_GW_TYPE_NONE</a>:</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="comment">/* Do Nothing (default Ethernet MTU will be set) */</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a51cf04b19d151ef02d0741faf68b462b">CE_GW_TYPE_ETH</a>:</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">if</span> ((flags &amp; <a class="code" href="ce__gw__dev_8h.html#ae907159232a1abcd6479c948ac507dd9">CE_GW_F_CAN_FD</a>) == CE_GW_F_CAN_FD) {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            dev-&gt;mtu = CANFD_MAX_DLEN;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            dev-&gt;mtu = CAN_MAX_DLEN;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a71eb32a8512b0e899de88c047114b880">CE_GW_TYPE_NET</a>:</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">if</span> ((flags &amp; CE_GW_F_CAN_FD) == CE_GW_F_CAN_FD) {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            dev-&gt;mtu = <span class="keyword">sizeof</span>(<span class="keyword">struct </span>canfd_frame);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            dev-&gt;mtu = <span class="keyword">sizeof</span>(<span class="keyword">struct </span>can_frame);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        }</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2eed9c0cbc5a57d049cebdd8952f1278">CE_GW_TYPE_TCP</a>:</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="comment">/* TODO nothing yet */</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2248c70f9d410e4f8b728d9d94e0f06a">CE_GW_TYPE_UDP</a>:</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="comment">/* TODO nothing yet */</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Type not defined.&quot;</span>);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    }</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00381">ce_gw_dev_create()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                                  {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    dev-&gt;netdev_ops = &amp;<a class="code" href="ce__gw__dev_8c.html#adafc338503ab6806467067a73933e447" title="Defined Functions of Ethernet device.">ce_gw_ops</a>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="comment">/* Set sensible MTU */</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">switch</span> (type) {</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066af4901ada58f827c027ddaa05feeb79be">CE_GW_TYPE_NONE</a>:</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="comment">/* Do Nothing (default Ethernet MTU will be set) */</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a51cf04b19d151ef02d0741faf68b462b">CE_GW_TYPE_ETH</a>:</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordflow">if</span> ((flags &amp; <a class="code" href="ce__gw__main_8h.html#ae907159232a1abcd6479c948ac507dd9">CE_GW_F_CAN_FD</a>) == CE_GW_F_CAN_FD) {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            dev-&gt;mtu = CANFD_MAX_DLEN;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            dev-&gt;mtu = CAN_MAX_DLEN;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        }</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a71eb32a8512b0e899de88c047114b880">CE_GW_TYPE_NET</a>:</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">if</span> ((flags &amp; CE_GW_F_CAN_FD) == CE_GW_F_CAN_FD) {</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            dev-&gt;mtu = <span class="keyword">sizeof</span>(<span class="keyword">struct </span>canfd_frame);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            dev-&gt;mtu = <span class="keyword">sizeof</span>(<span class="keyword">struct </span>can_frame);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2eed9c0cbc5a57d049cebdd8952f1278">CE_GW_TYPE_TCP</a>:</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="comment">/* TODO nothing yet */</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2248c70f9d410e4f8b728d9d94e0f06a">CE_GW_TYPE_UDP</a>:</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="comment">/* TODO nothing yet */</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Type not defined.&quot;</span>);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__dev_ga9cde6bf60611bf2cabfd884345508258_icgraph.png" border="0" usemap="#group__dev_ga9cde6bf60611bf2cabfd884345508258_icgraph" alt=""/></div>
 <map name="group__dev_ga9cde6bf60611bf2cabfd884345508258_icgraph" id="group__dev_ga9cde6bf60611bf2cabfd884345508258_icgraph">
-<area shape="rect" id="node3" href="group__dev.html#gaec9f0ca6285f78543128e51a53059a95" title="Allocate the device and set standart Attributes with ce_gw_dev_setup()" alt="" coords="181,5,312,35"/><area shape="rect" id="node5" href="ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="360,5,493,35"/></map>
+<area shape="rect" id="node3" href="group__dev.html#ga78011e5888520abefd3d721fc53af685" title="ce_gw_dev_create" alt="" coords="181,5,312,35"/><area shape="rect" id="node5" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="360,5,493,35"/></map>
 </div>
 </p>
 
@@ -1021,39 +1009,39 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00110">110</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00115">115</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8c_source.html#l00828">ce_gw_eth_rcv()</a>, and <a class="el" href="ce__gw__dev_8h_source.html#l00066">ce_gw_job_info::job_src</a>.</p>
-<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    printk (<span class="stringliteral">&quot;ce_gw_dev: dummy xmit function called....\n&quot;</span>);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">/* TODO: Get right gw_job and push it to eth_skb (instead of NULL) */</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(dev);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *job = NULL;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(job, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>, list_dev) {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#   else</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    hlist_for_each_entry_safe(job, pos, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>,</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                              list_dev) {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#   endif</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor"></span>        <a class="code" href="group__proc.html#ga5029c243442a169c880a5a93ac3efb09" title="The gateway function for incoming ETH frames Receive skb from ETH dev –&gt; process –&gt; send to CAN bus...">ce_gw_eth_rcv</a>(skb, job);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    dev_kfree_skb(skb);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment">/*here is my test for ce_gw_eth_to_canfd*/</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">/*  struct sk_buff *can_skb;*/</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">/*  __u32 id = 0xF65C034B;*/</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">/*  __u8 flags = 0x04;*/</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">/*  __u8 res0 = 0xF3;*/</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">/*  __u8 res1 = 0x00;*/</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">/*  can_skb = ce_gw_eth_to_canfd(id, flags, res0, res1, skb, dev);*/</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<p>References <a class="el" href="ce__gw__main_8c_source.html#l00829">ce_gw_eth_rcv()</a>, and <a class="el" href="ce__gw__dev_8h_source.html#l00064">ce_gw_job_info::job_src</a>.</p>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    printk (<span class="stringliteral">&quot;ce_gw_dev: dummy xmit function called....\n&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">/* TODO: Get right gw_job and push it to eth_skb (instead of NULL) */</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(dev);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *job = NULL;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(job, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>, list_dev) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#   else</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    hlist_for_each_entry_safe(job, pos, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                              list_dev) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#   endif</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor"></span>        <a class="code" href="group__proc.html#ga5029c243442a169c880a5a93ac3efb09" title="The gateway function for incoming ETH frames Receive skb from ETH dev –&gt; process –&gt; send to CAN bus...">ce_gw_eth_rcv</a>(skb, job);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    dev_kfree_skb(skb);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">/*here is my test for ce_gw_eth_to_canfd*/</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">/*  struct sk_buff *can_skb;*/</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">/*  __u32 id = 0xF65C034B;*/</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="comment">/*  __u8 flags = 0x04;*/</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="comment">/*  __u8 res0 = 0xF3;*/</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">/*  __u8 res1 = 0x00;*/</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">/*  can_skb = ce_gw_eth_to_canfd(id, flags, res0, res1, skb, dev);*/</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1095,12 +1083,12 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00093">93</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    printk (<span class="stringliteral">&quot;ce_gw_dev: ce_gw_release called\n&quot;</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    netif_stop_queue(dev);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00098">98</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    printk (<span class="stringliteral">&quot;ce_gw_dev: ce_gw_release called\n&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    netif_stop_queue(dev);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1127,82 +1115,82 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>param eth_dev was previously registered by <a class="el" href="group__dev.html#gab3ac9b72d30717c20f4d63faec67a425" title="Register a virtual ethernet device on the OS.">ce_gw_dev_register()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00384">384</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00430">430</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__main_8c_source.html#l00975">ce_gw_remove_route()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00061">ce_gw_dev_list::dev</a>, <a class="el" href="ce__gw__main_8h_source.html#l00071">ce_gw_job::id</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00067">ce_gw_job_info::job_dst</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00066">ce_gw_job_info::job_src</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00059">ce_gw_dev_list::list_reg</a>.</p>
+<p>References <a class="el" href="ce__gw__main_8c_source.html#l00982">ce_gw_remove_route()</a>, <a class="el" href="ce__gw__dev_8c_source.html#l00066">ce_gw_dev_list::dev</a>, <a class="el" href="ce__gw__main_8h_source.html#l00076">ce_gw_job::id</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00065">ce_gw_job_info::job_dst</a>, <a class="el" href="ce__gw__dev_8h_source.html#l00064">ce_gw_job_info::job_src</a>, and <a class="el" href="ce__gw__dev_8c_source.html#l00064">ce_gw_dev_list::list_reg</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00467">ce_gw_dev_cleanup()</a>, and <a class="el" href="ce__gw__netlink_8c_source.html#l00318">ce_gw_netlink_del()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                                                      {</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Unregister Device %s\n&quot;</span>, eth_dev-&gt;name);</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(eth_dev);</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Deleting all Routes of %s\n&quot;</span>, eth_dev-&gt;name);</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="comment">/* Delete all routes witch are linked to the soon unregistered device</span></div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="comment">     * where the device is the source */</span></div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *job = NULL;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(job, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>, list_dev) {</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="preprocessor">#   else</span></div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    hlist_for_each_entry_safe(job, pos, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>, list_dev) {</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="preprocessor">#   endif</span></div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        err = <a class="code" href="ce__gw__main_8c.html#a0b296fdda11e90cddbe65ae8b541b8dd">ce_gw_remove_route</a>(job-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a>);</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="keywordflow">if</span> (err != 0) {</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            pr_err(<span class="stringliteral">&quot;ce_gw_dev: route with id %u &quot;</span></div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                   <span class="stringliteral">&quot;deleting failed: %d&quot;</span>, job-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a>, err);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        }</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    }</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="comment">/* Delete all routes witch are linked to the soon unregistered device</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="comment">     * where the device is the dest */</span></div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    job = NULL;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    node = NULL;</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(job, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a96f88498c4428a4d66d73437ca3620c8">job_dst</a>, list_dev) {</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="preprocessor">#   else</span></div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="preprocessor"></span>    pos = NULL;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    hlist_for_each_entry_safe(job, pos, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a96f88498c4428a4d66d73437ca3620c8">job_dst</a>, list_dev) {</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="preprocessor">#   endif</span></div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        err = <a class="code" href="ce__gw__main_8c.html#a0b296fdda11e90cddbe65ae8b541b8dd">ce_gw_remove_route</a>(job-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a>);</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        {</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            pr_err(<span class="stringliteral">&quot;ce_gw_dev: route with id %u &quot;</span></div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                   <span class="stringliteral">&quot;deleting failed: %d&quot;</span>, job-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a>, err);</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        }</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    }</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="comment">/* unregister */</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Call unregister_netdev() of %s\n&quot;</span>, eth_dev-&gt;name);</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    unregister_netdev(eth_dev);</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html">ce_gw_dev_list</a> *dl = NULL;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    node = NULL;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="comment">/* search for the List Element of eth_dev */</span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_registered, <a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a>) {</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="preprocessor">#   else</span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="preprocessor"></span>    pos = NULL;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_registered,</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                              <a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a>) {</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">#   endif</span></div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span> (dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev)</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    }</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordflow">if</span> (dl == NULL || &amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a> == NULL) {</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Device not correct in internal list\n&quot;</span>);</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        hlist_del_rcu(&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a>);</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    }</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__dev_8c_source.html#l00513">ce_gw_dev_cleanup()</a>, and <a class="el" href="ce__gw__netlink_8c_source.html#l00333">ce_gw_netlink_del()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                                                      {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Unregister Device %s\n&quot;</span>, eth_dev-&gt;name);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job__info.html" title="The private Field of ether struct net_device with pointer to its job.">ce_gw_job_info</a> *priv = netdev_priv(eth_dev);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Deleting all Routes of %s\n&quot;</span>, eth_dev-&gt;name);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="comment">/* Delete all routes witch are linked to the soon unregistered device</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="comment">     * where the device is the source */</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__job.html">ce_gw_job</a> *job = NULL;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(job, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>, list_dev) {</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">#   else</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    hlist_for_each_entry_safe(job, pos, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a20a85b68143b85d05450fd6a9601f379">job_src</a>, list_dev) {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="preprocessor">#   endif</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        err = <a class="code" href="ce__gw__main_8c.html#a0b296fdda11e90cddbe65ae8b541b8dd">ce_gw_remove_route</a>(job-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a>);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        <span class="keywordflow">if</span> (err != 0) {</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;            pr_err(<span class="stringliteral">&quot;ce_gw_dev: route with id %u &quot;</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                   <span class="stringliteral">&quot;deleting failed: %d&quot;</span>, job-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a>, err);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        }</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    }</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="comment">/* Delete all routes witch are linked to the soon unregistered device</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="comment">     * where the device is the dest */</span></div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    job = NULL;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    node = NULL;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(job, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a96f88498c4428a4d66d73437ca3620c8">job_dst</a>, list_dev) {</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="preprocessor">#   else</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="preprocessor"></span>    pos = NULL;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    hlist_for_each_entry_safe(job, pos, node, &amp;priv-&gt;<a class="code" href="structce__gw__job__info.html#a96f88498c4428a4d66d73437ca3620c8">job_dst</a>, list_dev) {</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="preprocessor">#   endif</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        err = <a class="code" href="ce__gw__main_8c.html#a0b296fdda11e90cddbe65ae8b541b8dd">ce_gw_remove_route</a>(job-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a>);</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        {</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            pr_err(<span class="stringliteral">&quot;ce_gw_dev: route with id %u &quot;</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                   <span class="stringliteral">&quot;deleting failed: %d&quot;</span>, job-&gt;<a class="code" href="structce__gw__job.html#a76f8ba65ce8f902c0657233adee58698">id</a>, err);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        }</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    }</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="comment">/* unregister */</span></div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_dev: Call unregister_netdev() of %s\n&quot;</span>, eth_dev-&gt;name);</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    unregister_netdev(eth_dev);</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html" title="internal list of all registered and allocated devices.">ce_gw_dev_list</a> *dl = NULL;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    node = NULL;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="comment">/* search for the List Element of eth_dev */</span></div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_registered, <a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a>) {</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;<span class="preprocessor">#   else</span></div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="preprocessor"></span>    pos = NULL;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_registered,</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;                              <a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a>) {</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="preprocessor">#   endif</span></div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span> (dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev)</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    }</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keywordflow">if</span> (dl == NULL || &amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a> == NULL) {</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Device not correct in internal list\n&quot;</span>);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        hlist_del_rcu(&amp;dl-&gt;<a class="code" href="structce__gw__dev__list.html#a901f15f056b4e997a432d91538651c24">list_reg</a>);</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    }</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1218,7 +1206,109 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__dev_ga688a156f5994ae59ab4f1770653eb635_icgraph.png" border="0" usemap="#group__dev_ga688a156f5994ae59ab4f1770653eb635_icgraph" alt=""/></div>
 <map name="group__dev_ga688a156f5994ae59ab4f1770653eb635_icgraph" id="group__dev_ga688a156f5994ae59ab4f1770653eb635_icgraph">
-<area shape="rect" id="node3" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="207,5,345,35"/><area shape="rect" id="node7" href="ce__gw__netlink_8c.html#ab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="212,59,340,88"/><area shape="rect" id="node5" href="group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="395,5,507,35"/></map>
+<area shape="rect" id="node3" href="group__dev.html#ga9f556bd4667762bc63d53649ad6098ed" title="Deleting all objects created by ce_gw_dev_init_module() and all devices." alt="" coords="207,5,345,35"/><area shape="rect" id="node7" href="group__net.html#gab0a5b3010858a846fb34dadb9e405dc4" title="Deletes a device by name or a route by ID." alt="" coords="212,59,340,88"/><area shape="rect" id="node5" href="group__alloc.html#ga65d3994442c38318dddb547f47e5bcde" title="Will be automatically called on module remove." alt="" coords="395,5,507,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gaeb77e056c71ccebb57e895dc366be6f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ce_gw_has_min_mtu </td>
+          <td>(</td>
+          <td class="paramtype">struct net_device *&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066">ce_gw_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u32&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>checks if the given device has enough mtu to use the type and flags </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>The net_device which schould be checked </td></tr>
+    <tr><td class="paramname">type</td><td>The type which sould be compared to </td></tr>
+    <tr><td class="paramname">flags</td><td>needed dor the <a class="el" href="ce__gw__main_8h.html#ae907159232a1abcd6479c948ac507dd9">CE_GW_F_CAN_FD</a> flag, to check if the type is CANfd capable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The mtu of dev is bigger then the nedded mtu by the type </td></tr>
+    <tr><td class="paramname">false</td><td>if not </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00213">213</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+
+<p>References <a class="el" href="ce__gw__main_8h_source.html#l00049">CE_GW_F_CAN_FD</a>, <a class="el" href="ce__gw__main_8h_source.html#l00057">CE_GW_TYPE_ETH</a>, <a class="el" href="ce__gw__main_8h_source.html#l00059">CE_GW_TYPE_NET</a>, <a class="el" href="ce__gw__main_8h_source.html#l00056">CE_GW_TYPE_NONE</a>, <a class="el" href="ce__gw__main_8h_source.html#l00061">CE_GW_TYPE_TCP</a>, and <a class="el" href="ce__gw__main_8h_source.html#l00062">CE_GW_TYPE_UDP</a>.</p>
+
+<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l00916">ce_gw_create_route()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                                                               {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">int</span> mtu = ETH_DATA_LEN; <span class="comment">/* Standart Ethernet Value */</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">switch</span> (type) {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066af4901ada58f827c027ddaa05feeb79be">CE_GW_TYPE_NONE</a>:</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="comment">/* Do Nothing (default Ethernet MTU will be set) */</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a51cf04b19d151ef02d0741faf68b462b">CE_GW_TYPE_ETH</a>:</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">if</span> ((flags &amp; <a class="code" href="ce__gw__main_8h.html#ae907159232a1abcd6479c948ac507dd9">CE_GW_F_CAN_FD</a>) == CE_GW_F_CAN_FD) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            mtu = CANFD_MAX_DLEN;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            mtu = CAN_MAX_DLEN;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a71eb32a8512b0e899de88c047114b880">CE_GW_TYPE_NET</a>:</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">if</span> ((flags &amp; CE_GW_F_CAN_FD) == CE_GW_F_CAN_FD) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            mtu = <span class="keyword">sizeof</span>(<span class="keyword">struct </span>canfd_frame);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            mtu = <span class="keyword">sizeof</span>(<span class="keyword">struct </span>can_frame);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2eed9c0cbc5a57d049cebdd8952f1278">CE_GW_TYPE_TCP</a>:</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="comment">/* TODO nothing yet */</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="ce__gw__main_8h.html#ae9169581523a63d249884c335b34f066a2248c70f9d410e4f8b728d9d94e0f06a">CE_GW_TYPE_UDP</a>:</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="comment">/* TODO nothing yet */</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        pr_err(<span class="stringliteral">&quot;ce_gw_dev: Type not defined.&quot;</span>);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">if</span> (dev-&gt;mtu &gt;= mtu) {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__dev_gaeb77e056c71ccebb57e895dc366be6f1_icgraph.png" border="0" usemap="#group__dev_gaeb77e056c71ccebb57e895dc366be6f1_icgraph" alt=""/></div>
+<map name="group__dev_gaeb77e056c71ccebb57e895dc366be6f1_icgraph" id="group__dev_gaeb77e056c71ccebb57e895dc366be6f1_icgraph">
+<area shape="rect" id="node3" href="ce__gw__main_8h.html#aaabe871861b8e5300a33e1c5f797a88b" title="ce_gw_create_route" alt="" coords="200,5,339,35"/><area shape="rect" id="node5" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="387,5,520,35"/></map>
 </div>
 </p>
 
@@ -1255,28 +1345,28 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__dev.html#ga8e37969a73186890c848970eec1b3822" title="check if the param eth_dev is registered by this module">ce_gw_is_registered_dev()</a> should you normally use </dd></dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00167">167</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00172">172</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00061">ce_gw_dev_list::dev</a>.</p>
-<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                                                       {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html">ce_gw_dev_list</a> *dl = NULL;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_allocated, list_alloc) {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#   else</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_allocated,</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                              list_alloc) {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#   endif</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span> (dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev)</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">return</span> -ENODEV;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
+<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00066">ce_gw_dev_list::dev</a>.</p>
+<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                                                       {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html" title="internal list of all registered and allocated devices.">ce_gw_dev_list</a> *dl = NULL;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_allocated, list_alloc) {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#   else</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_allocated,</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                              list_alloc) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#   endif</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span> (dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">return</span> -ENODEV;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1310,38 +1400,38 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00187">187</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
+<p>Definition at line <a class="el" href="ce__gw__dev_8c_source.html#l00192">192</a> of file <a class="el" href="ce__gw__dev_8c_source.html">ce_gw_dev.c</a>.</p>
 
-<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00061">ce_gw_dev_list::dev</a>.</p>
+<p>References <a class="el" href="ce__gw__dev_8c_source.html#l00066">ce_gw_dev_list::dev</a>.</p>
 
-<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l00915">ce_gw_create_route()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                                                        {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html">ce_gw_dev_list</a> *dl = NULL;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_registered, list_reg) {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#   else</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_registered,</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                              list_reg) {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#   endif</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span> (dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev)</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_is_registered_dev: Device not registered\n&quot;</span>);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">return</span> -ENODEV;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ce__gw__main_8c_source.html#l00916">ce_gw_create_route()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                                        {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keyword">struct </span><a class="code" href="structce__gw__dev__list.html" title="internal list of all registered and allocated devices.">ce_gw_dev_list</a> *dl = NULL;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">struct </span>hlist_node *node;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#   if LINUX_VERSION_CODE &gt;= KERNEL_VERSION(3,9,0)</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor"></span>    hlist_for_each_entry_safe(dl, node, &amp;ce_gw_dev_registered, list_reg) {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#   else</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor"></span>    <span class="keyword">struct </span>hlist_node *pos;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    hlist_for_each_entry_safe(dl, pos, node, &amp;ce_gw_dev_registered,</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                              list_reg) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#   endif</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span> (dl-&gt;<a class="code" href="structce__gw__dev__list.html#abf690dbcccc005ba94a1ce16864ccdc9">dev</a> == eth_dev)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    pr_debug(<span class="stringliteral">&quot;ce_gw_is_registered_dev: Device not registered\n&quot;</span>);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span> -ENODEV;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__dev_ga8e37969a73186890c848970eec1b3822_icgraph.png" border="0" usemap="#group__dev_ga8e37969a73186890c848970eec1b3822_icgraph" alt=""/></div>
 <map name="group__dev_ga8e37969a73186890c848970eec1b3822_icgraph" id="group__dev_ga8e37969a73186890c848970eec1b3822_icgraph">
-<area shape="rect" id="node3" href="ce__gw__main_8h.html#aaabe871861b8e5300a33e1c5f797a88b" title="ce_gw_create_route" alt="" coords="224,5,363,35"/><area shape="rect" id="node5" href="ce__gw__netlink_8c.html#a275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="411,5,544,35"/></map>
+<area shape="rect" id="node3" href="ce__gw__main_8h.html#aaabe871861b8e5300a33e1c5f797a88b" title="ce_gw_create_route" alt="" coords="224,5,363,35"/><area shape="rect" id="node5" href="group__net.html#ga275329a4340fcde145c0e8be7e9cd098" title="add a virtual ethernet device or a route" alt="" coords="411,5,544,35"/></map>
 </div>
 </p>
 
@@ -1352,7 +1442,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 16 2013 22:53:41 for can_eth_gw Gateway Module by
+    <li class="footer">Generated on Mon Jul 22 2013 11:59:52 for can_eth_gw Gateway Module by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

@@ -104,9 +104,9 @@ $(document).ready(function(){initNavTree('group__net.html','');});
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="memitem:ga78d931ed956ba057768af71d1a0e6296"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__net.html#ga78d931ed956ba057768af71d1a0e6296">ce_gw_add</a> (char *src_name, char *dst_name, uint8_t type, uint32_t <a class="el" href="structflags.html">flags</a>)</td></tr>
-<tr class="memdesc:ga78d931ed956ba057768af71d1a0e6296"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a virtual ethernet device or a route  <a href="#ga78d931ed956ba057768af71d1a0e6296">More...</a><br/></td></tr>
-<tr class="separator:ga78d931ed956ba057768af71d1a0e6296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e677c75138bd2596e1e4552a963908c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__net.html#ga1e677c75138bd2596e1e4552a963908c">ce_gw_add</a> (char *dst_name, char *src_name, uint8_t type, uint32_t <a class="el" href="structflags.html">flags</a>)</td></tr>
+<tr class="memdesc:ga1e677c75138bd2596e1e4552a963908c"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a virtual ethernet device or a route  <a href="#ga1e677c75138bd2596e1e4552a963908c">More...</a><br/></td></tr>
+<tr class="separator:ga1e677c75138bd2596e1e4552a963908c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga33c7e18b4e6008d440213753a04ca03e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__net.html#ga33c7e18b4e6008d440213753a04ca03e">ce_gw_del</a> (uint32_t id, char *dev_name)</td></tr>
 <tr class="memdesc:ga33c7e18b4e6008d440213753a04ca03e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a device or a route in Kernel Module.  <a href="#ga33c7e18b4e6008d440213753a04ca03e">More...</a><br/></td></tr>
 <tr class="separator:ga33c7e18b4e6008d440213753a04ca03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('group__net.html','');});
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga78d931ed956ba057768af71d1a0e6296"></a>
+<a class="anchor" id="ga1e677c75138bd2596e1e4552a963908c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -164,8 +164,8 @@ $(document).ready(function(){initNavTree('group__net.html','');});
 <p>add a virtual ethernet device or a route </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">dst_name</td><td>The textual name of the device wich will be the dst. OR the name of the device, if you want to add a device. </td></tr>
     <tr><td class="paramname">src_name</td><td>The textual name of the device wich will be the src. Must be NULL if you want do add a device. </td></tr>
-    <tr><td class="paramname">src_name</td><td>The textual name of the device wich will be the dst. Must be NULL if you want do add a device. </td></tr>
     <tr><td class="paramname">type</td><td>The Type of the route. For adding dev some settings according to the type will be set. </td></tr>
     <tr><td class="paramname">flags</td><td>The Flags of the route. For adding dev some settings according to the type will be set. See <a class="el" href="netlink_8h.html" title="Control Area Network - Ethernet - Gateway - Netlink Header (Utility)">netlink.h</a> for the falgs.</td></tr>
   </table>
@@ -173,72 +173,72 @@ $(document).ready(function(){initNavTree('group__net.html','');});
 </dl>
 <dl class="section see"><dt>See Also</dt><dd>related callbacks: <a class="el" href="group__cb.html#gaef5a24bdf35c1368f8a78bd80be9f0b3" title="A callback wich prints the errno to stderr.">nl_cb_general_errno()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00209">209</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00212">212</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>References <a class="el" href="netlink_8c_source.html#l00064">CE_GW_A_DST</a>, <a class="el" href="netlink_8c_source.html#l00066">CE_GW_A_FLAGS</a>, <a class="el" href="netlink_8c_source.html#l00072">CE_GW_A_MAX</a>, <a class="el" href="netlink_8c_source.html#l00063">CE_GW_A_SRC</a>, <a class="el" href="netlink_8c_source.html#l00067">CE_GW_A_TYPE</a>, <a class="el" href="netlink_8h_source.html#l00057">CE_GW_C_ADD</a>, <a class="el" href="netlink_8c_source.html#l00077">ce_gw_genl_policy</a>, <a class="el" href="netlink_8c_source.html#l00088">genl_fam</a>, <a class="el" href="netlink_8c_source.html#l00054">IFACE_VERSION</a>, <a class="el" href="netlink_8c_source.html#l00089">nl_sk</a>, <a class="el" href="netlink_8c_source.html#l00053">NO_FLAG</a>, and <a class="el" href="netlink_8c_source.html#l00052">USER_HDR_SIZE</a>.</p>
+<p>References <a class="el" href="netlink_8c_source.html#l00065">CE_GW_A_DST</a>, <a class="el" href="netlink_8c_source.html#l00067">CE_GW_A_FLAGS</a>, <a class="el" href="netlink_8c_source.html#l00073">CE_GW_A_MAX</a>, <a class="el" href="netlink_8c_source.html#l00064">CE_GW_A_SRC</a>, <a class="el" href="netlink_8c_source.html#l00068">CE_GW_A_TYPE</a>, <a class="el" href="netlink_8h_source.html#l00061">CE_GW_C_ADD</a>, <a class="el" href="netlink_8c_source.html#l00078">ce_gw_genl_policy</a>, <a class="el" href="netlink_8c_source.html#l00089">genl_fam</a>, <a class="el" href="netlink_8c_source.html#l00054">IFACE_VERSION</a>, <a class="el" href="netlink_8c_source.html#l00090">nl_sk</a>, <a class="el" href="netlink_8c_source.html#l00053">NO_FLAG</a>, and <a class="el" href="netlink_8c_source.html#l00052">USER_HDR_SIZE</a>.</p>
 
 <p>Referenced by <a class="el" href="main_8c_source.html#l00048">main()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keyword">struct </span>nl_msg *msg;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">/* create */</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    msg = nlmsg_alloc();</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">if</span>(msg == NULL) {</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        fprintf(stderr,<span class="stringliteral">&quot;add: Message allocation failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">return</span> -ENOMEM;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">void</span> *user_hdr;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    user_hdr = genlmsg_put(msg, NL_AUTO_PORT, NL_AUTO_SEQ,</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                           genl_family_get_id(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>), <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                           <a class="code" href="netlink_8c.html#a36bdeffd4c0096064709efb2b7b44bb3">NO_FLAG</a>, <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a2c183715559a2f1c13b34d4939dd6cce">CE_GW_C_ADD</a>, <a class="code" href="netlink_8c.html#afdca1dccd45e7d08bc198424aa633136">IFACE_VERSION</a>);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">if</span> (user_hdr == NULL)</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;add: Message Haeder creation failed\n&quot;</span>);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">if</span> (src_name != NULL) { <span class="comment">/* indicates that it is add route command */</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        NLA_PUT_STRING(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6642afae0bcd79b84efb01fff9907e5b">CE_GW_A_SRC</a>, src_name);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        NLA_PUT_STRING(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba2c74c4ccfa93fcac6b48815742acf41d">CE_GW_A_DST</a>, dst_name);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    } <span class="comment">/* else it is add dev command */</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">/* Attributes needed by both, add route and add dev */</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    NLA_PUT_U8(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba34bf20414f03b5e1fb194d370963edd7">CE_GW_A_TYPE</a>, type);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    NLA_PUT_U32(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bac9f9e3a3ceb9cc4040bc673f7b1ed9fd">CE_GW_A_FLAGS</a>, <a class="code" href="structflags.html" title="Flags defined in netlink.h. Can used by flags2str().">flags</a>);</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="comment">/* vaildate */</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keyword">struct </span>nlmsghdr *msghdr = nlmsg_hdr(msg);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    err = genlmsg_validate(msghdr, <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                           <a class="code" href="netlink_8c.html#a02af765b6e5a0e7e83850e67c57d3f7a">CE_GW_A_MAX</a>, <a class="code" href="netlink_8c.html#ac3e619f7120621e19c5e5b59dfbdc012" title="Netlink Policy - Defines the Type for the Netlink Attributes.">ce_gw_genl_policy</a>);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;add: Validation of Message Failed: %i\n&quot;</span>, err);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">/* send */</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    nl_send_auto(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, msg);</div>
+<div class="fragment"><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">int</span> err = 0;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keyword">struct </span>nl_msg *msg;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="comment">/* create */</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    msg = nlmsg_alloc();</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">if</span>(msg == NULL) {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        fprintf(stderr,<span class="stringliteral">&quot;add: Message allocation failed.\n&quot;</span>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">return</span> -ENOMEM;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">void</span> *user_hdr;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    user_hdr = genlmsg_put(msg, NL_AUTO_PORT, NL_AUTO_SEQ,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                           genl_family_get_id(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>), <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                           <a class="code" href="netlink_8c.html#a36bdeffd4c0096064709efb2b7b44bb3">NO_FLAG</a>, <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a2c183715559a2f1c13b34d4939dd6cce">CE_GW_C_ADD</a>, <a class="code" href="netlink_8c.html#afdca1dccd45e7d08bc198424aa633136">IFACE_VERSION</a>);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">if</span> (user_hdr == NULL)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;add: Message Haeder creation failed\n&quot;</span>);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">if</span> (src_name != NULL) { <span class="comment">/* indicates that it is add route command */</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        NLA_PUT_STRING(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6642afae0bcd79b84efb01fff9907e5b">CE_GW_A_SRC</a>, src_name);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    } <span class="comment">/* else it is add dev command */</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">/* Attributes needed by both, add route and add dev */</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    NLA_PUT_STRING(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba2c74c4ccfa93fcac6b48815742acf41d">CE_GW_A_DST</a>, dst_name);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    NLA_PUT_U8(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba34bf20414f03b5e1fb194d370963edd7">CE_GW_A_TYPE</a>, type);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    NLA_PUT_U32(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bac9f9e3a3ceb9cc4040bc673f7b1ed9fd">CE_GW_A_FLAGS</a>, <a class="code" href="structflags.html" title="Flags defined in netlink.h. Can used by flags2str().">flags</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">/* vaildate */</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keyword">struct </span>nlmsghdr *msghdr = nlmsg_hdr(msg);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    err = genlmsg_validate(msghdr, <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                           <a class="code" href="netlink_8c.html#a02af765b6e5a0e7e83850e67c57d3f7a">CE_GW_A_MAX</a>, <a class="code" href="netlink_8c.html#ac3e619f7120621e19c5e5b59dfbdc012" title="Netlink Policy - Defines the Type for the Netlink Attributes.">ce_gw_genl_policy</a>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;add: Validation of Message Failed: %i\n&quot;</span>, err);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    err = nl_wait_for_ack(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        fprintf(stderr,</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="stringliteral">&quot;add: ACK is missing or Error returned. &quot;</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                <span class="stringliteral">&quot;Operation might fail: %i\n&quot;</span>, err);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    nlmsg_free(msg);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;nla_put_failure:</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Attribute Modification failed: %d\n&quot;</span>,-EMSGSIZE);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    nlmsg_free(msg);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">return</span> -EMSGSIZE;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="comment">/* send */</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    nl_send_auto(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, msg);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    err = nl_wait_for_ack(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        fprintf(stderr,</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <span class="stringliteral">&quot;add: ACK is missing or Error returned. &quot;</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="stringliteral">&quot;Operation might fail: %i\n&quot;</span>, err);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    nlmsg_free(msg);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;nla_put_failure:</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Attribute Modification failed: %d\n&quot;</span>,-EMSGSIZE);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    nlmsg_free(msg);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">return</span> -EMSGSIZE;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__net_ga78d931ed956ba057768af71d1a0e6296_icgraph.png" border="0" usemap="#group__net_ga78d931ed956ba057768af71d1a0e6296_icgraph" alt=""/></div>
-<map name="group__net_ga78d931ed956ba057768af71d1a0e6296_icgraph" id="group__net_ga78d931ed956ba057768af71d1a0e6296_icgraph">
+<div class="center"><img src="group__net_ga1e677c75138bd2596e1e4552a963908c_icgraph.png" border="0" usemap="#group__net_ga1e677c75138bd2596e1e4552a963908c_icgraph" alt=""/></div>
+<map name="group__net_ga1e677c75138bd2596e1e4552a963908c_icgraph" id="group__net_ga1e677c75138bd2596e1e4552a963908c_icgraph">
 <area shape="rect" id="node3" href="group__cb.html#ga0ddf1224851353fc92bfbff6f499fa97" title="creates an Ethernet package and sends it to a device." alt="" coords="141,5,192,35"/></map>
 </div>
 </p>
@@ -273,7 +273,7 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>The id of the route you want to delete. param dev_name must be NULL when you want to delete a route. </td></tr>
-    <tr><td class="paramname">dev_name</td><td>The textual name of the virtual device you want to delete. The device must be previously added by <a class="el" href="group__net.html#ga78d931ed956ba057768af71d1a0e6296" title="add a virtual ethernet device or a route">ce_gw_add()</a>. param id must be 0 if you want to delete a device. </td></tr>
+    <tr><td class="paramname">dev_name</td><td>The textual name of the virtual device you want to delete. The device must be previously added by <a class="el" href="group__net.html#ga1e677c75138bd2596e1e4552a963908c" title="add a virtual ethernet device or a route">ce_gw_add()</a>. param id must be 0 if you want to delete a device. </td></tr>
   </table>
   </dd>
 </dl>
@@ -287,65 +287,65 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd>related callbacks: <a class="el" href="group__cb.html#gaef5a24bdf35c1368f8a78bd80be9f0b3" title="A callback wich prints the errno to stderr.">nl_cb_general_errno()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00266">266</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00269">269</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>References <a class="el" href="netlink_8c_source.html#l00064">CE_GW_A_DST</a>, <a class="el" href="netlink_8c_source.html#l00065">CE_GW_A_ID</a>, <a class="el" href="netlink_8c_source.html#l00072">CE_GW_A_MAX</a>, <a class="el" href="netlink_8h_source.html#l00058">CE_GW_C_DEL</a>, <a class="el" href="netlink_8c_source.html#l00077">ce_gw_genl_policy</a>, <a class="el" href="netlink_8c_source.html#l00088">genl_fam</a>, <a class="el" href="netlink_8c_source.html#l00054">IFACE_VERSION</a>, <a class="el" href="netlink_8c_source.html#l00089">nl_sk</a>, <a class="el" href="netlink_8c_source.html#l00053">NO_FLAG</a>, and <a class="el" href="netlink_8c_source.html#l00052">USER_HDR_SIZE</a>.</p>
+<p>References <a class="el" href="netlink_8c_source.html#l00065">CE_GW_A_DST</a>, <a class="el" href="netlink_8c_source.html#l00066">CE_GW_A_ID</a>, <a class="el" href="netlink_8c_source.html#l00073">CE_GW_A_MAX</a>, <a class="el" href="netlink_8h_source.html#l00062">CE_GW_C_DEL</a>, <a class="el" href="netlink_8c_source.html#l00078">ce_gw_genl_policy</a>, <a class="el" href="netlink_8c_source.html#l00089">genl_fam</a>, <a class="el" href="netlink_8c_source.html#l00054">IFACE_VERSION</a>, <a class="el" href="netlink_8c_source.html#l00090">nl_sk</a>, <a class="el" href="netlink_8c_source.html#l00053">NO_FLAG</a>, and <a class="el" href="netlink_8c_source.html#l00052">USER_HDR_SIZE</a>.</p>
 
 <p>Referenced by <a class="el" href="main_8c_source.html#l00048">main()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">int</span> err;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">struct </span>nl_msg *msg;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != 0 &amp;&amp; dev_name != NULL) {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        err = -EINVAL;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">return</span> err;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">/* create */</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    msg = nlmsg_alloc();</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">if</span>(msg == NULL) {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        fprintf(stderr,<span class="stringliteral">&quot;del: Message allocation failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordtype">void</span> *user_hdr;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    user_hdr = genlmsg_put(msg, NL_AUTO_PORT, NL_AUTO_SEQ,</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                           genl_family_get_id(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>), <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                           <a class="code" href="netlink_8c.html#a36bdeffd4c0096064709efb2b7b44bb3">NO_FLAG</a>, <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3e85d90203948961ecd044791a58cdb7">CE_GW_C_DEL</a>, <a class="code" href="netlink_8c.html#afdca1dccd45e7d08bc198424aa633136">IFACE_VERSION</a>);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">if</span> (user_hdr == NULL)</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;del: Message Haeder creation failed\n&quot;</span>);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    NLA_PUT_U32(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bae2ca6210f65e132637a961d5c3037566">CE_GW_A_ID</a>, <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">if</span> (dev_name != NULL) { <span class="comment">/* del dev is called */</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        NLA_PUT_STRING(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba2c74c4ccfa93fcac6b48815742acf41d">CE_GW_A_DST</a>, dev_name);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="comment">/* vaildate */</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keyword">struct </span>nlmsghdr *msghdr = nlmsg_hdr(msg);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    err = genlmsg_validate(msghdr, <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                           <a class="code" href="netlink_8c.html#a02af765b6e5a0e7e83850e67c57d3f7a">CE_GW_A_MAX</a>, <a class="code" href="netlink_8c.html#ac3e619f7120621e19c5e5b59dfbdc012" title="Netlink Policy - Defines the Type for the Netlink Attributes.">ce_gw_genl_policy</a>);</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;del: Validation of Message Failed: %i\n&quot;</span>, err);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">/* send */</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    nl_send_auto(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, msg);</div>
+<div class="fragment"><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">int</span> err;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keyword">struct </span>nl_msg *msg;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != 0 &amp;&amp; dev_name != NULL) {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        err = -EINVAL;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">return</span> err;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="comment">/* create */</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    msg = nlmsg_alloc();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">if</span>(msg == NULL) {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        fprintf(stderr,<span class="stringliteral">&quot;del: Message allocation failed.\n&quot;</span>);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">void</span> *user_hdr;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    user_hdr = genlmsg_put(msg, NL_AUTO_PORT, NL_AUTO_SEQ,</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                           genl_family_get_id(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>), <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                           <a class="code" href="netlink_8c.html#a36bdeffd4c0096064709efb2b7b44bb3">NO_FLAG</a>, <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a3e85d90203948961ecd044791a58cdb7">CE_GW_C_DEL</a>, <a class="code" href="netlink_8c.html#afdca1dccd45e7d08bc198424aa633136">IFACE_VERSION</a>);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">if</span> (user_hdr == NULL)</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;del: Message Haeder creation failed\n&quot;</span>);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    NLA_PUT_U32(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bae2ca6210f65e132637a961d5c3037566">CE_GW_A_ID</a>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">if</span> (dev_name != NULL) { <span class="comment">/* del dev is called */</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        NLA_PUT_STRING(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba2c74c4ccfa93fcac6b48815742acf41d">CE_GW_A_DST</a>, dev_name);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="comment">/* vaildate */</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keyword">struct </span>nlmsghdr *msghdr = nlmsg_hdr(msg);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    err = genlmsg_validate(msghdr, <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                           <a class="code" href="netlink_8c.html#a02af765b6e5a0e7e83850e67c57d3f7a">CE_GW_A_MAX</a>, <a class="code" href="netlink_8c.html#ac3e619f7120621e19c5e5b59dfbdc012" title="Netlink Policy - Defines the Type for the Netlink Attributes.">ce_gw_genl_policy</a>);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;del: Validation of Message Failed: %i\n&quot;</span>, err);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    err = nl_wait_for_ack(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        fprintf(stderr,</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                <span class="stringliteral">&quot;add: ACK is missing or Error returned. &quot;</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                <span class="stringliteral">&quot;Operation might fail: %i\n&quot;</span>, err);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    nlmsg_free(msg);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">/* send */</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    nl_send_auto(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, msg);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    err = nl_wait_for_ack(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        fprintf(stderr,</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <span class="stringliteral">&quot;add: ACK is missing or Error returned. &quot;</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                <span class="stringliteral">&quot;Operation might fail: %i\n&quot;</span>, err);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    }</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;nla_put_failure:</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Attribute Modification failed: %d\n&quot;</span>,-EMSGSIZE);</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    nlmsg_free(msg);</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">return</span> -EMSGSIZE;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;}</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    nlmsg_free(msg);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;nla_put_failure:</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Attribute Modification failed: %d\n&quot;</span>,-EMSGSIZE);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    nlmsg_free(msg);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">return</span> -EMSGSIZE;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -386,58 +386,58 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00457">457</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00460">460</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>References <a class="el" href="netlink_8c_source.html#l00062">CE_GW_A_DATA</a>, <a class="el" href="netlink_8c_source.html#l00072">CE_GW_A_MAX</a>, <a class="el" href="netlink_8h_source.html#l00056">CE_GW_C_ECHO</a>, <a class="el" href="netlink_8c_source.html#l00077">ce_gw_genl_policy</a>, <a class="el" href="netlink_8c_source.html#l00088">genl_fam</a>, <a class="el" href="netlink_8c_source.html#l00054">IFACE_VERSION</a>, <a class="el" href="netlink_8c_source.html#l00445">nl_cb_echo_answer()</a>, <a class="el" href="netlink_8c_source.html#l00089">nl_sk</a>, <a class="el" href="netlink_8c_source.html#l00053">NO_FLAG</a>, and <a class="el" href="netlink_8c_source.html#l00052">USER_HDR_SIZE</a>.</p>
+<p>References <a class="el" href="netlink_8c_source.html#l00063">CE_GW_A_DATA</a>, <a class="el" href="netlink_8c_source.html#l00073">CE_GW_A_MAX</a>, <a class="el" href="netlink_8h_source.html#l00060">CE_GW_C_ECHO</a>, <a class="el" href="netlink_8c_source.html#l00078">ce_gw_genl_policy</a>, <a class="el" href="netlink_8c_source.html#l00089">genl_fam</a>, <a class="el" href="netlink_8c_source.html#l00054">IFACE_VERSION</a>, <a class="el" href="netlink_8c_source.html#l00448">nl_cb_echo_answer()</a>, <a class="el" href="netlink_8c_source.html#l00090">nl_sk</a>, <a class="el" href="netlink_8c_source.html#l00053">NO_FLAG</a>, and <a class="el" href="netlink_8c_source.html#l00052">USER_HDR_SIZE</a>.</p>
 
 <p>Referenced by <a class="el" href="main_8c_source.html#l00048">main()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;{</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordtype">int</span> rc; <span class="comment">/* return codes */</span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keyword">struct </span>nl_msg *msg;</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="comment">/* create */</span></div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    msg = nlmsg_alloc();</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordflow">if</span>(msg == NULL) {</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        fprintf(stderr,<span class="stringliteral">&quot;echo: Message allocation failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    }</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordtype">void</span> *user_hdr;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    user_hdr = genlmsg_put(msg, NL_AUTO_PORT, NL_AUTO_SEQ,</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                           genl_family_get_id(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>), <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                           <a class="code" href="netlink_8c.html#a36bdeffd4c0096064709efb2b7b44bb3">NO_FLAG</a>, <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a44cd231b8db9f092acdfd4795757909b">CE_GW_C_ECHO</a>, <a class="code" href="netlink_8c.html#afdca1dccd45e7d08bc198424aa633136">IFACE_VERSION</a>);</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">if</span> (user_hdr == NULL)</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;echo: Message Haeder creation failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    NLA_PUT_STRING(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baec3d23bfd24dde6459d9428e8c368ca0">CE_GW_A_DATA</a>, message);</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="comment">/* vaildate */</span></div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <span class="keyword">struct </span>nlmsghdr *msghdr = nlmsg_hdr(msg);</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <span class="keywordflow">if</span> ((rc = genlmsg_validate(msghdr,0,<a class="code" href="netlink_8c.html#a02af765b6e5a0e7e83850e67c57d3f7a">CE_GW_A_MAX</a>, <a class="code" href="netlink_8c.html#ac3e619f7120621e19c5e5b59dfbdc012" title="Netlink Policy - Defines the Type for the Netlink Attributes.">ce_gw_genl_policy</a>)) != 0) {</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;echo: Validation of Message Failed: %i\n&quot;</span>, rc);</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    }</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    <span class="comment">/* send */</span></div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    nl_socket_disable_auto_ack(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    nl_send_auto(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, msg);</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="comment">/* create callback system */</span></div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="keyword">struct </span>nl_cb *cb = nl_cb_alloc(NL_CB_DEBUG);</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    nl_cb_set(cb, NL_CB_MSG_IN, NL_CB_CUSTOM , <a class="code" href="group__cb.html#ga503fc6f43280b8fc7f307e7cba0e2dc6" title="Callback witch receive the message sen bach by kernel.">nl_cb_echo_answer</a>, NULL);</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    nl_recvmsgs(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, cb);</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    nl_cb_put(cb);</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    nlmsg_free(msg);</div>
+<div class="fragment"><div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;{</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordtype">int</span> rc; <span class="comment">/* return codes */</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keyword">struct </span>nl_msg *msg;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="comment">/* create */</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    msg = nlmsg_alloc();</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordflow">if</span>(msg == NULL) {</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        fprintf(stderr,<span class="stringliteral">&quot;echo: Message allocation failed.\n&quot;</span>);</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    }</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordtype">void</span> *user_hdr;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    user_hdr = genlmsg_put(msg, NL_AUTO_PORT, NL_AUTO_SEQ,</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                           genl_family_get_id(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>), <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                           <a class="code" href="netlink_8c.html#a36bdeffd4c0096064709efb2b7b44bb3">NO_FLAG</a>, <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a44cd231b8db9f092acdfd4795757909b">CE_GW_C_ECHO</a>, <a class="code" href="netlink_8c.html#afdca1dccd45e7d08bc198424aa633136">IFACE_VERSION</a>);</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordflow">if</span> (user_hdr == NULL)</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;echo: Message Haeder creation failed.\n&quot;</span>);</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    NLA_PUT_STRING(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55baec3d23bfd24dde6459d9428e8c368ca0">CE_GW_A_DATA</a>, message);</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="comment">/* vaildate */</span></div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keyword">struct </span>nlmsghdr *msghdr = nlmsg_hdr(msg);</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    <span class="keywordflow">if</span> ((rc = genlmsg_validate(msghdr,0,<a class="code" href="netlink_8c.html#a02af765b6e5a0e7e83850e67c57d3f7a">CE_GW_A_MAX</a>, <a class="code" href="netlink_8c.html#ac3e619f7120621e19c5e5b59dfbdc012" title="Netlink Policy - Defines the Type for the Netlink Attributes.">ce_gw_genl_policy</a>)) != 0) {</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;echo: Validation of Message Failed: %i\n&quot;</span>, rc);</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    }</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <span class="comment">/* send */</span></div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    nl_socket_disable_auto_ack(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    nl_send_auto(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, msg);</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="comment">/* create callback system */</span></div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keyword">struct </span>nl_cb *cb = nl_cb_alloc(NL_CB_DEBUG);</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    nl_cb_set(cb, NL_CB_MSG_IN, NL_CB_CUSTOM , <a class="code" href="group__cb.html#ga503fc6f43280b8fc7f307e7cba0e2dc6" title="Callback witch receive the message sen bach by kernel.">nl_cb_echo_answer</a>, NULL);</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    nl_recvmsgs(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, cb);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    nl_cb_put(cb);</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;nla_put_failure:</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Attribute Modification failed: %d\n&quot;</span>,-EMSGSIZE);</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    nlmsg_free(msg);</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;}</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    nlmsg_free(msg);</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;nla_put_failure:</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Attribute Modification failed: %d\n&quot;</span>,-EMSGSIZE);</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    nlmsg_free(msg);</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -490,64 +490,64 @@ Here is the caller graph for this function:</div>
 <dl class="section see"><dt>See Also</dt><dd>related callbacks: <a class="el" href="group__cb.html#ga199600d43736005696493aad43d62249" title="will be called for every multipart message and prints informations to stdout.">nl_cb_list_entry()</a>, <a class="el" href="group__cb.html#ga6e1740b71554f3d5aaf046aed3468652" title="will be called at the end of a multipart message.">nl_cb_list_finish()</a>, <a class="el" href="group__cb.html#gaef5a24bdf35c1368f8a78bd80be9f0b3" title="A callback wich prints the errno to stderr.">nl_cb_general_errno()</a> </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>perhaps return a list with the information, so that the caller could parse the data himself (for example he will search for something or want to pint out in an other method than the standart) </dd></dl>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00381">381</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00384">384</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>References <a class="el" href="netlink_8c_source.html#l00065">CE_GW_A_ID</a>, <a class="el" href="netlink_8c_source.html#l00072">CE_GW_A_MAX</a>, <a class="el" href="netlink_8h_source.html#l00059">CE_GW_C_LIST</a>, <a class="el" href="netlink_8c_source.html#l00077">ce_gw_genl_policy</a>, <a class="el" href="netlink_8c_source.html#l00088">genl_fam</a>, <a class="el" href="netlink_8c_source.html#l00054">IFACE_VERSION</a>, <a class="el" href="netlink_8c_source.html#l00200">nl_cb_general_errno()</a>, <a class="el" href="netlink_8c_source.html#l00332">nl_cb_list_entry()</a>, <a class="el" href="netlink_8c_source.html#l00376">nl_cb_list_finish()</a>, <a class="el" href="netlink_8c_source.html#l00089">nl_sk</a>, <a class="el" href="netlink_8c_source.html#l00053">NO_FLAG</a>, and <a class="el" href="netlink_8c_source.html#l00052">USER_HDR_SIZE</a>.</p>
+<p>References <a class="el" href="netlink_8c_source.html#l00066">CE_GW_A_ID</a>, <a class="el" href="netlink_8c_source.html#l00073">CE_GW_A_MAX</a>, <a class="el" href="netlink_8h_source.html#l00063">CE_GW_C_LIST</a>, <a class="el" href="netlink_8c_source.html#l00078">ce_gw_genl_policy</a>, <a class="el" href="netlink_8c_source.html#l00089">genl_fam</a>, <a class="el" href="netlink_8c_source.html#l00054">IFACE_VERSION</a>, <a class="el" href="netlink_8c_source.html#l00203">nl_cb_general_errno()</a>, <a class="el" href="netlink_8c_source.html#l00335">nl_cb_list_entry()</a>, <a class="el" href="netlink_8c_source.html#l00379">nl_cb_list_finish()</a>, <a class="el" href="netlink_8c_source.html#l00090">nl_sk</a>, <a class="el" href="netlink_8c_source.html#l00053">NO_FLAG</a>, and <a class="el" href="netlink_8c_source.html#l00052">USER_HDR_SIZE</a>.</p>
 
 <p>Referenced by <a class="el" href="main_8c_source.html#l00048">main()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;{</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordtype">int</span> err;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keyword">struct </span>nl_msg *msg;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="comment">/* create */</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    msg = nlmsg_alloc();</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">if</span>(msg == NULL) {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        fprintf(stderr,<span class="stringliteral">&quot;echo: Message allocation failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordtype">void</span> *user_hdr;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    user_hdr = genlmsg_put(msg, NL_AUTO_PORT, NL_AUTO_SEQ,</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                           genl_family_get_id(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>), <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                           <a class="code" href="netlink_8c.html#a36bdeffd4c0096064709efb2b7b44bb3">NO_FLAG</a>, <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a418a3d9e5c52734f0281b21ae8bd3473">CE_GW_C_LIST</a>, <a class="code" href="netlink_8c.html#afdca1dccd45e7d08bc198424aa633136">IFACE_VERSION</a>);</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">if</span> (user_hdr == NULL)</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;echo: Message Haeder creation failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    NLA_PUT_U32(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bae2ca6210f65e132637a961d5c3037566">CE_GW_A_ID</a>, <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="comment">/* vaildate */</span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keyword">struct </span>nlmsghdr *msghdr = nlmsg_hdr(msg);</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    err = genlmsg_validate(msghdr, 0, <a class="code" href="netlink_8c.html#a02af765b6e5a0e7e83850e67c57d3f7a">CE_GW_A_MAX</a>, <a class="code" href="netlink_8c.html#ac3e619f7120621e19c5e5b59dfbdc012" title="Netlink Policy - Defines the Type for the Netlink Attributes.">ce_gw_genl_policy</a>);</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;echo: Validation of Message Failed: %i\n&quot;</span>,</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                err);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    }</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="comment">/* send */</span></div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    nl_socket_disable_auto_ack(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    nl_send_auto(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, msg);</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="comment">/* create callback system */</span></div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keyword">struct </span>nl_cb *cb = nl_cb_alloc(NL_CB_DEFAULT);</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    nl_cb_set(cb, NL_CB_VALID, NL_CB_CUSTOM, <a class="code" href="group__cb.html#ga199600d43736005696493aad43d62249" title="will be called for every multipart message and prints informations to stdout.">nl_cb_list_entry</a>, NULL);</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    nl_cb_set(cb, NL_CB_FINISH, NL_CB_CUSTOM, <a class="code" href="group__cb.html#ga6e1740b71554f3d5aaf046aed3468652" title="will be called at the end of a multipart message.">nl_cb_list_finish</a>, NULL);</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    nl_cb_err(cb, NL_CB_CUSTOM, <a class="code" href="group__cb.html#gaef5a24bdf35c1368f8a78bd80be9f0b3" title="A callback wich prints the errno to stderr.">nl_cb_general_errno</a>, NULL);</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    printf(<span class="stringliteral">&quot; ID       SRC    DST    TYPE   HANDLED  DROPPED  FLAGS\n&quot;</span>);</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    nl_recvmsgs(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, cb);</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    nl_cb_put(cb);</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    nlmsg_free(msg);</div>
+<div class="fragment"><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;{</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">int</span> err;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keyword">struct </span>nl_msg *msg;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="comment">/* create */</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    msg = nlmsg_alloc();</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordflow">if</span>(msg == NULL) {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        fprintf(stderr,<span class="stringliteral">&quot;echo: Message allocation failed.\n&quot;</span>);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    }</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">void</span> *user_hdr;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    user_hdr = genlmsg_put(msg, NL_AUTO_PORT, NL_AUTO_SEQ,</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                           genl_family_get_id(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>), <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>,</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                           <a class="code" href="netlink_8c.html#a36bdeffd4c0096064709efb2b7b44bb3">NO_FLAG</a>, <a class="code" href="netlink_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a418a3d9e5c52734f0281b21ae8bd3473">CE_GW_C_LIST</a>, <a class="code" href="netlink_8c.html#afdca1dccd45e7d08bc198424aa633136">IFACE_VERSION</a>);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">if</span> (user_hdr == NULL)</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;echo: Message Haeder creation failed.\n&quot;</span>);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    NLA_PUT_U32(msg, <a class="code" href="netlink_8c.html#a06fc87d81c62e9abb8790b6e5713c55bae2ca6210f65e132637a961d5c3037566">CE_GW_A_ID</a>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="comment">/* vaildate */</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keyword">struct </span>nlmsghdr *msghdr = nlmsg_hdr(msg);</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    err = genlmsg_validate(msghdr, 0, <a class="code" href="netlink_8c.html#a02af765b6e5a0e7e83850e67c57d3f7a">CE_GW_A_MAX</a>, <a class="code" href="netlink_8c.html#ac3e619f7120621e19c5e5b59dfbdc012" title="Netlink Policy - Defines the Type for the Netlink Attributes.">ce_gw_genl_policy</a>);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;echo: Validation of Message Failed: %i\n&quot;</span>,</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                err);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    }</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="comment">/* send */</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    nl_socket_disable_auto_ack(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    nl_send_auto(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, msg);</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="comment">/* create callback system */</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keyword">struct </span>nl_cb *cb = nl_cb_alloc(NL_CB_DEFAULT);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    nl_cb_set(cb, NL_CB_VALID, NL_CB_CUSTOM, <a class="code" href="group__cb.html#ga199600d43736005696493aad43d62249" title="will be called for every multipart message and prints informations to stdout.">nl_cb_list_entry</a>, NULL);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    nl_cb_set(cb, NL_CB_FINISH, NL_CB_CUSTOM, <a class="code" href="group__cb.html#ga6e1740b71554f3d5aaf046aed3468652" title="will be called at the end of a multipart message.">nl_cb_list_finish</a>, NULL);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    nl_cb_err(cb, NL_CB_CUSTOM, <a class="code" href="group__cb.html#gaef5a24bdf35c1368f8a78bd80be9f0b3" title="A callback wich prints the errno to stderr.">nl_cb_general_errno</a>, NULL);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    printf(<span class="stringliteral">&quot; ID       SRC    DST    TYPE   HANDLED  DROPPED  FLAGS\n&quot;</span>);</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    nl_recvmsgs(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, cb);</div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;nla_put_failure:</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Attribute Modification failed: %d\n&quot;</span>,-EMSGSIZE);</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    nlmsg_free(msg);</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;}</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    nl_cb_put(cb);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    nlmsg_free(msg);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;nla_put_failure:</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Attribute Modification failed: %d\n&quot;</span>,-EMSGSIZE);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    nlmsg_free(msg);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -586,16 +586,16 @@ Here is the caller graph for this function:</div>
 <p>freeing the alloccated memory.  The Function free the memory allocated by <a class="el" href="group__net.html#ga5116444c51355bba0d9410a3c141d66c" title="creakte socket and family and connect">nl_sk_fam_init()</a>. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__net.html#ga5116444c51355bba0d9410a3c141d66c" title="creakte socket and family and connect">nl_sk_fam_init()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00556">556</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00559">559</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>References <a class="el" href="netlink_8c_source.html#l00088">genl_fam</a>, and <a class="el" href="netlink_8c_source.html#l00089">nl_sk</a>.</p>
+<p>References <a class="el" href="netlink_8c_source.html#l00089">genl_fam</a>, and <a class="el" href="netlink_8c_source.html#l00090">nl_sk</a>.</p>
 
 <p>Referenced by <a class="el" href="main_8c_source.html#l00048">main()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;{</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    nl_close(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    genl_family_put(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>);</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    nl_socket_free(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;{</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    nl_close(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    genl_family_put(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>);</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    nl_socket_free(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -632,57 +632,57 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="netlink_8c_source.html#l00507">507</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
+<p>Definition at line <a class="el" href="netlink_8c_source.html#l00510">510</a> of file <a class="el" href="netlink_8c_source.html">netlink.c</a>.</p>
 
-<p>References <a class="el" href="netlink_8c_source.html#l00072">CE_GW_A_MAX</a>, <a class="el" href="netlink_8c_source.html#l00050">GE_FAMILY_NAME</a>, <a class="el" href="netlink_8c_source.html#l00051">GE_FAMILY_VERSION</a>, <a class="el" href="netlink_8c_source.html#l00088">genl_fam</a>, <a class="el" href="netlink_8c_source.html#l00200">nl_cb_general_errno()</a>, <a class="el" href="netlink_8c_source.html#l00089">nl_sk</a>, and <a class="el" href="netlink_8c_source.html#l00052">USER_HDR_SIZE</a>.</p>
+<p>References <a class="el" href="netlink_8c_source.html#l00073">CE_GW_A_MAX</a>, <a class="el" href="netlink_8c_source.html#l00050">GE_FAMILY_NAME</a>, <a class="el" href="netlink_8c_source.html#l00051">GE_FAMILY_VERSION</a>, <a class="el" href="netlink_8c_source.html#l00089">genl_fam</a>, <a class="el" href="netlink_8c_source.html#l00203">nl_cb_general_errno()</a>, <a class="el" href="netlink_8c_source.html#l00090">nl_sk</a>, and <a class="el" href="netlink_8c_source.html#l00052">USER_HDR_SIZE</a>.</p>
 
 <p>Referenced by <a class="el" href="main_8c_source.html#l00048">main()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;{</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordtype">int</span> err;</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <span class="comment">/* create gneric netlink socket */</span></div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a> = nl_socket_alloc();</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a> == NULL ) {</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        fprintf (stderr, <span class="stringliteral">&quot;Socket allocation failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    }</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    err = genl_connect(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        fprintf (stderr, <span class="stringliteral">&quot;Connetion to socket failed: %d\n&quot;</span>, err);</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        <span class="keywordflow">return</span> err;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    }</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    err = nl_socket_modify_err_cb(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, NL_CB_CUSTOM,</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                                  <a class="code" href="group__cb.html#gaef5a24bdf35c1368f8a78bd80be9f0b3" title="A callback wich prints the errno to stderr.">nl_cb_general_errno</a>, NULL);</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        fprintf (stderr, <span class="stringliteral">&quot;Error Callback modification failed: %d\n&quot;</span>,</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                 err);</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    }</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    <span class="comment">/* create generic netlink family */</span></div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a> = genl_family_alloc();</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a> == NULL) {</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        fprintf (stderr, <span class="stringliteral">&quot;Family allocation failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    }</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    genl_family_set_name(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>, <a class="code" href="netlink_8c.html#a73b042b2a83455600d3cadfb8da8d0fe">GE_FAMILY_NAME</a>);</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    genl_family_set_version(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>, <a class="code" href="netlink_8c.html#a7fa2b4e35db63a73265fb42ceea5f799">GE_FAMILY_VERSION</a>);</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    genl_family_set_maxattr(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>, <a class="code" href="netlink_8c.html#a02af765b6e5a0e7e83850e67c57d3f7a">CE_GW_A_MAX</a>);</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    genl_family_set_hdrsize(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>, <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>);</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    genl_family_set_id(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>,</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                       (err = genl_ctrl_resolve(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, <a class="code" href="netlink_8c.html#a73b042b2a83455600d3cadfb8da8d0fe">GE_FAMILY_NAME</a>)));</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keywordflow">if</span> (err &lt; 0) {</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        fprintf(stderr,</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;                <span class="stringliteral">&quot;Could not resolve Netlink Family ID from kernel. &quot;</span></div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                <span class="stringliteral">&quot;Is the module loaded?: %d\n&quot;</span>, err);</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        <span class="keywordflow">return</span> err;</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    }</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;{</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="keywordtype">int</span> err;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="comment">/* create gneric netlink socket */</span></div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a> = nl_socket_alloc();</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a> == NULL ) {</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        fprintf (stderr, <span class="stringliteral">&quot;Socket allocation failed.\n&quot;</span>);</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    }</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    err = genl_connect(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>);</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        fprintf (stderr, <span class="stringliteral">&quot;Connetion to socket failed: %d\n&quot;</span>, err);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        <span class="keywordflow">return</span> err;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    }</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    err = nl_socket_modify_err_cb(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, NL_CB_CUSTOM,</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                                  <a class="code" href="group__cb.html#gaef5a24bdf35c1368f8a78bd80be9f0b3" title="A callback wich prints the errno to stderr.">nl_cb_general_errno</a>, NULL);</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        fprintf (stderr, <span class="stringliteral">&quot;Error Callback modification failed: %d\n&quot;</span>,</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                 err);</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    }</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="comment">/* create generic netlink family */</span></div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a> = genl_family_alloc();</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a> == NULL) {</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        fprintf (stderr, <span class="stringliteral">&quot;Family allocation failed.\n&quot;</span>);</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    }</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    genl_family_set_name(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>, <a class="code" href="netlink_8c.html#a73b042b2a83455600d3cadfb8da8d0fe">GE_FAMILY_NAME</a>);</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    genl_family_set_version(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>, <a class="code" href="netlink_8c.html#a7fa2b4e35db63a73265fb42ceea5f799">GE_FAMILY_VERSION</a>);</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    genl_family_set_maxattr(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>, <a class="code" href="netlink_8c.html#a02af765b6e5a0e7e83850e67c57d3f7a">CE_GW_A_MAX</a>);</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    genl_family_set_hdrsize(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>, <a class="code" href="netlink_8c.html#a5232864f2d4dbe90e1def142181fb999">USER_HDR_SIZE</a>);</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    genl_family_set_id(<a class="code" href="netlink_8c.html#a61e780a2dc78dfa0588eee4fd688bfb4">genl_fam</a>,</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;                       (err = genl_ctrl_resolve(<a class="code" href="netlink_8c.html#a7499cc89af483584ea44cae16fbe9ec1">nl_sk</a>, <a class="code" href="netlink_8c.html#a73b042b2a83455600d3cadfb8da8d0fe">GE_FAMILY_NAME</a>)));</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <span class="keywordflow">if</span> (err &lt; 0) {</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        fprintf(stderr,</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;                <span class="stringliteral">&quot;Could not resolve Netlink Family ID from kernel. &quot;</span></div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;                <span class="stringliteral">&quot;Is the module loaded?: %d\n&quot;</span>, err);</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        <span class="keywordflow">return</span> err;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    }</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -709,7 +709,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 16 2013 22:31:23 for can-eth-gw-utils Utilities by
+    <li class="footer">Generated on Mon Jul 22 2013 12:00:13 for can-eth-gw-utils Utilities by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>
