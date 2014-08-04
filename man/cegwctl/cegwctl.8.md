@@ -1,8 +1,8 @@
-----
--layout: index
--title: Man Page cegwctl
--subtitle: CAN - Ethernet Gateway Control Utility
-----
+---
+layout: index
+title: Man Page cegwctl
+subtitle: CAN - Ethernet Gateway Control Utility
+---
 
 NAME
 ====

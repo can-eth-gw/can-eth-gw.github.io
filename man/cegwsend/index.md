@@ -1,8 +1,8 @@
-----
--layout: index
--title: Man Page cegwsend
--subtitle: CAN - Ethernet Gateway Send Utility
-----
+---
+layout: index
+title: Man Page cegwsend
+subtitle: CAN - Ethernet Gateway Send Utility
+---
 
 NAME
 ====
