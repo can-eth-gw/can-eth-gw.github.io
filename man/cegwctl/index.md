@@ -65,15 +65,15 @@ COMMANDS
 
 <!-- -->
 
-| TYPE | FD? | BYTE | MTU Size Description     |
-|------|-----|------|--------------------------|
-| NONE | --  | 1500 | Standart Ethernet MTU    |
-| ETH  | NO  | 8    | Max CAN Payload          |
-| ETH  | YES | 64   | Max CAN-FD Payload       |
-| NET  | NO  | 16   | Max CAN Frame            |
-| NET  | YES | 72   | Max CAN-FD Frame         |
-| UDP  | --  | 1500 | Standart Ethernet MTU    |
-| TCP  | --  | 1500 | Standart Ethernet MTU    |
+	| TYPE | FD? | BYTE | MTU Size Description     |
+	|------|-----|------|--------------------------|
+	| NONE | --  | 1500 | Standart Ethernet MTU    |
+	| ETH  | NO  | 8    | Max CAN Payload          |
+	| ETH  | YES | 64   | Max CAN-FD Payload       |
+	| NET  | NO  | 16   | Max CAN Frame            |
+	| NET  | YES | 72   | Max CAN-FD Frame         |
+	| UDP  | --  | 1500 | Standart Ethernet MTU    |
+	| TCP  | --  | 1500 | Standart Ethernet MTU    |
 
 **del route** *ID*
 >    Deletes the Gateway with *ID*.
