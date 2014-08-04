@@ -30,39 +30,54 @@ CAN/CAN-FD Frame as payload.
 OPTIONS
 =======
 
-**-s**, **--src**=*SRC-MAC*
->    The MAC address, which should be written down in the SOURCE field of
-    the ethernet header. In the current version this option is NOT USED.
+**-s**, **--src**=*SRC-MAC* 
+> The MAC address, which should be written
+down in the SOURCE field of the ethernet header. In the current version
+this option is NOT USED.
 
-**-d**, **--dst**=*DST-MAC*
->    The MAC address, which should be written down in the DESTINATION
-    field of the ethernet header.
+**-d**, **--dst**=*DST-MAC* 
+> The MAC address, which should be written
+down in the DESTINATION field of the ethernet header.
 
-**-t**, **--type**=*ETHERTYPE*
->    Set the EtherType of the Ethernet frame. '**ipv4**', '**ipv6**',
-    '**can**' and '**canfd**' can be translated to their hexadcimal
-    code. All other types must be written like '**0x1234**' or
-    '**1234**. Please note that the last example is a hexadecimal
-    number, too. '**none**' can be used for experimental purposes.
+**-t**, **--type**=*ETHERTYPE* 
+> Set the EtherType of the Ethernet
+frame. '**ipv4**', '**ipv6**', '**can**' and '**canfd**' can be
+translated to their hexadcimal code. All other types must be written
+like '**0x1234**' or '**1234**. Please note that the last example is a
+hexadecimal number, too. '**none**' can be used for experimental
+purposes.
 
-**-r**, **--raw**=*RAW*
->    The raw data that should be sent. Please notice that the raw data
-    must be typed in the console as a hexadecimal number like this "01
-    23 45 67 89 ab cd ef", for example. You can use capital letters for
-    A, B, C, D, E and F, of course.
+**-r**, **--raw**=*RAW* 
+> The raw data that should be sent. Please
+notice that the raw data must be typed in the console as a hexadecimal
+number like this "01 23 45 67 89 ab cd ef", for example. You can use
+capital letters for A, B, C, D, E and F, of course.
 
-**-i**, **--interface**=*IFACE*
->    The name of the Ethernet Interface, that is going to receive the
-    message
+**-i**, **--interface**=*IFACE* 
+> The name of the Ethernet Interface,
+that is going to receive the message
 
 EXIT STATUS
 ===========
 
-**0**
->    success
-
-**!=0**
->    failure
+<table>
+<thead>
+<tr class="header">
+<th align="center">CODE</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="left">success</td>
+</tr>
+<tr class="even">
+<td align="center">!=0</td>
+<td align="left">failure</td>
+</tr>
+</tbody>
+</table>
 
 BUGS
 ====
@@ -74,7 +89,7 @@ Issues](https://github.com/can-eth-gw/can_eth_gw/issues)
 COPYRIGHT
 =========
 
-(C) Copyright 2013 Fabian Raab, Stefan Smarzly
+© Copyright 2013 Fabian Raab, Stefan Smarzly
 
 This file is part of CAN-Eth-GW.
 
@@ -95,5 +110,6 @@ SEE ALSO
 
 **Homepage:** <http://can-eth-gw.github.io>
 
-# AUTHORS
+AUTHORS
+=======
 Jakob Pfeiffer <jakob.pfeiffer@in.tum.de>.
