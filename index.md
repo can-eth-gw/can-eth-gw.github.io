@@ -43,6 +43,10 @@ The manuals also exists in html format:
 #### Status
 
 Early Development
+
+### References
+
+[Award For Excellenct Student Projects 2013](http://www.in.tum.de/forschung/auszeichnungen/detail/newsarticle/preis-fuer-hervorragende-studierendenprojekte-verliehen-im-rahmen-des-absolventenfestes-2013.html)
   
 ### Authors
 
