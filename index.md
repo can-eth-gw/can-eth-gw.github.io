@@ -46,7 +46,7 @@ Early Development
 
 ### References
 
-[Award For Excellenct Student Projects 2013](http://www.in.tum.de/forschung/auszeichnungen/detail/newsarticle/preis-fuer-hervorragende-studierendenprojekte-verliehen-im-rahmen-des-absolventenfestes-2013.html)
+[Award For Excellenct Student Projects 2013](https://www.in.tum.de/news-single-view/?tx_ttnews%5Btt_news%5D=321&cHash=2c8699ef22f704323237e6886bf08c78)
   
 ### Authors
 
